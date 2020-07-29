@@ -2,7 +2,7 @@
  A simple loader written in AHK.
  
 # How to compile
-- Clone the repository with the command `git clone https://github.com/rfoxxxyshit/aye-ahk-loader | cd aye-ahk-loader | git submodule add https://github.com/m4x3r1337/Ahk2Exe`
+- Clone the repository with the command `git clone https://github.com/rfoxxxyshit/aye-ahk-loader | cd aye-ahk-loader | git submodule update --init --recursive`
 - Run `COMPILE.bat`
 
 # How to load your DLLs
