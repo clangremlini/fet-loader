@@ -8,7 +8,7 @@
 # How to load your DLLs
 ##### _We're not gonna help you if your fucking system is gonna blow the fucking wine off it's not our fault. Got it?_
 - Open the config.
-- Change the value of `custominject' to `true'.
+- Change the value of `custominject` to `true`.
 - **Restart** loader and "Load DLL" will appear in the list.
 
 # Credits
