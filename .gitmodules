@@ -1,0 +1,3 @@
+[submodule "ahk2exe"]
+	path = ahk2exe
+	url = https://github.com/m4x3r1337/ahk2exe
