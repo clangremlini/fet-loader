@@ -6,7 +6,7 @@
 - Run `COMPILE.bat`
 
 # How to load your DLLs
-##### _We're not gonna help you if your fucking system is gonna blow the fucking wine off it's not our fault. Got it?_
+##### _We can't help you if your fucking system dies, it's not our fault. You got it?_
 - Open the config.
 - Change the value of `custominject` to `true`.
 - **Restart** loader and "Load DLL" will appear in the list.
