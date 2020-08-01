@@ -57,7 +57,8 @@ if (language = "en")
     global string_dev1 := "m4x3r1337"
     global string_dev2 := "rf0x1d"
     global string_count := "Current cheats count:"
-    global string_new_version := "A new version is available.`nDo you want to download?"
+    global string_new_version := "A new version is available."
+    global string_changelog := "Changelog:"
 }
 if (language = "ru") 
 {
@@ -75,7 +76,8 @@ if (language = "ru")
     global string_dev1 := "m4x3r1337"
     global string_dev2 := "rf0x1d"
     global string_count := "Текущее кол-во читов:"
-    global string_new_version := "Доступна новая версия.`nХотите загрузить её?"
+    global string_new_version := "Доступна новая версия."
+    global string_changelog := "Список изменений:"
 }
 if (language = "eblo") 
 {
@@ -93,5 +95,6 @@ if (language = "eblo")
     global string_dev1 := "m4x3r1337"
     global string_dev2 := "rf0x1d"
     global string_count := "Текущее кол-во хуев в твоей жопе:"
-    global string_new_version := "Доступна новая версия.`nХотите сосать её?"
+    global string_new_version := "Доступна новая версия."
+    global string_changelog := "Список членов in ur ass:"
 }

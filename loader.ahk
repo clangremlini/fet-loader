@@ -4,7 +4,7 @@
 #include Lib\OTA.ahk
 
 global script = "AYE Loader"
-global version = "v1.3.3.1"
+global version = "v1.3.3.2"
 
 
 ConfigOpen()

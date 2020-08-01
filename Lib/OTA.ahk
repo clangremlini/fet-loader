@@ -16,10 +16,11 @@ class OTA
         Return
         obj := JSON.Parse(jsonStr)
         latest_release := obj.tag_name
+        change_log := obj.body
         if (version != latest_release)
         {
             Logging(1,"A new version is available. Latest version: " latest_release)
-            MsgBox, 68, %script%, %string_new_version%
+            MsgBox, 68, %script% | %string_new_version%, %latest_release% | %string_changelog%`n`n%change_log%
             IfMsgBox, Yes
                 OTA.download(latest_release)
         }
