@@ -20,7 +20,7 @@ class OTA
         if (version != latest_release)
         {
             Logging(1,"A new version is available. Latest version: " latest_release)
-            MsgBox, 68, %script% | %string_new_version%, %latest_release% | %string_changelog%`n`n%change_log%
+            MsgBox, 68, %script% | %string_new_version%, %latest_release% | %string_changelog%`n`n%change_log%`n`n`n%string_want_download%
             IfMsgBox, Yes
                 OTA.download(latest_release)
         }

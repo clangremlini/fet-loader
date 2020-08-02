@@ -58,6 +58,7 @@ if (language = "en")
     global string_dev2 := "rf0x1d"
     global string_count := "Current cheats count:"
     global string_new_version := "A new version is available."
+    global string_want_download := "Want to download the update?"
     global string_changelog := "Changelog:"
 }
 if (language = "ru") 
@@ -77,6 +78,7 @@ if (language = "ru")
     global string_dev2 := "rf0x1d"
     global string_count := "Текущее кол-во читов:"
     global string_new_version := "Доступна новая версия."
+    global string_want_download := "Хотите скачать обновление?"
     global string_changelog := "Список изменений:"
 }
 if (language = "eblo") 
@@ -96,5 +98,6 @@ if (language = "eblo")
     global string_dev2 := "rf0x1d"
     global string_count := "Текущее кол-во хуев в твоей жопе:"
     global string_new_version := "Доступна новая версия."
+    global string_want_download := "Хотите сосать обновление?"
     global string_changelog := "Список членов in ur ass:"
 }
