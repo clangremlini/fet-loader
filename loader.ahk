@@ -19,6 +19,14 @@ RunAsAdmin()
    		Run *RunAs "%A_ScriptFullPath%" ,, UseErrorLevel 
 	}
 }
+CheckAhkIsANSI()
+{
+	if (A_IsUnicode)
+	{
+		Logging(2, "Compiled using Unicode Ahk Version")
+		MsgBox, Your build compiled using Unicode AHK version. It may not work properly!
+	}
+}
 ShowAbout()
 {
 	Logging(1,"Building About GUI...")
@@ -47,6 +55,7 @@ FileDelete, %A_TEMP%\cheats.ini
 FileDelete, C:\AYE\*.dll
 
 Logging(1,"Starting "script " " version "...")
+CheckAhkIsANSI()
 
 RunAsAdmin()
 Logging(1, "Creating folders and downloading files...")
