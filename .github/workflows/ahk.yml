@@ -9,6 +9,8 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
     - name: Install AHK
       uses: crazy-max/ghaction-chocolatey@v1.2.2
       with:
