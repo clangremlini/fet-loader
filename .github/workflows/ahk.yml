@@ -30,7 +30,7 @@ jobs:
     - if: steps.build.outputs.status != 'failure'
       name: Success Notice
       uses: actions/upload-artifact@v2
-        with:
-          name: aye-loader.exe
-          path: loader.exe
+      with:
+        name: aye-loader.exe
+        path: loader.exe
         
