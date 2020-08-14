@@ -4,8 +4,7 @@
 #include Lib\OTA.ahk
 
 global script = "AYE Loader"
-global version = "v1.3.3.3"
-
+global version = "v1.3.4"
 
 ConfigOpen()
 {
@@ -78,6 +77,8 @@ IfNotExist, C:\AYE\emb.exe
 
 Logging(1,"Getting vars...")
 IniRead, cheatlist, %A_TEMP%\cheats.ini, cheatlist, cheatlist
+VarSetCapacity(ansi, StrPut(cheatlist, "CP1251")), StrPut(cheatlist, &ansi, "CP1251")
+cheatlist := StrGet(&ansi, "UTF-8")
 IniRead, custominject, C:\AYE\config.ini, settings, custominject
 IniRead, checkupdates, C:\AYE\config.ini, settings, checkupdates
 StringLower, custominject, custominject

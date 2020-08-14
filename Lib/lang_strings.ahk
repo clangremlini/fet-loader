@@ -101,3 +101,43 @@ if (language = "eblo")
     global string_want_download := "Хотите сосать обновление?"
     global string_changelog := "Список членов in ur ass:"
 }
+if (language = "hvh") 
+{
+    global string_load := "Заижектить фри хуйню"
+    global string_bypass := "Получить вак"
+    global string_config := "Сетинг"
+    global string_about := "уиды овнеров"
+    global string_pid0 := "але нищий даун запусти кс хуесос"
+    global string_nosteam := "АЫЖАЫАХЫАЗХЫЗ БРЕЙНА 0 БЕЗ СТИМА"
+    global string_success := "ыазыазы нищита с кряком ору"
+    global string_warning_custom_dll := "если у тебя минус винда нам абсолютно похуй потому что ты сам виноват дауна сын"
+    global string_no_dll := "нищ, выбери длл."
+    global string_desc := "Ауе лоадер для Ауе пацанів з відкритим вихідним кодом."
+    global string_devs := "Овнеры:"
+    global string_dev1 := "m4x3r1337"
+    global string_dev2 := "rf0x1d"
+    global string_count := "Количество фри помоек:"
+    global string_new_version := "Новая версия вышла обновись."
+    global string_want_download := "Гетнуть ауе лоадер?"
+    global string_changelog := "Список улудшений:"
+}
+if (language = "ukr") 
+{
+    global string_load := "З'їсти сало"
+    global string_bypass := "Включити VAC bypass"
+    global string_config := "Настройка"
+    global string_about := "Інформація"
+    global string_pid0 := "Процес csgo.exe не знайдено. Запустити?"
+    global string_nosteam := "Встанови Steam, москаль."
+    global string_success := "Інжект пройшов успішно"
+    global string_warning_custom_dll := "Ми не будемо тобі допомагати якщо у тебе нахуй система полетить вінда нахуй злетить це не наша вина.'nзрозумів?"
+    global string_no_dll := "Ти не вибрав DLL."
+    global string_desc := "Ауе лоадер для Ауе пацанів з відкритим вихідним кодом."
+    global string_devs := "Розробник:"
+    global string_dev1 := "m4x3r1337"
+    global string_dev2 := "rf0x1d"
+    global string_count := "Поточна кількість читів:"
+    global string_new_version := "Доступна нова версія."
+    global string_want_download := "Хочете завантажити оновлення?"
+    global string_changelog := "Список змін:"
+}
