@@ -24,7 +24,7 @@ ShowAbout()
 	Logging(1,"Building About GUI...")
 	IfNotExist, %A_TEMP%\cheats.ini
 	{
-		cheatsCount = "РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ"
+		cheatsCount = "Не удалось загрузить"
 	} else {
 		IniRead, cheatlist, %A_TEMP%\cheats.ini, cheatlist, cheatlist
 		StringSplit, cheatss, cheatlist, |
