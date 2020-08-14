@@ -4,40 +4,35 @@ on:
     branches: [ master, beta ]
   pull_request:
     branches: [ master, beta ]
-
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Checkout submodules
-        uses: srt32/git-actions@v0.0.3
+    - uses: actions/checkout@v2
+    - name: Checkout submodules
+      uses: srt32/git-actions@v0.0.3
+      with:
+        args: git submodule update --init --recursive
+    - name: Install AHK
+      uses: crazy-max/ghaction-chocolatey@v1.2.2
+      with:
+        args: install autohotkey.install --params='/DefaultVer:A32'
+    - name: Build Loader
+      run: echo ::set-output name=status::success && COMPILE.bat || echo ::set-output name=status::failure
+      continue-on-error: true
+    - name: Dump steps context
+      env:
+        STEPS_CONTEXT: ${{ toJson(steps) }}
+      run: echo "$STEPS_CONTEXT"
+    - if: steps.build.outputs.status == 'failure'
+      name: Failure Notice
+      run: |
+        echo Build failed!
+        exit 1
+    - if: steps.build.outputs.status != 'failure'
+      name: Success Notice
+      - uses: actions/upload-artifact@v2
         with:
-          args: git submodule update --init --recursive
-
-      - name: Install AHK
-        uses: crazy-max/ghaction-chocolatey@v1.2.2
-        with:
-          args: install autohotkey.install --params='/DefaultVer:A32'
-      
-      - name: Build Loader
-        run: echo ::set-output name=status::success && COMPILE.bat || echo ::set-output name=status::failure
-        continue-on-error: true
-      - name: Dump steps context
-        env:
-          STEPS_CONTEXT: ${{ toJson(steps) }}
-        run: echo "$STEPS_CONTEXT"
-      - if: steps.build.outputs.status == 'failure'
-        name: Failure Notice
-        run: |
-          echo Build failed!
-          exit 1
-      - if: steps.build.outputs.status != 'failure'
-        name: Success Notice
-        - uses: actions/upload-artifact@v2
-          with:
-            name: aye-loader.exe
-            path: loader.exe
+          name: aye-loader.exe
+          path: loader.exe
         
