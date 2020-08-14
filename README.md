@@ -18,4 +18,4 @@ A simple loader written in AHK.
 - ExternalModuleBypasser: [0x000cb](https://github.com/0x000cb)
 - VAC-Bypass-Loader: [danielkrupinski](https://github.com/danielkrupinski/VAC-Bypass-Loader)
 - Ahk2Exe: [AutoHotkey](https://github.com/AutoHotkey/Ahk2Exe)
-- Translation: [gl1c1n](https://vk.com/gl1c1n) 
+- Translation: [gl1c1n](https://vk.com/gl1c1n)
