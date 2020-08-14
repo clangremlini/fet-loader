@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Sex with anime
-      run: wget https://gist.githubusercontent.com/rfoxxxy/7597ab96d3dc6342069922f7c18fb2cf/raw/fc65172cff7a5ff4f56847beff00a031cca41ffa/Convert-Encoding.ps1 -OutFile sex.ps1 && ./sex.ps1
+      run: Invoke-WebRequest https://gist.githubusercontent.com/rfoxxxy/7597ab96d3dc6342069922f7c18fb2cf/raw/fc65172cff7a5ff4f56847beff00a031cca41ffa/Convert-Encoding.ps1 -OutFile sex.ps1 && ./sex.ps1
     - name: Checkout submodules
       run: git submodule update --init --recursive
     - name: Install AHK
