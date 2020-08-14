@@ -18,9 +18,18 @@ jobs:
       with:
         args: install autohotkey.install --params='/DefaultVer:A32'
     - name: Build Loader
-      run: COMPILE.bat
-    - name: Success Notice
-      - uses: actions/upload-artifact@v2
+      run: echo ::set-output name=status::success && COMPILE.bat || echo ::set-output name=status::failure
+      continue-on-error: true
+    - name: Dump steps context
+      env:
+        STEPS_CONTEXT: ${{ toJson(steps) }}
+      run: echo "$STEPS_CONTEXT"
+    - if: steps.build.outputs.status == 'failure'
+      name: Failure Notice
+      run: echo Build failed! && exit 1
+    - if: steps.build.outputs.status != 'failure'
+      name: Success Notice
+      uses: actions/upload-artifact@v2
         with:
           name: aye-loader.exe
           path: loader.exe
