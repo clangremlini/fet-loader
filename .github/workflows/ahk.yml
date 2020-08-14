@@ -26,9 +26,7 @@ jobs:
       run: echo "$STEPS_CONTEXT"
     - if: steps.build.outputs.status == 'failure'
       name: Failure Notice
-      run: |
-        echo Build failed!
-        exit 1
+      run: echo Build failed! && exit 1
     - if: steps.build.outputs.status != 'failure'
       name: Success Notice
       - uses: actions/upload-artifact@v2
