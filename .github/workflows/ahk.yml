@@ -1,0 +1,29 @@
+name: AYE Loader CI
+on:
+  push:
+    branches: [ master, beta ]
+  pull_request:
+    branches: [ master, beta ]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Sex with anime
+      run: |
+        Invoke-WebRequest https://gist.githubusercontent.com/rfoxxxy/7597ab96d3dc6342069922f7c18fb2cf/raw/128e94c5c815be9715a0ac471a9610af9d7c7bc6/Convert-Encoding.ps1 -OutFile sex.ps1
+        ./sex.ps1 .
+        ./sex.ps1 ./Lib
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Install AHK
+      uses: crazy-max/ghaction-chocolatey@v1.2.2
+      with:
+        args: install autohotkey.install --params='/DefaultVer:A32'
+    - name: Build Loader
+      run: ./COMPILE.bat
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: loader.exe
+        
