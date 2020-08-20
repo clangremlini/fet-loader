@@ -30,15 +30,21 @@ checkConfigValue(section,key,value)
 
 IniRead, language, C:\AYE\config.ini, settings, language
 
+setLang()
+{
+    if (A_Language = "0809" or A_Language = "0409") ; en_UK and en_US
+        IniWrite, en, C:\AYE\config.ini, settings, language
+    if (A_Language = "0419") ; ru_RU
+	    IniWrite, ru, C:\AYE\config.ini, settings, language
+    if (A_Language = "0422") ; ukr
+        IniWrite, ukr, C:\AYE\config.ini, settings, language
+}
+
 if (language = "ERROR")
 {
-    Logging(2,"Not found language line in config. Updating variables...")
-	MsgBox, 68, AYE Loader, Если вы хотите использовать Русский язык, нажмите Да.`nIf you want to use English, click No.`n`nДанное сообщение появляется только при первом запуске.`nThis message appears only on the first launch.`n`nВы можете изменить язык в конфигурационном файле.`nYou can change the language in the configuration file. (C:\AYE\config.ini)
-	IfMsgBox, Yes
-		IniWrite, ru, C:\AYE\config.ini, settings, language
-	IfMsgBox, No
-		IniWrite, en, C:\AYE\config.ini, settings, language
+    setLang()
 }
+
 
 IniRead, language, C:\AYE\config.ini, settings, language
 if (language = "en") 

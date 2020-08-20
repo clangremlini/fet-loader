@@ -4,7 +4,7 @@
 #include Lib\OTA.ahk
 
 global script = "AYE Loader"
-global version = "v1.3.4"
+global version = "v1.3.5"
 
 ConfigOpen()
 {
@@ -24,7 +24,7 @@ ShowAbout()
 	Logging(1,"Building About GUI...")
 	IfNotExist, %A_TEMP%\cheats.ini
 	{
-		cheatsCount = "ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð·Ð°Ð³Ñ€ÑƒÐ·Ð¸Ñ‚ÑŒ"
+		cheatsCount = "Íå óäàëîñü çàãðóçèòü"
 	} else {
 		IniRead, cheatlist, %A_TEMP%\cheats.ini, cheatlist, cheatlist
 		StringSplit, cheatss, cheatlist, |
@@ -107,8 +107,8 @@ if (oldgui = "false")
 
 	Gui, Add, Button, x172 y9 w90 h30 +Center gLoad, %string_load%
 	Gui, Add, Button, x172 y69 w90 h30 +Center gBypass, %string_bypass%
-	Gui, Add, Button, x132 y119 w60 h30 +Center gConfig, %string_config%
-	Gui, Add, Button, x242 y119 w60 h30 +Center gAbout, %string_about%
+	Gui, Add, Button, x132 y119 w65 h30 +Center gConfig, %string_config%
+	Gui, Add, Button, x242 y119 w65 h30 +Center gAbout, %string_about%
 	Logging(1,"done.")
 	return
 }
@@ -228,6 +228,12 @@ if (PID > 0) and (Cheat = "Load DLL")
 }
 Bypass:
 {
+	IfNotExist, C:\AYE\vac-bypass.exe
+	{
+		Logging(1,"Downloading vac-bypass.exe...")
+		UrlDownloadToFile, https://github.com/m4x3r1337/otc-direct-link/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
+		Logging(1, "done.")
+	}
 	Run, C:\AYE\vac-bypass.exe
 	return
 }
