@@ -4,7 +4,7 @@
 #include Lib\OTA.ahk
 
 global script = "AYE Loader"
-global version = "v1.3.5"
+global version = "v1.3"
 
 ConfigOpen()
 {
@@ -24,7 +24,7 @@ ShowAbout()
 	Logging(1,"Building About GUI...")
 	IfNotExist, %A_TEMP%\cheats.ini
 	{
-		cheatsCount = "Не удалось загрузить"
+		cheatsCount = "Не удалось загрузить список читов"
 	} else {
 		IniRead, cheatlist, %A_TEMP%\cheats.ini, cheatlist, cheatlist
 		StringSplit, cheatss, cheatlist, |
@@ -100,7 +100,8 @@ if (oldgui = "false")
 	if (custominject = "true")
 	{
 		Logging(1,"Custom injection was enabled!")
-		Gui, Add, ListBox, x12 y9 w110 h140 vCheat Choose1, %cheatlist%|Load DLL
+		IniRead, customlist, C:\AYE\custom\custom.ini, dlls, customlist
+		Gui, Add, ListBox, x12 y9 w110 h140 vCheat Choose1, %cheatlist%|%customlist%
 	} else {
 		Gui, Add, ListBox, x12 y9 w110 h140 vCheat Choose1, %cheatlist%
 	}
@@ -162,7 +163,7 @@ if (PID == 0)
 		Return
 }
 
-if (Cheat != "Load DLL") and (PID > 0)
+if (Cheat != "Slot1" and Cheat != "Slot2" and Cheat != "Slot3" and Cheat != "Slot4" and Cheat != "Slot5") and (PID > 0) ;govnokod mne poxui
 {
 	Logging(1,"Initialized dll injection")
 	IniRead, dll, %A_TEMP%\cheats.ini, cheats, %Cheat%
@@ -188,39 +189,32 @@ if (Cheat != "Load DLL") and (PID > 0)
 	TO_LOAD = C:\AYE\%dll%
 	Logging(1,"Injecting " DLL "...")
 	Inject_Dll(PID,TO_LOAD)
-	MsgBox, %string_success%
+	MsgBox, %script%, %string_success%
 	Logging(1,"Injected " DLL)
 	Return
 }
 
 
-if (PID > 0) and (Cheat = "Load DLL")
+if (PID > 0) and (Cheat = "Slot1" or Cheat = "Slot2" or Cheat = "Slot3" or Cheat = "Slot4" or Cheat = "Slot5") ;govnokod mne poxui
 {	
 	MsgBox, 4, %script%, %string_warning_custom_dll%
 	IfMsgBox, Yes
 	{
+		DLL_PATH := "C:\AYE\custom\" Cheat ".dll"
 		Logging(1,"Initialized custom injection")
-		FileSelectFile, DLL, 3, , %script% | Select DLL, DLL (*.dll)
-		if (DLL = "")
+		Logging(1,"Injecting custom dll...")
+		IfNotExist, C:\AYE\custom\%Cheat%.dll
 		{
-			Logging(1,"DLL not selected")
-			MsgBox, 0, %script%, %string_no_dll%
-		}
-		else {
-			Logging(1,"Injecting custom dll...")
-			Logging(1,"Running emb...")
-			Run, C:\AYE\emb.exe
-			Logging(1, "done.")
-			INJECT := Inject_Dll(PID,DLL)
-			if (!INJECT)
-			{
-				Logging(2,"Injection failed. DLL: " DLL)
-				Return
-			}
-			MsgBox, %string_success%
-			Logging(1,"Injected custom dll")
+			MsgBox, 16, %script%, %string_dll_not_found1%%cheat%%string_dll_not_found2%
 			ExitApp
 		}
+		Logging(1,"Running emb...")
+		Run, C:\AYE\emb.exe
+		Logging(1, "done.")
+		Inject_Dll(PID,DLL_PATH)
+		MsgBox, %script%, %string_success%
+		Logging(1,"Injected custom dll")
+		ExitApp
 	}
 	IfMsgBox, No
 		Return
