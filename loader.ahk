@@ -4,7 +4,7 @@
 #include Lib\OTA.ahk
 
 global script = "AYE Loader"
-global version = "v1.4"
+global version = "v1.4.1"
 
 ConfigOpen()
 {
@@ -24,7 +24,7 @@ ShowAbout()
 	Logging(1,"Building About GUI...")
 	IfNotExist, %A_TEMP%\cheats.ini
 	{
-		cheatsCount = "Не удалось загрузить список читов"
+		cheatsCount = "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ"
 	} else {
 		IniRead, cheatlist, %A_TEMP%\cheats.ini, cheatlist, cheatlist
 		StringSplit, cheatss, cheatlist, |

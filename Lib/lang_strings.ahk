@@ -5,6 +5,10 @@ IfNotExist, C:\AYE
 	Logging(1, "Creating folder...")
 	FileCreateDir, C:\AYE
 }
+IfNotExist, C:\AYE\custom
+{	
+	FileCreateDir, C:\AYE\custom
+}
 IfNotExist, C:\AYE\config.ini
 {	
 	Logging(1, "Creating config file...")
