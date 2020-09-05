@@ -11,7 +11,8 @@ A simple loader written in AHK.
 ##### _We can't help you if your fucking system dies, it's not our fault. You got it?_
 - Open the config.
 - Change the value of `custominject` to `true`.
-- **Restart** loader and "Load DLL" will appear in the list.
+- **Restart** loader
+- In the folder C:\AYE\custom put dll with the name slot1.dll, slot2.dll, and so on, then we inject this slot.
 
 # Credits
 - Loader: [m4x3r1337](https://github.com/m4x3r1337) & [rf0x1d](https://github.com/rfoxxxy)
