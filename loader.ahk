@@ -4,7 +4,7 @@
 #include Lib\OTA.ahk
 
 global script = "AYE Loader"
-global version = "v1.4.1"
+global version = "v1.4.2"
 
 ConfigOpen()
 {
@@ -16,7 +16,8 @@ RunAsAdmin()
 	if (A_IsAdmin = false) 
 	{ 
 		Logging(1,"Restarting as admin...")
-   		Run *RunAs "%A_ScriptFullPath%" ,, UseErrorLevel 
+   		Run *RunAs "%A_ScriptFullPath%" ,, UseErrorLevel
+		ExitApp
 	}
 }
 ShowAbout()
@@ -24,7 +25,7 @@ ShowAbout()
 	Logging(1,"Building About GUI...")
 	IfNotExist, %A_TEMP%\cheats.ini
 	{
-		cheatsCount = "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ"
+		cheatsCount = "Не удалось получить список читов"
 	} else {
 		IniRead, cheatlist, %A_TEMP%\cheats.ini, cheatlist, cheatlist
 		StringSplit, cheatss, cheatlist, |
@@ -38,9 +39,10 @@ ShowAbout()
 	Gui, About:Add, Link, x79 y69 w200 h20 +Center, %string_devs% <a href="https://m4x3r.xyz/">%string_dev1%</a> and <a href="https://rf0x3d.su/">%string_dev2%</a>
 	Gui, About:Add, Text, x59 y89 w200 h20 +Center, %string_count% %cheatsCount%
 	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/rfoxxxyshit/aye-ahk-loader">Github</a>
-	Gui, About:Add, Link, x210 y115 w100 h20 +Center, <a href="https://qiwi.me/rfoxxxyshit">Donate :)</a>
+	Gui, About:Add, Link, x140 y115 w100 h20 +Center, <a href="https://t.me/ayeloader">Telegram</a>
+	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://qiwi.me/rfoxxxyshit">Donate</a>
 	Logging(1,"done.")
-	return	
+	return  
 }
 
 FileDelete, %A_TEMP%\cheats.ini
@@ -189,7 +191,7 @@ if (Cheat != "Slot1" and Cheat != "Slot2" and Cheat != "Slot3" and Cheat != "Slo
 	TO_LOAD = C:\AYE\%dll%
 	Logging(1,"Injecting " DLL "...")
 	Inject_Dll(PID,TO_LOAD)
-	MsgBox, %script%, %string_success%
+	MsgBox, 0, %script%, %string_success%
 	Logging(1,"Injected " DLL)
 	Return
 }
@@ -212,7 +214,7 @@ if (PID > 0) and (Cheat = "Slot1" or Cheat = "Slot2" or Cheat = "Slot3" or Cheat
 		Run, C:\AYE\emb.exe
 		Logging(1, "done.")
 		Inject_Dll(PID,DLL_PATH)
-		MsgBox, %script%, %string_success%
+		MsgBox, 0, %script%, %string_success%
 		Logging(1,"Injected custom dll")
 		ExitApp
 	}
