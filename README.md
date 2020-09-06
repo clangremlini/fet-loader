@@ -15,7 +15,7 @@ A simple loader written in AHK.
 - In the folder C:\AYE\custom put dll with the name slot1.dll, slot2.dll, and so on, then we inject this slot.
 
 # Credits
-- Loader: [m4x3r1337](https://github.com/m4x3r1337)
+- Loader: [m4x3r1337](https://github.com/m4x3r1337) & [rf0x1d](https://github.com/rfoxxxy) previously
 - ExternalModuleBypasser: [0x000cb](https://github.com/0x000cb)
 - VAC-Bypass-Loader: [danielkrupinski](https://github.com/danielkrupinski/VAC-Bypass-Loader)
 - Ahk2Exe: [AutoHotkey](https://github.com/AutoHotkey/Ahk2Exe)
