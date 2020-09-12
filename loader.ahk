@@ -3,8 +3,10 @@
 #include Lib\lang_strings.ahk
 #include Lib\OTA.ahk
 
+
 global script = "AYE Loader"
-global version = "v1.4.2"
+global version = "v1.4.2-1"
+global build_type = "stable"
 
 ConfigOpen()
 {
@@ -36,11 +38,11 @@ ShowAbout()
 	Gui, About:Show, w315 h155, %script% %version% | About
 	Gui, About:Add, Text, x112 y9 w100 h20 +Center, %script%
 	Gui, About:Add, Text, x59 y29 w200 h30 +Center, %string_desc%
-	Gui, About:Add, Link, x79 y69 w200 h20 +Center, %string_devs% <a href="https://m4x3r.xyz/">%string_dev1%</a> and <a href="https://rf0x3d.su/">%string_dev2%</a>
+	Gui, About:Add, Link, x79 y69 w200 h20 +Center, %string_devs% <a href="https://m4x3r.xyz/">%string_dev1%</a> and <a href="https://gl1c1n.life/">%string_dev2%</a>
 	Gui, About:Add, Text, x59 y89 w200 h20 +Center, %string_count% %cheatsCount%
-	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/rfoxxxyshit/aye-ahk-loader">Github</a>
+	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/clangremlini/aye-ahk-loader">Github</a>
 	Gui, About:Add, Link, x140 y115 w100 h20 +Center, <a href="https://t.me/ayeloader">Telegram</a>
-	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://qiwi.me/rfoxxxyshit">Donate</a>
+	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://qiwi.com/n/m4x3r1337">Donate</a>
 	Logging(1,"done.")
 	return  
 }
@@ -55,25 +57,25 @@ Logging(1, "Creating folders and downloading files...")
 IfNotExist, %A_TEMP%\cheats.ini
 {	
 	Logging(1, "Getting cheat list...")
-	UrlDownloadToFile, https://github.com/m4x3r1337/otc-direct-link/raw/master/cheats.ini, %A_TEMP%\cheats.ini
+	UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/cheats.ini, %A_TEMP%\cheats.ini
 	Logging(1, "done.")
 }
 IfNotExist, C:\AYE\vac-bypass.exe
 {
 	Logging(1,"Downloading vac-bypass.exe...")
-	UrlDownloadToFile, https://github.com/m4x3r1337/otc-direct-link/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
+	UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
 	Logging(1, "done.")
 }
 IfNotExist, C:\AYE\vac-bypass.exe
 {
 	Logging(1,"Downloading vac-bypass.exe...")
-	UrlDownloadToFile, https://github.com/m4x3r1337/otc-direct-link/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
+	UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
 	Logging(1, "done.")
 }
 IfNotExist, C:\AYE\emb.exe
 {
 	Logging(1,"Downloading emb.exe...")
-	UrlDownloadToFile, https://github.com/m4x3r1337/otc-direct-link/raw/master/emb.exe, C:\AYE\emb.exe
+	UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/emb.exe, C:\AYE\emb.exe
 	Logging(1, "done.")
 }
 
@@ -174,14 +176,14 @@ if (Cheat != "Slot1" and Cheat != "Slot2" and Cheat != "Slot3" and Cheat != "Slo
 	IfNotExist, C:\AYE\%dll%
 	{
 		Logging(1,"Downloading " DLL "...")
-		UrlDownloadToFile, https://github.com/m4x3r1337/otc-direct-link/raw/master/%dll%, C:\AYE\%dll%
+		UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/%dll%, C:\AYE\%dll%
 		Sleep 2500
 		Logging(1, "done.")
 	}
 	IfNotExist, C:\AYE\emb.exe
 	{
 		Logging(1,"Downloading emb.exe...")
-		UrlDownloadToFile, https://github.com/m4x3r1337/otc-direct-link/raw/master/emb.exe, C:\AYE\emb.exe
+		UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/emb.exe, C:\AYE\emb.exe
 		Logging(1, "done.")
 	}
 	Logging(1,"Running emb...")
@@ -227,7 +229,7 @@ Bypass:
 	IfNotExist, C:\AYE\vac-bypass.exe
 	{
 		Logging(1,"Downloading vac-bypass.exe...")
-		UrlDownloadToFile, https://github.com/m4x3r1337/otc-direct-link/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
+		UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
 		Logging(1, "done.")
 	}
 	Run, C:\AYE\vac-bypass.exe
