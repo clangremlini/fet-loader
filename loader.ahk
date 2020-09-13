@@ -5,7 +5,7 @@
 
 
 global script = "AYE Loader"
-global version = "v1.4.2-1"
+global version = "v1.4.3"
 global build_type = "stable"
 
 ConfigOpen()
@@ -171,8 +171,6 @@ if (Cheat != "Slot1" and Cheat != "Slot2" and Cheat != "Slot3" and Cheat != "Slo
 {
 	Logging(1,"Initialized dll injection")
 	IniRead, dll, %A_TEMP%\cheats.ini, cheats, %Cheat%
-	FileDelete, C:\AYE\%dll%
-	Sleep 1500
 	IfNotExist, C:\AYE\%dll%
 	{
 		Logging(1,"Downloading " DLL "...")
@@ -204,20 +202,22 @@ if (PID > 0) and (Cheat = "Slot1" or Cheat = "Slot2" or Cheat = "Slot3" or Cheat
 	MsgBox, 4, %script%, %string_warning_custom_dll%
 	IfMsgBox, Yes
 	{
-		DLL_PATH := "C:\AYE\custom\" Cheat ".dll"
+		StringReplace, cheatdll, Cheat, S, s
+		DLL_PATH = C:\AYE\custom\%cheatdll%.dll
 		Logging(1,"Initialized custom injection")
 		Logging(1,"Injecting custom dll...")
-		IfNotExist, C:\AYE\custom\%Cheat%.dll
+		IfNotExist, C:\AYE\custom\%cheatdll%.dll
 		{
-			MsgBox, 16, %script%, %string_dll_not_found1%%cheat%%string_dll_not_found2%
+			MsgBox, 16, %script%, %string_dll_not_found1%%cheatdll%%string_dll_not_found2%
 			ExitApp
 		}
 		Logging(1,"Running emb...")
 		Run, C:\AYE\emb.exe
 		Logging(1, "done.")
+		Sleep, 1500
 		Inject_Dll(PID,DLL_PATH)
 		MsgBox, 0, %script%, %string_success%
-		Logging(1,"Injected custom dll")
+		Logging(1,"Injected custom dll (" DLL_PATH ")")
 		ExitApp
 	}
 	IfMsgBox, No
