@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap - Prebuilt Layout</title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="jquery-3.4.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="buttons.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+<!-- Title Bar -->
+  <header>
+    <div class="d-flex align-items-stretch bg-dark text-white">
+      <span class="flex-grow-1 px-2 py-1" onmousedown="neutron.DragTitleBar()">AYE Loader</span>
+      <span class="title-btn title-btn-close mr-2" onclick="neutron.Close()">X</span>
+    </div>
+  </header>
+<!-- End Title Bar -->
+	  
+<div id="inject">
+  <button type="button" class="btn btn-inject btn-primary" value="inject" onClick="ahk.Inject(GetSelectedCheat())">Инжект</button>
+</div>
+	  	  
+<div id="cheatslist">
+	<div class="btn-group-vertical btn-group-toggle ml-3 mt-3" data-toggle="buttons" id="cheats">
+		<label class="btn btn-primary active">
+		    <input type="radio" name="cheat" value="OTC" autocomplete="off" checked> OTC
+		</label>
+		<label class="btn btn-primary">
+		    <input type="radio" name="cheat" value="OTC V3" autocomplete="off"> OTC v3
+		</label>
+		<label class="btn btn-primary">
+		    <input type="radio" name="cheat" value="features.win" autocomplete="off"> features.win
+		</label>
+		<label class="btn btn-primary">
+		    <input type="radio" name="cheat" value="KillAura.host" autocomplete="off"> KillAura.host
+		</label>
+		<label class="btn btn-primary">
+		    <input type="radio" name="cheat" value="aurora free" autocomplete="off"> aurora free
+		</label>
+	</div>
+</div>
+	  
+<script type="text/javascript">
+	function GetSelectedCheat(){
+        var radioValue = $("input[name='cheat']:checked").val();
+		return radioValue;
+    };	
+</script>
+  
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="popper.min.js"></script>
+    <script src="bootstrap-4.4.1.js"></script>
+  </body>
+</html>
