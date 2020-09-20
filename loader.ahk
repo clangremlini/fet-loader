@@ -1,6 +1,6 @@
 global script = "AYE Loader"
-global version = "v1.4.3"
-global build_type = "stable"
+global version = "2.0.0-rc1"
+global build_type = "alpha"
 
 #NoEnv
 SetBatchLines, -1
@@ -80,7 +80,7 @@ if (checkupdates = "true")
 
 neutron := new NeutronWindow()
 neutron.Load("Web\main.html")
-neutron.Show("w800 h600")
+neutron.Show("w400 h600")
 neutron.Gui("+LabelNeutron")
 return
 

@@ -8,8 +8,6 @@
     height: 40px;
 }
 
-
-
 * {
     cursor: default;
     -webkit-touch-callout: none;
@@ -24,6 +22,32 @@
 
 body {
     background: #454851;
-    color: #ffffff;
+    color: #A8C7FF;
     min-height: 100vh;
-  }
+}
+
+.btn-outline-primary{
+    outline-color:#A8BEFF;
+    border-color:#A8BEFF;
+    box-shadow: none!important;
+    color: #A8C7FF;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active{
+    background-color: #A8BEFF;
+    border-color:#A8BEFF;
+    color: white;
+    box-shadow: none!important;
+}
+
+.btn-outline-primary:focus{
+    box-shadow: none!important;
+    border-color: none !important;
+}
+.btn-outline-primary:disabled{
+    outline-color:#A8BEFF;
+    border-color:#A8BEFF;
+    box-shadow: none!important;
+    color: #A8C7FF;
+    filter: brightness(65%)
+}
