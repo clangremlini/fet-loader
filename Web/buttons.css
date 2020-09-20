@@ -6,6 +6,21 @@
 
     width: 100px;
     height: 40px;
+
+    background-color: #28a745;
+    outline-color:#28a745;
+    border-color:#28a745;
+    box-shadow: none!important;
+    color: white;
+}
+
+.btn-inject:disabled{
+    background-color: transparent;
+    outline-color:#dc3545;
+    border-color:#dc3545;
+    box-shadow: none!important;
+    color: #dc3545;
+    filter: brightness(66%)
 }
 
 * {
@@ -43,11 +58,4 @@ body {
 .btn-outline-primary:focus{
     box-shadow: none!important;
     border-color: none !important;
-}
-.btn-outline-primary:disabled{
-    outline-color:#A8BEFF;
-    border-color:#A8BEFF;
-    box-shadow: none!important;
-    color: #A8C7FF;
-    filter: brightness(66%)
 }

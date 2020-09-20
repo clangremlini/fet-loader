@@ -28,8 +28,8 @@
   <!-- End Title Bar -->
 
   <div id="inject">
-    <button type="button" class="btn btn-outline-primary btn-inject" value="inject" id="inject_button"
-      onClick="ahk.Inject(GetSelectedCheat())" disabled=true>Инжект</button>
+    <button type="button" class="btn btn-inject" value="inject" id="inject_button"
+      onClick="ahk.Inject(GetSelectedCheat())" disabled=true>Inject</button>
   </div>
 
   <div id="cheatslist">
@@ -98,6 +98,7 @@
   <script>
     function CheatButtonClicked() {
       document.getElementById("inject_button").disabled = false;
+
     }
   </script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
