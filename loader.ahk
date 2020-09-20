@@ -72,11 +72,11 @@ IniRead, checkupdates, C:\AYE\config.ini, settings, checkupdates
 StringLower, custominject, custominject
 Logging(1, "done.")
 
-if (checkupdates = "true")
-{
-    Logging(1,"Checking updates...")
-    OTA.checkupd()
-}
+; if (checkupdates = "true")
+; {
+;     Logging(1,"Checking updates...")
+;     OTA.checkupd()
+; }
 
 neutron := new NeutronWindow()
 neutron.Load("Web\main.html")
