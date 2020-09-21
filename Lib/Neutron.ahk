@@ -602,9 +602,9 @@ class NeutronWindow
 	{
 		; Complete the path based on compiled state
 		if A_IsCompiled
-			url := "res://" this.wnd.encodeURIComponent(A_ScriptFullPath) "/10/" fileName
+			url := fileName
 		else
-			url := A_WorkingDir "/" fileName
+			url := fileName
 		
 		; Navigate to the calculated file URL
 		this.wb.Navigate(url)

@@ -1,5 +1,5 @@
 global script = "AYE Loader"
-global version = "2.0.0-rc1"
+global version = "2.0.0-rc2"
 global build_type = "alpha"
 
 #NoEnv
@@ -27,6 +27,7 @@ RunAsAdmin()
 
 FileDelete, C:\AYE\cheats.ini
 FileDelete, C:\AYE\*.dll
+FileDelete, %A_WinDir%\Temp\Web\* ;бюджетный автоапдейт
 
 Logging(1,"Starting "script " " version "...")
 
@@ -58,28 +59,28 @@ IfNotExist, C:\AYE\emb.exe
     Logging(1, "done.")
 }
 
-SetWorkingDir %A_Temp%
-FileCreateDir, Web
-FileInstall, Web\bootstrap-4.4.1.js, Web\bootstrap-4.4.1.js, 1
-FileInstall, Web\bootstrap-4.4.1.css, Web\bootstrap-4.4.1.css, 1
-FileInstall, Web\jquery-3.4.1.min.js, Web\jquery-3.4.1.min.js, 1
-FileInstall, Web\popper.min.js, Web\popper.min.js, 1
-FileInstall, Web\main.html, Web\main.html, 1
-FileInstall, Web\buttons.css, Web\buttons.css, 1
+
+UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/bootstrap-4.4.1.js, %A_WinDir%\Temp\Web\bootstrap-4.4.1.js
+UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/bootstrap-4.4.1.css, %A_WinDir%\Temp\Web\bootstrap-4.4.1.css
+UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/jquery-3.4.1.min.js, %A_WinDir%\Temp\Web\jquery-3.4.1.min.js
+UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/popper.min.js, %A_WinDir%\Temp\Web\popper.min.js
+UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/main.html, %A_WinDir%\Temp\Web\main.html
+UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/buttons.css, %A_WinDir%\Temp\Web\buttons.css
+
 
 IniRead, custominject, C:\AYE\config.ini, settings, custominject
 IniRead, checkupdates, C:\AYE\config.ini, settings, checkupdates
 StringLower, custominject, custominject
 Logging(1, "done.")
 
-; if (checkupdates = "true")
-; {
-;     Logging(1,"Checking updates...")
-;     OTA.checkupd()
-; }
+if (checkupdates = "true" and build_type = "stable")
+{
+    Logging(1,"Checking updates...")
+    OTA.checkupd()
+}
 
 neutron := new NeutronWindow()
-neutron.Load("Web\main.html")
+neutron.Load(A_WinDir "\Temp\Web\main.html")
 neutron.Show("w400 h600")
 neutron.Gui("+LabelNeutron")
 return
@@ -95,7 +96,10 @@ Load:
     Inject(neutron, event)
     {
         Cheat = %event%
-        MsgBox % "[DEBUG] Trying to inject " event ;
+        if (build_type != "stable")
+        {
+            MsgBox % "[DEBUG] Trying to inject " event
+        }
         Process, Wait, csgo.exe, 1
         PID = %ErrorLevel%
 
@@ -116,7 +120,7 @@ Load:
             IfMsgBox, No
             Return
         }
-        if (Cheat != "Slot1" and Cheat != "Slot2" and Cheat != "Slot3" and Cheat != "Slot4" and Cheat != "Slot5") and (PID > 0) ;govnokod mne poxui
+        if (PID > 0 and Cheat != "Load DLL") ;govnokod mne poxui
         {
             Logging(1,"Initialized dll injection")
             IniRead, dll, %A_TEMP%\cheats.ini, cheats, %Cheat%
@@ -143,6 +147,31 @@ Load:
             MsgBox, 0, %script%, %string_success%
             Logging(1,"Injected " DLL)
             Return
+        }
+        if (PID > 0 and Cheat = "Load DLL")
+        {
+            MsgBox, 4, %script%, %string_warning_custom_dll%
+            IfMsgBox, Yes
+            {
+                Logging(1,"Initialized custom injection")
+                FileSelectFile, DLL, 3, , %script% | Select DLL, DLL (*.dll)
+                if (DLL = "")
+                {
+                    Logging(1,"DLL not selected")
+                    MsgBox, 0, %script%, %string_no_dll%
+                }
+                else
+                {
+                Logging(1,"Injecting custom dll...")
+                Logging(1,"Running emb...")
+                Run, C:\AYE\emb.exe
+                Logging(1, "done.")
+                Sleep, 1500
+                Inject_Dll(PID,DLL)
+                MsgBox, %string_success%
+                Logging(1,"Injected custom dll")
+                }
+            }
         }
     }
 
