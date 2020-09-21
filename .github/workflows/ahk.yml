@@ -1,9 +1,9 @@
 name: AYE Loader CI
 on:
   push:
-    branches: [ master, beta ]
+    branches: [ master, web-ui ]
   pull_request:
-    branches: [ master, beta ]
+    branches: [ master, web-ui ]
 jobs:
   build:
     runs-on: windows-latest
@@ -27,3 +27,4 @@ jobs:
       with:
         path: loader.exe
         
+    
