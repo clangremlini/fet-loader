@@ -601,22 +601,18 @@ class NeutronWindow
 	Load(fileName)
 	{
 		; Complete the path based on compiled state
-		if A_IsCompiled
-			url := fileName
-		else
-			url := fileName
-		
+		url := A_WorkingDir "/" fileName
 		; Navigate to the calculated file URL
 		this.wb.Navigate(url)
-		
+
 		; Wait for the page to finish loading
 		while this.wb.readyState < 3
 			Sleep, 50
-		
+
 		; Inject the AHK objects into the JS scope
 		this.wnd.neutron := this
 		this.wnd.ahk := new this.Dispatch(this)
-		
+
 		; Wait for the page to finish loading
 		while this.wb.readyState < 4
 			Sleep, 50

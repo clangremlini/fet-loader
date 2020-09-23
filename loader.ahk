@@ -1,5 +1,5 @@
 global script = "AYE Loader"
-global version = "2.0.0-rc2"
+global version = "2.0.0-rc4"
 global build_type = "alpha"
 
 #NoEnv
@@ -27,7 +27,6 @@ RunAsAdmin()
 
 FileDelete, C:\AYE\cheats.ini
 FileDelete, C:\AYE\*.dll
-FileDelete, %A_WinDir%\Temp\Web\* ;бюджетный автоапдейт
 
 Logging(1,"Starting "script " " version "...")
 
@@ -60,12 +59,14 @@ IfNotExist, C:\AYE\emb.exe
 }
 
 
-UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/bootstrap-4.4.1.js, %A_WinDir%\Temp\Web\bootstrap-4.4.1.js
-UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/bootstrap-4.4.1.css, %A_WinDir%\Temp\Web\bootstrap-4.4.1.css
-UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/jquery-3.4.1.min.js, %A_WinDir%\Temp\Web\jquery-3.4.1.min.js
-UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/popper.min.js, %A_WinDir%\Temp\Web\popper.min.js
-UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/main.html, %A_WinDir%\Temp\Web\main.html
-UrlDownloadToFile, https://raw.githubusercontent.com/clangremlini/aye-ahk-loader/web-ui/Web/buttons.css, %A_WinDir%\Temp\Web\buttons.css
+SetWorkingDir, C:\AYE
+FileCreateDir, Web
+FileInstall, Web\bootstrap-4.4.1.js, Web\bootstrap-4.4.1.js, 1
+FileInstall, Web\bootstrap-4.4.1.css, Web\bootstrap-4.4.1.css, 1
+FileInstall, Web\jquery-3.4.1.min.js, Web\jquery-3.4.1.min.js, 1
+FileInstall, Web\popper.min.js, Web\popper.min.js, 1
+FileInstall, Web\main.html, Web\main.html, 1
+FileInstall, Web\buttons.css, Web\buttons.css, 1
 
 
 IniRead, custominject, C:\AYE\config.ini, settings, custominject
@@ -80,7 +81,7 @@ if (checkupdates = "true" and build_type = "stable")
 }
 
 neutron := new NeutronWindow()
-neutron.Load(A_WinDir "\Temp\Web\main.html")
+neutron.Load("Web\main.html")
 neutron.Show("w400 h600")
 neutron.Gui("+LabelNeutron")
 return
@@ -123,7 +124,7 @@ Load:
         if (PID > 0 and Cheat != "Load DLL") ;govnokod mne poxui
         {
             Logging(1,"Initialized dll injection")
-            IniRead, dll, %A_TEMP%\cheats.ini, cheats, %Cheat%
+            IniRead, dll, C:\AYE\cheats.ini, cheats, %Cheat%
             IfNotExist, C:\AYE\%dll%
             {
                 Logging(1,"Downloading " DLL "...")
