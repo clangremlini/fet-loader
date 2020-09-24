@@ -15,13 +15,14 @@ A simple loader written in AHK.
 - In the folder C:\AYE\custom put dll with the name slot1.dll, slot2.dll, and so on, then we inject this slot.
 
 # Credits
-- Loader: [m4x3r](https://github.com/m4x3r) & [rf0x1d](https://github.com/rfoxxxy) previously
-- Inject_Dll lib: [Brian Baker](https://github.com/Fooly-Cooly)
+- Loader: [m4x3r](https://github.com/m4x3r)
+- Inject_Dll: [Brian Baker](https://github.com/Fooly-Cooly)
+- JSON: teadrinker
+- Neutron: [G33kDude](https://github.com/G33kDude/Neutron.ahk)
 - ExternalModuleBypasser: [0x000cb](https://github.com/0x000cb)
 - VAC-Bypass-Loader: [danielkrupinski](https://github.com/danielkrupinski/VAC-Bypass-Loader)
 - Ahk2Exe: [AutoHotkey](https://github.com/AutoHotkey/Ahk2Exe)
 - Translation: [Gl1c1n](https://github.com/Gl1c1n)
 - Web-UI: [toxyxd](https://github.com/toxyxd)
-
 
 ## Powered by [@codishinc](https://github.com/clangremlini)
