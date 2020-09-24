@@ -24,5 +24,8 @@ A simple loader written in AHK.
 - Ahk2Exe: [AutoHotkey](https://github.com/AutoHotkey/Ahk2Exe)
 - Translation: [Gl1c1n](https://github.com/Gl1c1n)
 - Web-UI: [toxyxd](https://github.com/toxyxd)
+- Bootstrap: [Bootstrap authors](https://github.com/twbs)
+- Popper: Federico Zivolo
+- jQuery: [JS Foundation](https://openjsf.org/)
 
 ## Powered by [@codishinc](https://github.com/clangremlini)
