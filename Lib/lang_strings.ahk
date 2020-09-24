@@ -9,6 +9,10 @@ IfNotExist, C:\AYE\custom
 {	
 	FileCreateDir, C:\AYE\custom
 }
+IfNotExist, C:\AYE\Web
+{	
+	FileCreateDir, C:\AYE\Web
+}
 IfNotExist, C:\AYE\config.ini
 {	
 	Logging(1, "Creating config file...")
@@ -20,9 +24,7 @@ IfNotExist, C:\AYE\config.ini
 
 
 checkConfigValue("C:\AYE\config.ini","settings","oldgui","false")
-checkConfigValue("C:\AYE\config.ini","settings","oldgui","false")
 checkConfigValue("C:\AYE\config.ini","settings","checkupdates","true")
-checkConfigValue("C:\AYE\custom\custom.ini","dlls","customlist","Slot1|Slot2|Slot3|Slot4|Slot5")
 
 checkConfigValue(file,section,key,value)
 {   
@@ -67,7 +69,7 @@ if (language = "en")
     global string_desc := "AYE loader with open-source for AYE boys."
     global string_devs := "Developers:"
     global string_dev1 := "m4x3r1337"
-    global string_dev2 := "rf0x1d"
+    global string_dev2 := "Gl1c1n"
     global string_count := "Current cheats count:"
     global string_new_version := "A new version is available."
     global string_want_download := "Want to download the update?"

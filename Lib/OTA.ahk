@@ -6,7 +6,7 @@ class OTA
 {
     checkupd()
     {
-        jsonStr := JSON.GetFromUrl("https://api.github.com/repos/rfoxxxyshit/aye-ahk-loader/releases/latest")
+        jsonStr := JSON.GetFromUrl("https://api.github.com/repos/clangremlini/aye-ahk-loader/releases/latest")
         if IsObject(jsonStr) 
         {
             MsgBox, % jsonStr[1]
@@ -27,7 +27,7 @@ class OTA
     }
     download(govnokod_po_drugomy_ne_rabotaet)
     {
-        download_url := "https://github.com/rfoxxxyshit/aye-ahk-loader/releases/download/" govnokod_po_drugomy_ne_rabotaet "/loader.exe"
+        download_url := "https://github.com/clangremlini/aye-ahk-loader/releases/download/" govnokod_po_drugomy_ne_rabotaet "/loader.exe"
         UrlDownloadToFile, %download_url%, loader-%govnokod_po_drugomy_ne_rabotaet%.exe
         Run, loader-%govnokod_po_drugomy_ne_rabotaet%.exe
         ExitApp
