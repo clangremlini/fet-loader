@@ -16,8 +16,8 @@
 ; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 global script = "AYE Loader"
-global version = "2.0.0-rc5"
-global build_type = "alpha"
+global version = "2.0.0"
+global build_type = "stable"
 
 #NoEnv
 SetBatchLines, -1
@@ -201,6 +201,5 @@ Bypass(neutron)
         UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
         Logging(1, "done.")
     }
-    MsgBox, [DEBUG] vac bypass runned
     return
 }
