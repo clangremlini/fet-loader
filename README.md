@@ -19,10 +19,5 @@ A simple loader written in AHK.
 - Inject_Dll: [Brian Baker](https://github.com/Fooly-Cooly)
 - JSON: teadrinker
 - Neutron: [G33kDude](https://github.com/G33kDude/Neutron.ahk)
-- ExternalModuleBypasser: [0x000cb](https://github.com/0x000cb)
-- VAC-Bypass-Loader: [danielkrupinski](https://github.com/danielkrupinski/VAC-Bypass-Loader)
-- Ahk2Exe: [AutoHotkey](https://github.com/AutoHotkey/Ahk2Exe)
-- Translation: [Gl1c1n](https://github.com/Gl1c1n)
-- Web-UI: [toxyxd](https://github.com/toxyxd)
 
 ## Powered by [@codishinc](https://github.com/clangremlini)
