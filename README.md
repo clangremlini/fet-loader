@@ -15,7 +15,7 @@ A simple loader written in AHK.
 - Select `Load DLL` and .dll file
 
 # Credits
-- Loader: [m4x3r](https://github.com/m4x3r)
+- Loader: [m4x3r](https://m4x3r.xyz) & [rf0x3d](https://rf0x3d.su)
 - Inject_Dll: [Brian Baker](https://github.com/Fooly-Cooly)
 - JSON: teadrinker
 - Neutron: [G33kDude](https://github.com/G33kDude/Neutron.ahk)
