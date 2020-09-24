@@ -1,5 +1,5 @@
 global script = "AYE Loader"
-global version = "2.0.0-rc4"
+global version = "2.0.0-rc5"
 global build_type = "alpha"
 
 #NoEnv
@@ -176,14 +176,14 @@ Load:
         }
     }
 
-Bypass:
+Bypass(neutron)
+{
+    IfNotExist, C:\AYE\vac-bypass.exe
     {
-        IfNotExist, C:\AYE\vac-bypass.exe
-        {
-            Logging(1,"Downloading vac-bypass.exe...")
-            UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
-            Logging(1, "done.")
-        }
-        Run, C:\AYE\vac-bypass.exe
-        return
+        Logging(1,"Downloading vac-bypass.exe...")
+        UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
+        Logging(1, "done.")
     }
+    MsgBox, [DEBUG] vac bypass runned
+    return
+}
