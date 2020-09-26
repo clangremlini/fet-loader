@@ -78,12 +78,14 @@ IfNotExist, C:\AYE\emb.exe
 
 SetWorkingDir, C:\AYE
 FileCreateDir, Web
-FileInstall, Web\bootstrap-4.4.1.js, Web\bootstrap-4.4.1.js, 1
-FileInstall, Web\bootstrap-4.4.1.css, Web\bootstrap-4.4.1.css, 1
-FileInstall, Web\jquery-3.4.1.min.js, Web\jquery-3.4.1.min.js, 1
-FileInstall, Web\popper.min.js, Web\popper.min.js, 1
+FileCreateDir, Web\js
+FileCreateDir, Web\css
+FileInstall, Web\js\bootstrap-4.4.1.js, Web\js\bootstrap-4.4.1.js, 1
+FileInstall, Web\css\bootstrap-4.4.1.css, Web\css\bootstrap-4.4.1.css, 1
+FileInstall, Web\js\jquery-3.4.1.min.js, Web\js\jquery-3.4.1.min.js, 1
+FileInstall, Web\js\popper.min.js, Web\js\popper.min.js, 1
 FileInstall, Web\main.html, Web\main.html, 1
-FileInstall, Web\buttons.css, Web\buttons.css, 1
+FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
 
 
 IniRead, custominject, C:\AYE\config.ini, settings, custominject
