@@ -16,7 +16,7 @@
 ; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 global script = "AYE Loader"
-global version = "v2.0.0"
+global version = "v2.0.1"
 global build_type = "stable"
 
 #NoEnv
@@ -78,12 +78,14 @@ IfNotExist, C:\AYE\emb.exe
 
 SetWorkingDir, C:\AYE
 FileCreateDir, Web
-FileInstall, Web\bootstrap-4.4.1.js, Web\bootstrap-4.4.1.js, 1
-FileInstall, Web\bootstrap-4.4.1.css, Web\bootstrap-4.4.1.css, 1
-FileInstall, Web\jquery-3.4.1.min.js, Web\jquery-3.4.1.min.js, 1
-FileInstall, Web\popper.min.js, Web\popper.min.js, 1
+FileCreateDir, Web\js
+FileCreateDir, Web\css
+FileInstall, Web\js\bootstrap-4.4.1.js, Web\js\bootstrap-4.4.1.js, 1
+FileInstall, Web\css\bootstrap-4.4.1.css, Web\css\bootstrap-4.4.1.css, 1
+FileInstall, Web\js\jquery-3.4.1.min.js, Web\js\jquery-3.4.1.min.js, 1
+FileInstall, Web\js\popper.min.js, Web\js\popper.min.js, 1
 FileInstall, Web\main.html, Web\main.html, 1
-FileInstall, Web\buttons.css, Web\buttons.css, 1
+FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
 
 
 IniRead, custominject, C:\AYE\config.ini, settings, custominject
@@ -201,5 +203,8 @@ Bypass(neutron)
         UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
         Logging(1, "done.")
     }
+    Logging(1, "Running bypass...")
+    Run, C:\AYE\vac-bypass.exe
+    Logging(1, "done.")
     return
 }
