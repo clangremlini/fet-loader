@@ -33,7 +33,7 @@
   </div>
 
   <div id="bypass">
-    <button type="button" class="btn btn-bypass" value="bypass" id="bypass_button" onclick="ahk.Bypass()">Enable bypass</button>
+    <button type="button" class="btn btn-bypass" value="bypass" id="bypass_button" onclick="BypassButtonClicked()">Enable bypass</button>
   </div>
 
   <div id="cheatslist">
@@ -102,7 +102,13 @@
   <script>
     function CheatButtonClicked() {
       document.getElementById("inject_button").disabled = false;
-
+    }
+  </script>
+  <script>
+    function BypassButtonClicked() {
+      document.getElementById("bypass_button").disabled = true;
+      document.getElementById("bypass_button").textContent = "Bypass enabled!";
+      ahk.Bypass();
     }
   </script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
