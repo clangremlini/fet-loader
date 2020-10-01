@@ -17,6 +17,7 @@ A simple loader written in AHK.
 # Credits
 - Loader: [m4x3r](https://m4x3r.xyz) & [rf0x3d](https://rf0x3d.su)
 - Inject_Dll: [Brian Baker](https://github.com/Fooly-Cooly)
+- OTA.ahk: [CodISH inc.](https://github.com/clangremlini/OTA.ahk)
 - JSON: teadrinker
 - Neutron: [G33kDude](https://github.com/G33kDude/Neutron.ahk)
 - ExternalModuleBypasser: [0x000cb](https://github.com/0x000cb)
