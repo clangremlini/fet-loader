@@ -16,10 +16,11 @@
 ; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 global script = "AYE Loader"
-global version = "v2.0.1"
+global version = "v2.0.2"
 global build_type = "stable"
 
 #NoEnv
+#NoTrayIcon
 SetBatchLines, -1
 CoordMode, Mouse, Screen
 
