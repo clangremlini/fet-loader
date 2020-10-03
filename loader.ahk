@@ -25,6 +25,7 @@ SetBatchLines, -1
 CoordMode, Mouse, Screen
 
 #Include Lib\Neutron.ahk
+#Include Lib\Logging.ahk
 #include Lib\lang_strings.ahk
 #include Lib\OTA.ahk
 
