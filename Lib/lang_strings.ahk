@@ -1,3 +1,5 @@
+; compile with utf-8
+
 #Include Lib\Logging.ahk
 
 IfNotExist, C:\AYE
@@ -65,45 +67,45 @@ if (language = "en")
 }
 if (language = "ru") 
 {
-    global string_pid0 := "Процесс csgo.exe не найден. Запустить?"
-    global string_nosteam := "Установи Steam, клоун."
-    global string_success := "Инжект прошел успешно"
-    global string_warning_custom_dll := "Мы не будем тебе помогать если у тебя нахуй система полетит винда нахуй слетит это не наша вина.`nПонял?"
-    global string_no_dll := "Ты не выбрал DLL."
-    global string_new_version := "Доступна новая версия."
-    global string_want_download := "Хотите загрузить обновление?"
-    global string_changelog := "Список изменений:"
+    global string_pid0 := "РџСЂРѕС†РµСЃСЃ csgo.exe РЅРµ РЅР°Р№РґРµРЅ. Р—Р°РїСѓСЃС‚РёС‚СЊ?"
+    global string_nosteam := "РЈСЃС‚Р°РЅРѕРІРё Steam, РєР»РѕСѓРЅ."
+    global string_success := "РРЅР¶РµРєС‚ РїСЂРѕС€РµР» СѓСЃРїРµС€РЅРѕ"
+    global string_warning_custom_dll := "РњС‹ РЅРµ Р±СѓРґРµРј С‚РµР±Рµ РїРѕРјРѕРіР°С‚СЊ РµСЃР»Рё Сѓ С‚РµР±СЏ РЅР°С…СѓР№ СЃРёСЃС‚РµРјР° РїРѕР»РµС‚РёС‚ РІРёРЅРґР° РЅР°С…СѓР№ СЃР»РµС‚РёС‚ СЌС‚Рѕ РЅРµ РЅР°С€Р° РІРёРЅР°.`nРџРѕРЅСЏР»?"
+    global string_no_dll := "РўС‹ РЅРµ РІС‹Р±СЂР°Р» DLL."
+    global string_new_version := "Р”РѕСЃС‚СѓРїРЅР° РЅРѕРІР°СЏ РІРµСЂСЃРёСЏ."
+    global string_want_download := "РҐРѕС‚РёС‚Рµ Р·Р°РіСЂСѓР·РёС‚СЊ РѕР±РЅРѕРІР»РµРЅРёРµ?"
+    global string_changelog := "РЎРїРёСЃРѕРє РёР·РјРµРЅРµРЅРёР№:"
 }
 if (language = "eblo") 
 {
-    global string_pid0 := "ААХАХАХАХ ДАУН КСГО ЗАПУСТИ ЛМАО"
-    global string_nosteam := "Установи Steam, клоун."
-    global string_success := "твоя мама выебана успешна"
-    global string_warning_custom_dll := "Мы не будем тебе помогать если у тебя нахуй система полетит винда нахуй слетит это не наша вина.`nПонял?"
-    global string_no_dll := "ало уебок длл выбери"
+    global string_pid0 := "РђРђРҐРђРҐРђРҐРђРҐ Р”РђРЈРќ РљРЎР“Рћ Р—РђРџРЈРЎРўР Р›РњРђРћ"
+    global string_nosteam := "РЈСЃС‚Р°РЅРѕРІРё Steam, РєР»РѕСѓРЅ."
+    global string_success := "С‚РІРѕСЏ РјР°РјР° РІС‹РµР±Р°РЅР° СѓСЃРїРµС€РЅР°"
+    global string_warning_custom_dll := "РњС‹ РЅРµ Р±СѓРґРµРј С‚РµР±Рµ РїРѕРјРѕРіР°С‚СЊ РµСЃР»Рё Сѓ С‚РµР±СЏ РЅР°С…СѓР№ СЃРёСЃС‚РµРјР° РїРѕР»РµС‚РёС‚ РІРёРЅРґР° РЅР°С…СѓР№ СЃР»РµС‚РёС‚ СЌС‚Рѕ РЅРµ РЅР°С€Р° РІРёРЅР°.`nРџРѕРЅСЏР»?"
+    global string_no_dll := "Р°Р»Рѕ СѓРµР±РѕРє РґР»Р» РІС‹Р±РµСЂРё"
     global string_new_version := "A new version is available."
     global string_want_download := "Want to download the update?"
     global string_changelog := "Changelog:"
 }
 if (language = "hvh") 
 {
-    global string_pid0 := "але нищий даун запусти кс хуесос"
-    global string_nosteam := "АЫЖАЫАХЫАЗХЫЗ БРЕЙНА 0 БЕЗ СТИМА"
-    global string_success := "ыазыазы нищита с кряком ору"
-    global string_warning_custom_dll := "если у тебя минус винда нам абсолютно похуй потому что ты сам виноват дауна сын"
-    global string_no_dll := "нищ, выбери длл."
-    global string_new_version := "Доступна новая версия."
-    global string_want_download := "Хотите загрузить обновление?"
-    global string_changelog := "Список изменений:"
+    global string_pid0 := "Р°Р»Рµ РЅРёС‰РёР№ РґР°СѓРЅ Р·Р°РїСѓСЃС‚Рё РєСЃ С…СѓРµСЃРѕСЃ"
+    global string_nosteam := "РђР«Р–РђР«РђРҐР«РђР—РҐР«Р— Р‘Р Р•Р™РќРђ 0 Р‘Р•Р— РЎРўРРњРђ"
+    global string_success := "С‹Р°Р·С‹Р°Р·С‹ РЅРёС‰РёС‚Р° СЃ РєСЂСЏРєРѕРј РѕСЂСѓ"
+    global string_warning_custom_dll := "РµСЃР»Рё Сѓ С‚РµР±СЏ РјРёРЅСѓСЃ РІРёРЅРґР° РЅР°Рј Р°Р±СЃРѕР»СЋС‚РЅРѕ РїРѕС…СѓР№ РїРѕС‚РѕРјСѓ С‡С‚Рѕ С‚С‹ СЃР°Рј РІРёРЅРѕРІР°С‚ РґР°СѓРЅР° СЃС‹РЅ"
+    global string_no_dll := "РЅРёС‰, РІС‹Р±РµСЂРё РґР»Р»."
+    global string_new_version := "Р”РѕСЃС‚СѓРїРЅР° РЅРѕРІР°СЏ РІРµСЂСЃРёСЏ."
+    global string_want_download := "РҐРѕС‚РёС‚Рµ Р·Р°РіСЂСѓР·РёС‚СЊ РѕР±РЅРѕРІР»РµРЅРёРµ?"
+    global string_changelog := "РЎРїРёСЃРѕРє РёР·РјРµРЅРµРЅРёР№:"
 }
 if (language = "ukr") 
 {
-    global string_pid0 := "Процес csgo.exe не знайдено. Запустити?"
-    global string_nosteam := "Встанови Steam, москаль."
-    global string_success := "Інжект пройшов успішно"
-    global string_warning_custom_dll := "Ми не будемо тобі допомагати якщо у тебе нахуй система полетить вінда нахуй злетить це не наша вина.'nзрозумів?"
-    global string_no_dll := "Ти не вибрав DLL."
-    global string_new_version := "Доступна нова версія."
-    global string_want_download := "Хочете завантажити оновлення?"
-    global string_changelog := "Список змін:
+    global string_pid0 := "РџСЂРѕС†РµСЃ csgo.exe РЅРµ Р·РЅР°Р№РґРµРЅРѕ. Р—Р°РїСѓСЃС‚РёС‚Рё?"
+    global string_nosteam := "Р’СЃС‚Р°РЅРѕРІРё Steam, РјРѕСЃРєР°Р»СЊ."
+    global string_success := "Р†РЅР¶РµРєС‚ РїСЂРѕР№С€РѕРІ СѓСЃРїС–С€РЅРѕ"
+    global string_warning_custom_dll := "РњРё РЅРµ Р±СѓРґРµРјРѕ С‚РѕР±С– РґРѕРїРѕРјР°РіР°С‚Рё СЏРєС‰Рѕ Сѓ С‚РµР±Рµ РЅР°С…СѓР№ СЃРёСЃС‚РµРјР° РїРѕР»РµС‚РёС‚СЊ РІС–РЅРґР° РЅР°С…СѓР№ Р·Р»РµС‚РёС‚СЊ С†Рµ РЅРµ РЅР°С€Р° РІРёРЅР°.'nР·СЂРѕР·СѓРјС–РІ?"
+    global string_no_dll := "РўРё РЅРµ РІРёР±СЂР°РІ DLL."
+    global string_new_version := "Р”РѕСЃС‚СѓРїРЅР° РЅРѕРІР° РІРµСЂСЃС–СЏ."
+    global string_want_download := "РҐРѕС‡РµС‚Рµ Р·Р°РІР°РЅС‚Р°Р¶РёС‚Рё РѕРЅРѕРІР»РµРЅРЅСЏ?"
+    global string_changelog := "РЎРїРёСЃРѕРє Р·РјС–РЅ:"
 }

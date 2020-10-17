@@ -16,7 +16,7 @@
 ; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 global script = "AYE Loader"
-global version = "v2.0.2"
+global version = "v2.0.3"
 global build_type = "stable"
 
 #NoEnv
@@ -26,7 +26,7 @@ CoordMode, Mouse, Screen
 
 #Include Lib\Neutron.ahk
 #Include Lib\Logging.ahk
-#include Lib\lang_strings.ahk
+#include Lib\lang_strings.ahk 
 #include Lib\OTA.ahk
 
 ConfigOpen()
@@ -103,7 +103,7 @@ if (checkupdates = "true" and build_type = "stable")
 
 neutron := new NeutronWindow()
 neutron.Load("Web\main.html")
-neutron.Show("w400 h600")
+neutron.Show("w640 h680")
 neutron.Gui("+LabelNeutron")
 return
 
@@ -117,7 +117,6 @@ Load:
 
     Inject(neutron, event)
     {
-        Cheat = %event%
         if (build_type != "stable")
         {
             MsgBox % "[DEBUG] Trying to inject " event
@@ -142,10 +141,10 @@ Load:
             IfMsgBox, No
             Return
         }
-        if (PID > 0 and Cheat != "Load DLL") ;govnokod mne poxui
+        if (PID > 0 and event != "Load DLL") ;govnokod mne poxui
         {
             Logging(1,"Initialized dll injection")
-            IniRead, dll, C:\AYE\cheats.ini, cheats, %Cheat%
+            IniRead, dll, C:\AYE\cheats.ini, cheats, %event%
             IfNotExist, C:\AYE\%dll%
             {
                 Logging(1,"Downloading " DLL "...")
@@ -166,7 +165,6 @@ Load:
             TO_LOAD = C:\AYE\%dll%
             Logging(1,"Injecting " DLL "...")
             Inject_Dll(PID,TO_LOAD)
-            MsgBox, 0, %script%, %string_success%
             Logging(1,"Injected " DLL)
             Return
         }
@@ -184,14 +182,13 @@ Load:
                 }
                 else
                 {
-                Logging(1,"Injecting custom dll...")
-                Logging(1,"Running emb...")
-                Run, C:\AYE\emb.exe
-                Logging(1, "done.")
-                Sleep, 1500
-                Inject_Dll(PID,DLL)
-                MsgBox, %string_success%
-                Logging(1,"Injected custom dll")
+                    Logging(1,"Injecting custom dll...")
+                    Logging(1,"Running emb...")
+                    Run, C:\AYE\emb.exe
+                    Logging(1, "done.")
+                    Sleep, 1500
+                    Inject_Dll(PID,DLL)
+                    Logging(1,"Injected custom dll")
                 }
             }
         }

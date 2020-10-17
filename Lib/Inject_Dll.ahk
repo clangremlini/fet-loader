@@ -5,6 +5,9 @@
 ;	Requires AutoHotKey ANSI
 ;=================================================================================
 
+#Include Logging.ahk
+#include lang_strings.ahk
+
 Inject_CleanUp(pMsg, pHandle, pLibrary)
 {
 	If pMsg
@@ -51,7 +54,9 @@ Inject_Dll(pID, dllPath)
     DllCall("WaitForSingleObject", "Ptr", hThread, "UInt", WAIT_FAILED)
     
 	If !DllCall("GetExitCodeThread", "Ptr", hThread, "UIntP", lpExitCode)
-		Inject_CleanUp("Couldn't create thread in PID: " pID, pHandle, pLibrary)
+		Return Inject_CleanUp("Couldn't create thread in PID: " pID, pHandle, pLibrary)
 
     DllCall("CloseHandle", "UInt", hThread)
+	MsgBox, 0, %script%, %string_success%
+	Return
 }
