@@ -1,5 +1,5 @@
 # AYE Loader 
-[![AHK](https://img.shields.io/badge/language-AHK-green.svg?style=flat-square)](https://wikipedia.org/wiki/AutoHotkey) [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg?style=flat-square)](https://en.wikipedia.org/wiki/Microsoft_Windows) [![Master](https://img.shields.io/badge/master-2.0.3-green.svg?style=flat-square)](https://github.com/clangremlini/aye-ahk-loader) [![hackeri](https://img.shields.io/github/downloads/clangremlini/aye-ahk-loader/total.svg?style=flat-square)](https://github.com/clangremlini/aye-ahk-loader/releases)
+[![AHK](https://img.shields.io/badge/language-AHK-green.svg?style=flat-square)](https://wikipedia.org/wiki/AutoHotkey) [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg?style=flat-square)](https://en.wikipedia.org/wiki/Microsoft_Windows) [![Master](https://img.shields.io/badge/master-2.1-green.svg?style=flat-square)](https://github.com/clangremlini/aye-ahk-loader) [![hackeri](https://img.shields.io/github/downloads/clangremlini/aye-ahk-loader/total.svg?style=flat-square)](https://github.com/clangremlini/aye-ahk-loader/releases)
 
 A simple loader written in AHK.
 
@@ -28,5 +28,6 @@ A simple loader written in AHK.
 - Bootstrap: [Bootstrap authors](https://github.com/twbs)
 - Popper: Federico Zivolo
 - jQuery: [JS Foundation](https://openjsf.org/)
+- Custom repo: [zrn1x](https://github.com/oliyase)
 
 ## Powered by [@codishinc](https://github.com/clangremlini)
