@@ -16,8 +16,8 @@
 ; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 global script = "AYE Loader"
-global version = "v2.1"
-global build_type = "stable"
+global version = "v2.1.1"
+global build_type = "release"
 
 #NoEnv
 #NoTrayIcon
@@ -94,7 +94,7 @@ IniRead, cheatrepo, C:\AYE\config.ini, settings, cheatrepo
 StringLower, custominject, custominject
 Logging(1, "done.")
 
-if (checkupdates = "true" and build_type = "stable")
+if (checkupdates = "true" and build_type = "release")
 {
     Logging(1,"Checking updates...")
     OTA.checkupd()
@@ -124,7 +124,7 @@ Load:
 
     Inject(neutron, event)
     {
-        if (build_type != "stable")
+        if (build_type != "release")
         {
             MsgBox % "[DEBUG] Trying to inject " event
         }
@@ -152,9 +152,11 @@ Load:
         {
             Logging(1,"Initialized dll injection")
             IniRead, dll, C:\AYE\cheats.ini, cheats, %event%
+            IniRead, cheatrepo, C:\AYE\config.ini, settings, cheatrepo
+
             IfNotExist, C:\AYE\%dll%
             {
-                Logging(1,"Downloading " DLL "...")
+                Logging(1,"Downloading " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " ...")
                 UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, C:\AYE\%dll%
                 Sleep 2500
                 Logging(1, "done.")
