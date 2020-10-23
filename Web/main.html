@@ -39,9 +39,10 @@
   <div id="cheatslist">
     <div class="btn-group-vertical btn-group-toggle ml-3 mt-3" data-toggle="buttons" id="cheats">
       <script>
-        function getText() {
+        function getText() {    
           var xmlHttp = new XMLHttpRequest();
-          xmlHttp.open("GET", "https://raw.githubusercontent.com/clangremlini/ayeloader-dll-repo/master/cheats.ini", false); // false for synchronous request
+          var linktomainfile = "https://github.com/clangremlini/ayeloader-dll-repo/raw/master/cheats.ini";
+          xmlHttp.open("GET", linktomainfile, false);
           xmlHttp.send(null);
           return xmlHttp.responseText;
         }

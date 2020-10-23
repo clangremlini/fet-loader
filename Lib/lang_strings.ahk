@@ -16,6 +16,7 @@ IfNotExist, C:\AYE\config.ini
 	Logging(1, "Creating config file...")
 	IniWrite, false, C:\AYE\config.ini, settings, custominject
 	IniWrite, true, C:\AYE\config.ini, settings, checkupdates
+	IniWrite, clangremlini/ayeloader-dll-repo, C:\AYE\config.ini, settings, cheatrepo
     IniWrite, false, C:\AYE\config.ini, settings, oldgui
 	Logging(1, "done.")
 }
@@ -23,6 +24,7 @@ IfNotExist, C:\AYE\config.ini
 
 checkConfigValue("C:\AYE\config.ini","settings","oldgui","false")
 checkConfigValue("C:\AYE\config.ini","settings","checkupdates","true")
+checkConfigValue("C:\AYE\config.ini","settings","cheatrepo","clangremlini/ayeloader-dll-repo")
 
 checkConfigValue(file,section,key,value)
 {   
