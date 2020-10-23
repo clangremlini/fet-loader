@@ -16,7 +16,7 @@
 ; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 global script = "AYE Loader"
-global version = "v2.0.3"
+global version = "v2.1"
 global build_type = "stable"
 
 #NoEnv
@@ -28,6 +28,7 @@ CoordMode, Mouse, Screen
 #Include Lib\Logging.ahk
 #include Lib\lang_strings.ahk 
 #include Lib\OTA.ahk
+#SingleInstance Off
 
 ConfigOpen()
 {
@@ -51,17 +52,13 @@ Logging(1,"Starting "script " " version "...")
 
 RunAsAdmin()
 
+IniRead, cheatrepo, C:\AYE\config.ini, settings, cheatrepo
+
 Logging(1, "Creating folders and downloading files...")
 IfNotExist, C:\AYE\cheats.ini
 {	
     Logging(1, "Getting cheat list...")
-    UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/cheats.ini, C:\AYE\cheats.ini
-    Logging(1, "done.")
-}
-IfNotExist, C:\AYE\vac-bypass.exe
-{
-    Logging(1,"Downloading vac-bypass.exe...")
-    UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
+    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/cheats.ini, C:\AYE\cheats.ini
     Logging(1, "done.")
 }
 IfNotExist, C:\AYE\vac-bypass.exe
@@ -86,12 +83,14 @@ FileInstall, Web\js\bootstrap-4.4.1.js, Web\js\bootstrap-4.4.1.js, 1
 FileInstall, Web\css\bootstrap-4.4.1.css, Web\css\bootstrap-4.4.1.css, 1
 FileInstall, Web\js\jquery-3.4.1.min.js, Web\js\jquery-3.4.1.min.js, 1
 FileInstall, Web\js\popper.min.js, Web\js\popper.min.js, 1
-FileInstall, Web\main.html, Web\main.html, 1
+FileInstall, Web\main.html, Web\main.bak, 1
 FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
 
 
 IniRead, custominject, C:\AYE\config.ini, settings, custominject
 IniRead, checkupdates, C:\AYE\config.ini, settings, checkupdates
+IniRead, cheatrepo, C:\AYE\config.ini, settings, cheatrepo
+
 StringLower, custominject, custominject
 Logging(1, "done.")
 
@@ -100,15 +99,23 @@ if (checkupdates = "true" and build_type = "stable")
     Logging(1,"Checking updates...")
     OTA.checkupd()
 }
-
+FileRead, gui, Web\main.bak
+StringReplace, newgui, gui, clangremlini/ayeloader-dll-repo, %cheatrepo%, All
+FileAppend, %newgui%, Web\main.html 
 neutron := new NeutronWindow()
 neutron.Load("Web\main.html")
-neutron.Show("w640 h680")
+Loop, Read, C:\AYE\cheats.ini
+{
+   total_lines = %A_Index%
+}
+guiheight := (total_lines - 3) * 40 + 45
+neutron.Show("w320 h" guiheight )
 neutron.Gui("+LabelNeutron")
 return
 
 NeutronClose:
     FileRemoveDir, temp, 1
+    FileDelete, Web\main.html
 ExitApp
 return
 
@@ -148,14 +155,14 @@ Load:
             IfNotExist, C:\AYE\%dll%
             {
                 Logging(1,"Downloading " DLL "...")
-                UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/%dll%, C:\AYE\%dll%
+                UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, C:\AYE\%dll%
                 Sleep 2500
                 Logging(1, "done.")
             }
             IfNotExist, C:\AYE\emb.exe
             {
                 Logging(1,"Downloading emb.exe...")
-                UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/emb.exe, C:\AYE\emb.exe
+                UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/emb.exe, C:\AYE\emb.exe
                 Logging(1, "done.")
             }
             Logging(1,"Running emb...")
@@ -199,7 +206,7 @@ Bypass(neutron)
     IfNotExist, C:\AYE\vac-bypass.exe
     {
         Logging(1,"Downloading vac-bypass.exe...")
-        UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
+        UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
         Logging(1, "done.")
     }
     Logging(1, "Running bypass...")
