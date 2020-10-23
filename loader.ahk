@@ -108,7 +108,7 @@ Loop, Read, C:\AYE\cheats.ini
 {
    total_lines = %A_Index%
 }
-guiheight := (total_lines - 3) * 40 + 45
+guiheight := (total_lines - 2) * 40 - 1 + 40
 neutron.Show("w320 h" guiheight )
 neutron.Gui("+LabelNeutron")
 return
