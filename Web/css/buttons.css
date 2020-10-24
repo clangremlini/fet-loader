@@ -54,6 +54,32 @@
     box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
 }
 
+.btn-theme
+{
+    position: absolute;
+    bottom: 195px;
+    right: 15px;
+    width: 100px;
+    height: 60px;
+    color: #8b6ac9;
+    /* background-color: #17a2b8; */
+    border-color: #8251df;
+}
+.btn-theme:hover
+{
+    color: #fff;
+    background-color: #be94e0;
+    border-color: #be94e0;
+}
+
+.btn-theme:focus, .btn-bypass.focus
+{
+    color: #fff;
+    background-color: #552aa5;
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.2rem #be94e0;
+}
+
 
 .btn-inject:disabled{
     background-color: transparent;
@@ -83,15 +109,15 @@ body {
 }
 
 .btn-outline-primary{
-    outline-color:#A8BEFF;
-    border-color:#A8BEFF;
+    outline-color:#6f42c1;
+    border-color:#6f42c1;
     box-shadow: none!important;
-    color: #A8C7FF;
+    color: #FFFFFF;
 }
 
 .btn-outline-primary:hover, .btn-outline-primary:active{
-    background-color: #A8BEFF;
-    border-color:#A8BEFF;
+    background-color: #be94e0;
+    border-color: #be94e0;
     color: white;
     box-shadow: none!important;
 }

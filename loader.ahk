@@ -21,11 +21,11 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     2.1.1
-;@Ahk2Exe-SetVersion            2.1.1
+;@Ahk2Exe-SetProductVersion     2.2.8.1.3.3.7
+;@Ahk2Exe-SetVersion            2.2.8.1.3.3.7
 
 global script = "AYE Loader"
-global version = "v2.1.1"
+global version = "v2.2.8.1.3.3.7"
 global build_type = "release"
 
 #NoEnv
@@ -57,6 +57,10 @@ RunAsAdmin()
 FileDelete, C:\AYE\cheats.ini
 FileDelete, C:\AYE\*.dll
 
+RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
+RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
+winbuild := DllCall("GetVersion") >> 16 & 0xFFFF
+
 Logging(1,"Starting "script " " version "...")
 
 RunAsAdmin()
@@ -82,8 +86,30 @@ IfNotExist, C:\AYE\emb.exe
     UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/emb.exe, C:\AYE\emb.exe
     Logging(1, "done.")
 }
+Logging(1,"done.")
 
+Logging(1, "")
+Logging(1,"---ENV---")
+Logging(1,"OS: "winedition)
+if (A_Is64bitOS = true) {
+    Logging(1,"OS Arch: x64")
+} else {
+    Logging(1,"OS Arch: x86")
+}
+Logging(1,"Version: "winver)
+Logging(1,"Build No.: "winbuild)
+Logging(1,"Loader Location: "A_ScriptFullPath)
+Logging(1,"Cheat Repo: "cheatrepo)
+if (A_IsUnicode = true) {
+    Logging(1,"Compiler Type: UTF-8")
+} else {
+    Logging(1,"Compiler Type: ANSI")
+}
+Logging(1,"Compiler Version: "A_AhkVersion)
+Logging(1,"---ENV---")
+Logging(1, "")
 
+Logging(1, "Unpacking GUI...")
 SetWorkingDir, C:\AYE
 FileCreateDir, Web
 FileCreateDir, Web\js
@@ -224,4 +250,9 @@ Bypass(neutron)
     Run, C:\AYE\vac-bypass.exe
     Logging(1, "done.")
     return
+}
+
+OpenSource(neutron) ; костыли по другому не работают
+{
+    Run, https://github.com/clangremlini/aye-ahk-loader
 }
