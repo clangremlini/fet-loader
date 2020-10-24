@@ -21,11 +21,15 @@
   <!-- Title Bar -->
   <header>
     <div class="d-flex align-items-stretch bg-dark text-white">
-      <span class="flex-grow-1 px-2 py-1" onmousedown="neutron.DragTitleBar()">AYE Loader</span>
-      <span class="title-btn title-btn-close mr-2 mt-1" onclick="neutron.Close()">✖</span>
+      <span class="flex-grow-1 px-2 py-1" oncontextmenu="ahk.OpenSource()" onmousedown="neutron.DragTitleBar()">AYE Loader</span>
+      <span class="title-btn title-btn-close mr-2 mt-1" style="cursor: pointer;" onclick="neutron.Close()">✖</span>
     </div>
   </header>
   <!-- End Title Bar -->
+
+  <div id="switch-theme">
+    <button type="button" class="btn btn-theme" value="change_theme" id="theme_button" onclick="toggleTheme()">Switch Theme</button>
+  </div>
 
   <div id="inject">
     <button type="button" class="btn btn-inject" value="inject" id="inject_button"
@@ -110,6 +114,24 @@
       document.getElementById("bypass_button").disabled = true;
       document.getElementById("bypass_button").textContent = "Bypass enabled!";
       ahk.Bypass();
+    }
+  </script>
+  <script>
+    // function to set a given theme/color-scheme
+    function setTheme(color, color2) {
+        $("body").css("background", color)
+        $(".btn-outline-primary").css("color", color2)
+    }
+    // function to toggle between light and dark theme
+    function toggleTheme() {
+        theme = document.body.style.getPropertyValue("background")
+        theme_dark = "#454851"
+        theme_light = "#dbdbdb"
+        if (theme == "rgb(219, 219, 219)") {
+            setTheme(theme_dark, "#FFFFFF")
+        } else {
+            setTheme(theme_light, "#000000")
+        }
     }
   </script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->

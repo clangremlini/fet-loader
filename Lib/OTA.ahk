@@ -28,8 +28,8 @@ class OTA
     download(govnokod_po_drugomy_ne_rabotaet)
     {
         download_url := "https://github.com/clangremlini/aye-ahk-loader/releases/download/" govnokod_po_drugomy_ne_rabotaet "/loader.exe"
-        UrlDownloadToFile, %download_url%, loader-%govnokod_po_drugomy_ne_rabotaet%.exe
-        Run, loader-%govnokod_po_drugomy_ne_rabotaet%.exe
+        UrlDownloadToFile, %download_url%, %A_ScriptDir%\loader-%govnokod_po_drugomy_ne_rabotaet%.exe
+        Run, %A_ScriptDir%\loader-%govnokod_po_drugomy_ne_rabotaet%.exe
         ExitApp
     }
 }
