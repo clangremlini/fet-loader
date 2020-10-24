@@ -21,12 +21,12 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     2.2.8.1.3.3.7
-;@Ahk2Exe-SetVersion            2.2.8.1.3.3.7
+;@Ahk2Exe-SetProductVersion     2.1.2
+;@Ahk2Exe-SetVersion            2.1.2
 
 global script = "AYE Loader"
-global version = "v2.2.8.1.3.3.7"
-global build_type = "release"
+global version = "v2.1.2"
+global build_type = "release" ; release or alpha or beta
 
 #NoEnv
 #NoTrayIcon
@@ -39,7 +39,7 @@ CoordMode, Mouse, Screen
 #include Lib\OTA.ahk
 #SingleInstance Off
 
-ConfigOpen()
+ConfigOpen() ;for old gui
 {
     run, C:\AYE\config.ini
 }
@@ -52,6 +52,30 @@ RunAsAdmin()
         Run *RunAs "%A_ScriptFullPath%" ,, UseErrorLevel
         ExitApp
     }
+}
+ShowAbout() ;for old gui
+{
+	Logging(1,"Building About GUI...")
+	IfNotExist, %A_TEMP%\cheats.ini
+	{
+		cheatsCount = "Не удалось получить список читов"
+	} else {
+		IniRead, cheatlist, %A_TEMP%\cheats.ini, cheatlist, cheatlist
+		StringSplit, cheatss, cheatlist, |
+		cheatsCount := cheatss0
+	}
+	Gui, About:New
+	Gui, About:Font, s9
+	Gui, About:Show, w315 h155, %script% %version% | About
+	Gui, About:Add, Text, x112 y9 w100 h20 +Center, %script%
+	Gui, About:Add, Text, x59 y29 w200 h30 +Center, %string_desc%
+	Gui, About:Add, Link, x79 y69 w200 h20 +Center, %string_devs% <a href="https://m4x3r.xyz/">%string_dev1%</a> and <a href="https://gl1c1n.life/">%string_dev2%</a>
+	Gui, About:Add, Text, x59 y89 w200 h20 +Center, %string_count% %cheatsCount%
+	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/clangremlini/aye-ahk-loader">Github</a>
+	Gui, About:Add, Link, x140 y115 w100 h20 +Center, <a href="https://t.me/ayeloader">Telegram</a>
+	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://qiwi.com/n/m4x3r1337">Donate</a>
+	Logging(1,"done.")
+	return  
 }
 
 FileDelete, C:\AYE\cheats.ini
@@ -122,11 +146,11 @@ FileInstall, Web\main.html, Web\main.bak, 1
 FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
 
 
-IniRead, custominject, C:\AYE\config.ini, settings, custominject
+IniRead, oldgui, C:\AYE\config.ini, settings, oldgui
+IniRead, cheatlist, C:\AYE\cheats.ini, cheatlist, cheatlist
 IniRead, checkupdates, C:\AYE\config.ini, settings, checkupdates
 IniRead, cheatrepo, C:\AYE\config.ini, settings, cheatrepo
 
-StringLower, custominject, custominject
 Logging(1, "done.")
 
 if (checkupdates = "true" and build_type = "release")
@@ -134,20 +158,38 @@ if (checkupdates = "true" and build_type = "release")
     Logging(1,"Checking updates...")
     OTA.checkupd()
 }
-FileRead, gui, Web\main.bak
-StringReplace, newgui, gui, clangremlini/ayeloader-dll-repo, %cheatrepo%, All
-FileAppend, %newgui%, Web\main.html 
-neutron := new NeutronWindow()
-neutron.Load("Web\main.html")
-Loop, Read, C:\AYE\cheats.ini
+if (oldgui = "true")
 {
-   total_lines = %A_Index%
+	Gui, Font, s9
+	Gui, Show, w323 h165, %script% %version%
+	Gui, Add, ListBox, x12 y9 w110 h140 vCheat Choose1, %cheatlist%
+	Gui, Add, Button, x172 y9 w90 h30 +Center gLoad, %string_load%
+	Gui, Add, Button, x172 y69 w90 h30 +Center gBypass, %string_bypass%
+	Gui, Add, Button, x132 y119 w65 h30 +Center gConfigOpen, %string_config%
+	Gui, Add, Button, x242 y119 w65 h30 +Center gShowAbout, %string_about%
+	Logging(1,"done.")
+	return
 }
-guiheight := (total_lines - 2) * 40 - 1 + 40
-neutron.Show("w320 h" guiheight )
-neutron.Gui("+LabelNeutron")
-return
+else
+{
+    FileRead, gui, Web\main.bak
+    StringReplace, newgui, gui, clangremlini/ayeloader-dll-repo, %cheatrepo%, All
+    FileAppend, %newgui%, Web\main.html 
+    neutron := new NeutronWindow()
+    neutron.Load("Web\main.html")
+    Loop, Read, C:\AYE\cheats.ini
+    {
+    total_lines = %A_Index%
+    }
+    guiheight := (total_lines - 2) * 40 - 1 + 40
+    neutron.Show("w320 h" guiheight )
+    neutron.Gui("+LabelNeutron")
+    return
+}
 
+GuiClose:
+    ExitApp
+    return
 NeutronClose:
     FileRemoveDir, temp, 1
     FileDelete, Web\main.html
@@ -212,7 +254,7 @@ Load:
             Logging(1,"Injected " DLL)
             Return
         }
-        if (PID > 0 and Cheat = "Load DLL")
+        if (PID > 0 and event = "Load DLL")
         {
             MsgBox, 4, %script%, %string_warning_custom_dll%
             IfMsgBox, Yes

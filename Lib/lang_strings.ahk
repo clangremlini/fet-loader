@@ -57,6 +57,10 @@ if (language = "ERROR")
 IniRead, language, C:\AYE\config.ini, settings, language
 if (language = "en") 
 {
+    global string_load := "Load"
+    global string_bypass := "Enable VAC bypass"
+    global string_config := "Config"
+    global string_about := "About"
     global string_pid0 := "No csgo.exe process found. Run it?"
     global string_nosteam := "Install steam, retard."
     global string_success := "Successful injection!"
@@ -69,6 +73,10 @@ if (language = "en")
 }
 if (language = "ru") 
 {
+    global string_load := "Заинжектить"
+    global string_bypass := "Включить VAC bypass"
+    global string_config := "Настройки"
+    global string_about := "Инфо"
     global string_pid0 := "Процесс csgo.exe не найден. Запустить?"
     global string_nosteam := "Установи Steam, клоун."
     global string_success := "Инжект прошел успешно"
@@ -80,6 +88,10 @@ if (language = "ru")
 }
 if (language = "eblo") 
 {
+    global string_load := "Соснуть хуй"
+    global string_bypass := "Насрать VAC bypass"
+    global string_config := "Хуенфиг"
+    global string_about := "Докс"
     global string_pid0 := "ААХАХАХАХ ДАУН КСГО ЗАПУСТИ ЛМАО"
     global string_nosteam := "Установи Steam, клоун."
     global string_success := "твоя мама выебана успешна"
@@ -91,6 +103,10 @@ if (language = "eblo")
 }
 if (language = "hvh") 
 {
+    global string_load := "Заижектить фри хуйню"
+    global string_bypass := "Получить вак"
+    global string_config := "Сетинг"
+    global string_about := "уиды овнеров"
     global string_pid0 := "але нищий даун запусти кс хуесос"
     global string_nosteam := "АЫЖАЫАХЫАЗХЫЗ БРЕЙНА 0 БЕЗ СТИМА"
     global string_success := "ыазыазы нищита с кряком ору"
@@ -102,6 +118,10 @@ if (language = "hvh")
 }
 if (language = "ukr") 
 {
+    global string_load := "З'їсти сало"
+    global string_bypass := "Включити VAC bypass"
+    global string_config := "Настройка"
+    global string_about := "Інформація"
     global string_pid0 := "Процес csgo.exe не знайдено. Запустити?"
     global string_nosteam := "Встанови Steam, москаль."
     global string_success := "Інжект пройшов успішно"
