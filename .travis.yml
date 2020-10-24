@@ -2,6 +2,7 @@ os: windows
 language: shell
 install:
   - powershell -Command Invoke-WebRequest https://gist.githubusercontent.com/rfoxxxy/7597ab96d3dc6342069922f7c18fb2cf/raw/128e94c5c815be9715a0ac471a9610af9d7c7bc6/Convert-Encoding.ps1 -OutFile sex.ps1
+  - powershell -Command Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
   - powershell -File ./sex.ps1 .
   - powershell -File ./sex.ps1 ./Lib
   - git submodule update --init --recursive
