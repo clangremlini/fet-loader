@@ -1,6 +1,6 @@
 os: windows
 language: shell
-install:
+build:
   - powershell -Command Invoke-WebRequest https://gist.githubusercontent.com/rfoxxxy/7597ab96d3dc6342069922f7c18fb2cf/raw/128e94c5c815be9715a0ac471a9610af9d7c7bc6/Convert-Encoding.ps1 -OutFile sex.ps1
   - powershell -Command Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
   - powershell -Command Unblock-File -Path ./sex.ps1
@@ -8,6 +8,5 @@ install:
   - powershell -File ./sex.ps1 ./Lib
   - git submodule update --init --recursive
   - choco install autohotkey.install --params='/DefaultVer:A32'
-build:
   - ./COMPILE.bat
     
