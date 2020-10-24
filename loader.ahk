@@ -1,4 +1,5 @@
 ; AYE Loader
+; A simple cheats loader written in AHK.
 ; Copyright (C) 2020 CodISH inc. (headed by m4x3r)
 ; https://github.com/clangremlini/aye-ahk-loader
 ; 
@@ -14,6 +15,14 @@
 ;
 ; You should have received a copy of the GNU General Public License
 ; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;
+;
+;@Ahk2Exe-SetName               AYE Loader
+;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
+;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
+;@Ahk2Exe-SetCompanyName        CodISH Inc.
+;@Ahk2Exe-SetProductVersion     2.1.1
+;@Ahk2Exe-SetVersion            2.1.1
 
 global script = "AYE Loader"
 global version = "v2.1.1"
