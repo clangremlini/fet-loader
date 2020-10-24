@@ -21,11 +21,11 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     2.1.2
-;@Ahk2Exe-SetVersion            2.1.2
+;@Ahk2Exe-SetProductVersion     2.1.2.1
+;@Ahk2Exe-SetVersion            2.1.2.1
 
 global script = "AYE Loader"
-global version = "v2.1.2"
+global version = "v2.1.2.1"
 global build_type = "release" ; release or alpha or beta
 
 #NoEnv
@@ -38,6 +38,9 @@ CoordMode, Mouse, Screen
 #include Lib\lang_strings.ahk 
 #include Lib\OTA.ahk
 #SingleInstance Off
+
+FileDelete, C:\AYE\cheats.ini
+FileDelete, C:\AYE\*.dll
 
 ConfigOpen() ;for old gui
 {
@@ -78,8 +81,7 @@ ShowAbout() ;for old gui
 	return  
 }
 
-FileDelete, C:\AYE\cheats.ini
-FileDelete, C:\AYE\*.dll
+
 
 RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
 RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
@@ -231,12 +233,15 @@ Load:
             IniRead, dll, C:\AYE\cheats.ini, cheats, %event%
             IniRead, cheatrepo, C:\AYE\config.ini, settings, cheatrepo
 
-            IfNotExist, C:\AYE\%dll%
+            Loop 2
             {
-                Logging(1,"Downloading " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " ...")
-                UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, C:\AYE\%dll%
-                Sleep 2500
-                Logging(1, "done.")
+                IfNotExist, C:\AYE\%dll%
+                {
+                    Logging(1,"Downloading " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " to C:\AYE\"dll)
+                    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, C:\AYE\%dll%
+                    Sleep 2500
+                    Logging(1, "done.")
+                }
             }
             IfNotExist, C:\AYE\emb.exe
             {
@@ -249,9 +254,9 @@ Load:
             Logging(1, "done.")
             Sleep, 1500
             TO_LOAD = C:\AYE\%dll%
-            Logging(1,"Injecting " DLL "...")
+            Logging(1,"Injecting " TO_LOAD "...")
             Inject_Dll(PID,TO_LOAD)
-            Logging(1,"Injected " DLL)
+            Logging(1,"Injected " TO_LOAD)
             Return
         }
         if (PID > 0 and event = "Load DLL")
