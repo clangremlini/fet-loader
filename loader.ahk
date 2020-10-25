@@ -21,12 +21,15 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     2.1.2.1
-;@Ahk2Exe-SetVersion            2.1.2.1
+;@Ahk2Exe-SetProductVersion     2.1.3
+;@Ahk2Exe-SetVersion            2.1.3
 
 global script = "AYE Loader"
-global version = "v2.1.2.1"
+global version = "v2.1.3"
 global build_type = "release" ; release or alpha or beta
+
+
+global times = 3 ; piece of shit, don't touch
 
 #NoEnv
 #NoTrayIcon
@@ -233,14 +236,23 @@ Load:
             IniRead, dll, C:\AYE\cheats.ini, cheats, %event%
             IniRead, cheatrepo, C:\AYE\config.ini, settings, cheatrepo
 
-            Loop 2
-            {
+            Loop 3
+            {   
                 IfNotExist, C:\AYE\%dll%
                 {
-                    Logging(1,"Downloading " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " to C:\AYE\"dll)
+                    Logging(1,"Trying download " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " to C:\AYE\"dll)
                     UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, C:\AYE\%dll%
-                    Sleep 2500
-                    Logging(1, "done.")
+                    if (ErrorLevel = "0")
+                    {
+                        Logging(1, "done.")
+                    }
+                    else
+                    {
+                        timesretrying = times - 1   
+                        Logging(0, "something went wrong. retrying (" timesretrying " times")
+
+                    }
+                    
                 }
             }
             IfNotExist, C:\AYE\emb.exe
