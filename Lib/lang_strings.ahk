@@ -2,29 +2,29 @@
 
 #Include Lib\Logging.ahk
 
-IfNotExist, C:\AYE
+IfNotExist, C:\FET Loader
 {	
 	Logging(1, "Creating folder...")
-	FileCreateDir, C:\AYE
+	FileCreateDir, C:\FET Loader
 }
-IfNotExist, C:\AYE\Web
+IfNotExist, C:\FET Loader\Web
 {	
-	FileCreateDir, C:\AYE\Web
+	FileCreateDir, C:\FET Loader\Web
 }
-IfNotExist, C:\AYE\config.ini
+IfNotExist, C:\FET Loader\config.ini
 {	
 	Logging(1, "Creating config file...")
-	IniWrite, false, C:\AYE\config.ini, settings, custominject
-	IniWrite, true, C:\AYE\config.ini, settings, checkupdates
-	IniWrite, clangremlini/ayeloader-dll-repo, C:\AYE\config.ini, settings, cheatrepo
-    IniWrite, false, C:\AYE\config.ini, settings, oldgui
+	IniWrite, false, C:\FET Loader\config.ini, settings, custominject
+	IniWrite, true, C:\FET Loader\config.ini, settings, checkupdates
+	IniWrite, clangremlini/fetloader-dll-repo, C:\FET Loader\config.ini, settings, cheatrepo
+    IniWrite, false, C:\FET Loader\config.ini, settings, oldgui
 	Logging(1, "done.")
 }
 
 
-checkConfigValue("C:\AYE\config.ini","settings","oldgui","false")
-checkConfigValue("C:\AYE\config.ini","settings","checkupdates","true")
-checkConfigValue("C:\AYE\config.ini","settings","cheatrepo","clangremlini/ayeloader-dll-repo")
+checkConfigValue("C:\FET Loader\config.ini","settings","oldgui","false")
+checkConfigValue("C:\FET Loader\config.ini","settings","checkupdates","true")
+checkConfigValue("C:\FET Loader\config.ini","settings","cheatrepo","clangremlini/fetloader-dll-repo")
 
 checkConfigValue(file,section,key,value)
 {   
@@ -36,16 +36,16 @@ checkConfigValue(file,section,key,value)
     }
 }
 
-IniRead, language, C:\AYE\config.ini, settings, language
+IniRead, language, C:\FET Loader\config.ini, settings, language
 
 setLang()
 {
     if (A_Language = "0809" or A_Language = "0409") ; en_UK and en_US
-        IniWrite, en, C:\AYE\config.ini, settings, language
+        IniWrite, en, C:\FET Loader\config.ini, settings, language
     if (A_Language = "0419") ; ru_RU
-	    IniWrite, ru, C:\AYE\config.ini, settings, language
+	    IniWrite, ru, C:\FET Loader\config.ini, settings, language
     if (A_Language = "0422") ; ukr
-        IniWrite, ukr, C:\AYE\config.ini, settings, language
+        IniWrite, ukr, C:\FET Loader\config.ini, settings, language
 }
 
 if (language = "ERROR")
@@ -54,7 +54,7 @@ if (language = "ERROR")
 }
 
 
-IniRead, language, C:\AYE\config.ini, settings, language
+IniRead, language, C:\FET Loader\config.ini, settings, language
 if (language = "en") 
 {
     global string_load := "Load"

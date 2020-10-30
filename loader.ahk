@@ -1,7 +1,7 @@
-; AYE Loader
+; FET Loader
 ; A simple cheats loader written in AHK.
 ; Copyright (C) 2020 CodISH inc. (headed by m4x3r)
-; https://github.com/clangremlini/aye-ahk-loader
+; https://github.com/clangremlini/fet-ahk-loader
 ; 
 ; This program is free software: you can redistribute it and/or modify
 ; it under the terms of the GNU General Public License as published by
@@ -17,15 +17,15 @@
 ; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ;
 ;
-;@Ahk2Exe-SetName               AYE Loader
+;@Ahk2Exe-SetName               FET Loader
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     2.1.3
-;@Ahk2Exe-SetVersion            2.1.3
+;@Ahk2Exe-SetProductVersion     2.2
+;@Ahk2Exe-SetVersion            2.2
 
-global script = "AYE Loader"
-global version = "v2.1.3"
+global script = "FET Loader"
+global version = "v2.2"
 global build_type = "release" ; release or alpha or beta
 
 
@@ -42,12 +42,12 @@ CoordMode, Mouse, Screen
 #include Lib\OTA.ahk
 #SingleInstance Off
 
-FileDelete, C:\AYE\cheats.ini
-FileDelete, C:\AYE\*.dll
+FileDelete, C:\FET Loader\cheats.ini
+FileDelete, C:\FET Loader\*.dll
 
 ConfigOpen() ;for old gui
 {
-    run, C:\AYE\config.ini
+    run, C:\FET Loader\config.ini
 }
 
 RunAsAdmin()
@@ -77,8 +77,8 @@ ShowAbout() ;for old gui
 	Gui, About:Add, Text, x59 y29 w200 h30 +Center, %string_desc%
 	Gui, About:Add, Link, x79 y69 w200 h20 +Center, %string_devs% <a href="https://m4x3r.xyz/">%string_dev1%</a> and <a href="https://gl1c1n.life/">%string_dev2%</a>
 	Gui, About:Add, Text, x59 y89 w200 h20 +Center, %string_count% %cheatsCount%
-	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/clangremlini/aye-ahk-loader">Github</a>
-	Gui, About:Add, Link, x140 y115 w100 h20 +Center, <a href="https://t.me/ayeloader">Telegram</a>
+	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/clangremlini/fet-loader">Github</a>
+	Gui, About:Add, Link, x140 y115 w100 h20 +Center, <a href="https://t.me/fetloader">Telegram</a>
 	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://qiwi.com/n/m4x3r1337">Donate</a>
 	Logging(1,"done.")
 	return  
@@ -94,25 +94,25 @@ Logging(1,"Starting "script " " version "...")
 
 RunAsAdmin()
 
-IniRead, cheatrepo, C:\AYE\config.ini, settings, cheatrepo
+IniRead, cheatrepo, C:\FET Loader\config.ini, settings, cheatrepo
 
 Logging(1, "Creating folders and downloading files...")
-IfNotExist, C:\AYE\cheats.ini
+IfNotExist, C:\FET Loader\cheats.ini
 {	
     Logging(1, "Getting cheat list...")
-    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/cheats.ini, C:\AYE\cheats.ini
+    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/cheats.ini, C:\FET Loader\cheats.ini
     Logging(1, "done.")
 }
-IfNotExist, C:\AYE\vac-bypass.exe
+IfNotExist, C:\FET Loader\vac-bypass.exe
 {
     Logging(1,"Downloading vac-bypass.exe...")
-    UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
+    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/vac-bypass.exe, C:\FET Loader\vac-bypass.exe
     Logging(1, "done.")
 }
-IfNotExist, C:\AYE\emb.exe
+IfNotExist, C:\FET Loader\emb.exe
 {
     Logging(1,"Downloading emb.exe...")
-    UrlDownloadToFile, https://github.com/clangremlini/ayeloader-dll-repo/raw/master/emb.exe, C:\AYE\emb.exe
+    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/emb.exe, C:\FET Loader\emb.exe
     Logging(1, "done.")
 }
 Logging(1,"done.")
@@ -139,7 +139,7 @@ Logging(1,"---ENV---")
 Logging(1, "")
 
 Logging(1, "Unpacking GUI...")
-SetWorkingDir, C:\AYE
+SetWorkingDir, C:\FET Loader
 FileCreateDir, Web
 FileCreateDir, Web\js
 FileCreateDir, Web\css
@@ -151,10 +151,10 @@ FileInstall, Web\main.html, Web\main.bak, 1
 FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
 
 
-IniRead, oldgui, C:\AYE\config.ini, settings, oldgui
-IniRead, cheatlist, C:\AYE\cheats.ini, cheatlist, cheatlist
-IniRead, checkupdates, C:\AYE\config.ini, settings, checkupdates
-IniRead, cheatrepo, C:\AYE\config.ini, settings, cheatrepo
+IniRead, oldgui, C:\FET Loader\config.ini, settings, oldgui
+IniRead, cheatlist, C:\FET Loader\cheats.ini, cheatlist, cheatlist
+IniRead, checkupdates, C:\FET Loader\config.ini, settings, checkupdates
+IniRead, cheatrepo, C:\FET Loader\config.ini, settings, cheatrepo
 
 Logging(1, "done.")
 
@@ -178,11 +178,11 @@ if (oldgui = "true")
 else
 {
     FileRead, gui, Web\main.bak
-    StringReplace, newgui, gui, clangremlini/ayeloader-dll-repo, %cheatrepo%, All
+    StringReplace, newgui, gui, clangremlini/fetloader-dll-repo, %cheatrepo%, All
     FileAppend, %newgui%, Web\main.html 
     neutron := new NeutronWindow()
     neutron.Load("Web\main.html")
-    Loop, Read, C:\AYE\cheats.ini
+    Loop, Read, C:\FET Loader\cheats.ini
     {
     total_lines = %A_Index%
     }
@@ -233,15 +233,15 @@ Load:
         if (PID > 0 and event != "Load DLL") ;govnokod mne poxui
         {
             Logging(1,"Initialized dll injection")
-            IniRead, dll, C:\AYE\cheats.ini, cheats, %event%
-            IniRead, cheatrepo, C:\AYE\config.ini, settings, cheatrepo
+            IniRead, dll, C:\FET Loader\cheats.ini, cheats, %event%
+            IniRead, cheatrepo, C:\FET Loader\config.ini, settings, cheatrepo
 
             Loop 3
             {   
-                IfNotExist, C:\AYE\%dll%
+                IfNotExist, C:\FET Loader\%dll%
                 {
-                    Logging(1,"Trying download " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " to C:\AYE\"dll)
-                    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, C:\AYE\%dll%
+                    Logging(1,"Trying download " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " to C:\FET Loader\"dll)
+                    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, C:\FET Loader\%dll%
                     if (ErrorLevel = "0")
                     {
                         Logging(1, "done.")
@@ -255,17 +255,17 @@ Load:
                     
                 }
             }
-            IfNotExist, C:\AYE\emb.exe
+            IfNotExist, C:\FET Loader\emb.exe
             {
                 Logging(1,"Downloading emb.exe...")
-                UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/emb.exe, C:\AYE\emb.exe
+                UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/emb.exe, C:\FET Loader\emb.exe
                 Logging(1, "done.")
             }
             Logging(1,"Running emb...")
-            Run, C:\AYE\emb.exe
+            Run, C:\FET Loader\emb.exe
             Logging(1, "done.")
             Sleep, 1500
-            TO_LOAD = C:\AYE\%dll%
+            TO_LOAD = C:\FET Loader\%dll%
             Logging(1,"Injecting " TO_LOAD "...")
             Inject_Dll(PID,TO_LOAD)
             Logging(1,"Injected " TO_LOAD)
@@ -287,7 +287,7 @@ Load:
                 {
                     Logging(1,"Injecting custom dll...")
                     Logging(1,"Running emb...")
-                    Run, C:\AYE\emb.exe
+                    Run, C:\FET Loader\emb.exe
                     Logging(1, "done.")
                     Sleep, 1500
                     Inject_Dll(PID,DLL)
@@ -299,19 +299,19 @@ Load:
 
 Bypass(neutron)
 {
-    IfNotExist, C:\AYE\vac-bypass.exe
+    IfNotExist, C:\FET Loader\vac-bypass.exe
     {
         Logging(1,"Downloading vac-bypass.exe...")
-        UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/vac-bypass.exe, C:\AYE\vac-bypass.exe
+        UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/vac-bypass.exe, C:\FET Loader\vac-bypass.exe
         Logging(1, "done.")
     }
     Logging(1, "Running bypass...")
-    Run, C:\AYE\vac-bypass.exe
+    Run, C:\FET Loader\vac-bypass.exe
     Logging(1, "done.")
     return
 }
 
 OpenSource(neutron) ; костыли по другому не работают
 {
-    Run, https://github.com/clangremlini/aye-ahk-loader
+    Run, https://github.com/clangremlini/fet-loader
 }

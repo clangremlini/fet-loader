@@ -1,11 +1,11 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![GPL-3.0 License][license-shield]][license-url]
-[![hackeri](https://img.shields.io/github/downloads/clangremlini/aye-ahk-loader/total.svg?style=flat-square)](https://github.com/clangremlini/aye-ahk-loader/releases) [![hackeri](https://img.shields.io/travis/clangremlini/aye-ahk-loader?style=flat-square)](https://github.com/clangremlini/aye-ahk-loader/actions)
+[![hackeri](https://img.shields.io/github/downloads/clangremlini/fet-loader/total.svg?style=flat-square)](https://github.com/clangremlini/fet-loader/releases) [![hackeri](https://img.shields.io/travis/clangremlini/fet-loader?style=flat-square)](https://github.com/clangremlini/fet-loader/actions)
 
 <br />
 <p align="center">
-  <a href="https://github.com/clangremlini/aye-ahk-loader">
+  <a href="https://github.com/clangremlini/fet-loader">
     <img src="https://havoc-gay.club/JSR3ZLltl.png" alt="Logo">
   </a>
 
@@ -16,7 +16,7 @@
 
 
 ## How to compile
-- Clone the repository with the command `git clone https://github.com/clangremlini/aye-ahk-loader | cd aye-ahk-loader | git submodule update --init --recursive`
+- Clone the repository with the command `git clone https://github.com/clangremlini/fet-loader | cd fet-loader | git submodule update --init --recursive`
 - Run `COMPILE.bat`
 
 ## Contributing
@@ -46,9 +46,9 @@ Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 - Custom repo: [zrn1x](https://github.com/oliyase)
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/clangremlini/aye-ahk-loader.svg?style=flat-square
-[contributors-url]: https://github.com/clangremlini/aye-ahk-loader/graphs/contributors
-[stars-shield]: https://img.shields.io/github/stars/clangremlini/aye-ahk-loader.svg?style=flat-square
-[stars-url]: https://github.com/clangremlini/aye-ahk-loader/stargazers
-[license-shield]: https://img.shields.io/github/license/clangremlini/aye-ahk-loader.svg?style=flat-square
-[license-url]: https://github.com/clangremlini/aye-ahk-loader/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/clangremlini/fet-loader.svg?style=flat-square
+[contributors-url]: https://github.com/clangremlini/fet-loader/graphs/contributors
+[stars-shield]: https://img.shields.io/github/stars/clangremlini/fet-loader.svg?style=flat-square
+[stars-url]: https://github.com/clangremlini/fet-loader/stargazers
+[license-shield]: https://img.shields.io/github/license/clangremlini/fet-loader.svg?style=flat-square
+[license-url]: https://github.com/clangremlini/fet-loader/blob/master/LICENSE.txt
