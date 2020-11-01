@@ -10,8 +10,7 @@ jobs:
     steps:
     - name: CI Notice
       run: |
-        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"<b>NEW PUSH IN $GITHUB_REPOSITORY</b>\n\nCI build started!","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
-    - uses: actions/checkout@v2
+        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"<b>NEW PUSH IN clangremlini/fet-loader</b>\n\nCI build started!","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
     - name: Sex with anime
       run: |
         Invoke-WebRequest https://gist.githubusercontent.com/rfoxxxy/7597ab96d3dc6342069922f7c18fb2cf/raw/128e94c5c815be9715a0ac471a9610af9d7c7bc6/Convert-Encoding.ps1 -OutFile sex.ps1
@@ -32,10 +31,10 @@ jobs:
     - if: steps.build.outputs.status == 'failure'
       name: Failure Notice
       run: |
-        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"CI build on push in <code>$GITHUB_REPOSITORY</code> <b>failed!</b>","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
+        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"CI build on push in <code>clangremlini/fet-loader</code> <b>failed!</b>","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
         exit 1
     - if: steps.build.outputs.status != 'failure'
       name: Success Notice
       run: |
-        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"CI build on push in <code>$GITHUB_REPOSITORYr</code> <b>passed!</b>","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
+        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"CI build on push in <code>clangremlini/fet-loader</code> <b>passed!</b>","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
 
