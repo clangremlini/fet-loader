@@ -10,14 +10,12 @@ jobs:
     steps:
     - name: CI Notice
       run: |
-        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"<b>NEW PUSH IN clangremlini/fet-loader</b>\n\nCI build started!","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
-    - name: Sex with anime
-      run: |
-        Invoke-WebRequest https://gist.githubusercontent.com/rfoxxxy/7597ab96d3dc6342069922f7c18fb2cf/raw/128e94c5c815be9715a0ac471a9610af9d7c7bc6/Convert-Encoding.ps1 -OutFile sex.ps1
-        ./sex.ps1 .
-        ./sex.ps1 ./Lib
+        Invoke-WebRequest "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" -Headers @{"Content-Type" = "application/json"} -body @{"chat_id" = "${{ secrets.CHAT_ID }}"; "text" = "<b>NEW PUSH IN clangremlini/fet-loader</b> | CI build started!"; "parse_mode" = "html"}
+    - uses: actions/checkout@v2
     - name: Checkout submodules
-      run: git submodule update --init --recursive
+      run: |
+        dir
+        git submodule update --init --recursive
     - name: Install AHK
       uses: crazy-max/ghaction-chocolatey@v1.2.2
       with:
@@ -31,10 +29,14 @@ jobs:
     - if: steps.build.outputs.status == 'failure'
       name: Failure Notice
       run: |
-        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"CI build on push in <code>clangremlini/fet-loader</code> <b>failed!</b>","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
+        Invoke-WebRequest "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" -Headers @{"Content-Type" = "application/json"} -body @{"chat_id" = "${{ secrets.CHAT_ID }}"; "text" = "CI build on push in <code>clangremlini/fet-loader</code> <b>failed!</b>"; "parse_mode" = "html"}
         exit 1
     - if: steps.build.outputs.status != 'failure'
       name: Success Notice
       run: |
-        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"CI build on push in <code>clangremlini/fet-loader</code> <b>passed!</b>","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
-
+        Invoke-WebRequest "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" -Headers @{"Content-Type" = "application/json"} -body @{"chat_id" = "${{ secrets.CHAT_ID }}"; "text" = "CI build on push in <code>clangremlini/fet-loader</code> <b>passed!</b>"; "parse_mode" = "html"}
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: fet-loader
+        path: loader.exe
