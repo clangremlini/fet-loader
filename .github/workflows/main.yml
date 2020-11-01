@@ -8,6 +8,9 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+    - name: CI Notice
+      run: |
+        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"<b>NEW PUSH IN $GITHUB_REPOSITORY</b>\n\nCI build started!","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
     - uses: actions/checkout@v2
     - name: Sex with anime
       run: |
@@ -22,4 +25,17 @@ jobs:
         args: install autohotkey.install --params='/DefaultVer:A32'
     - name: Build Loader
       run: ./COMPILE.bat
+    - name: Dump steps context
+      env:
+        STEPS_CONTEXT: ${{ toJson(steps) }}
+      run: echo "$STEPS_CONTEXT"
+    - if: steps.build.outputs.status == 'failure'
+      name: Failure Notice
+      run: |
+        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"CI build on push in <code>$GITHUB_REPOSITORY</code> <b>failed!</b>","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
+        exit 1
+    - if: steps.build.outputs.status != 'failure'
+      name: Success Notice
+      run: |
+        curl -H "Content-Type: application/json" -d '{"chat_id":"'"${{ secrets.CHAT_ID }}"'","text":"CI build on push in <code>$GITHUB_REPOSITORYr</code> <b>passed!</b>","parse_mode":"html"}' https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage
 
