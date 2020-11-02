@@ -25,7 +25,7 @@ class Pastebin
             , "api_paste_code=<logs.log")
         WinHttpRequest("https://pastebin.com/api/api_post.php", PostData, PostHeader, "+NO_AUTO_REDIRECT+SaveAs:logs_upload.tmp")
         FileRead, logurl, logs_upload.tmp
-        FileDelete, logs_upload.log
+        FileDelete, logs_upload.tmp
         if (InStr(logurl, "Bad API request"))
         {
             MsgBox, 0, FET Loader Logs Uploader, %logurl%
