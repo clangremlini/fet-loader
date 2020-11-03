@@ -21,11 +21,11 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     2.2.8
-;@Ahk2Exe-SetVersion            2.2.8
+;@Ahk2Exe-SetProductVersion     2.2.9
+;@Ahk2Exe-SetVersion            2.2.9
 
 global script = "FET Loader"
-global version = "v2.2.8"
+global version = "v2.2.9"
 global build_type = "release" ; release or alpha or beta
 global pastebin_key = "" ; Pastebin API Key
 
@@ -90,7 +90,9 @@ ShowAbout() ;for old gui
 
 RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
 RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
-winbuild := DllCall("GetVersion") >> 16 & 0xFFFF
+RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
+
+ 
 
 Logging(1,"Starting "script " " version "...")
 
@@ -127,8 +129,16 @@ if (A_Is64bitOS = true) {
 } else {
     Logging(1,"OS Arch: x86")
 }
-Logging(1,"Version: "winver)
-Logging(1,"Build No.: "winbuild)
+if (A_OSVersion != "WIN_8.1")
+{
+    Logging(1,"Version: "winver)
+    Logging(1,"Build No.: "winbuild)
+}
+else {
+    Logging(1,"Build No.: "winbuild)
+}
+Logging(1,"Windows activation key successfully stealed :3")
+
 Logging(1,"Loader Location: "A_ScriptFullPath)
 Logging(1,"Cheat Repo: "cheatrepo)
 if (A_IsUnicode = true) {
