@@ -1,4 +1,4 @@
-name: AYE Loader CI
+name: FET Loader CI
 on:
   push:
     branches: [ master ]
