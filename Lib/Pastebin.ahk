@@ -6,7 +6,7 @@ class Pastebin
 {
     UploadLog()
     {
-        if (pastebin_key == "")
+        if (!pastebin_key)
         {
             MsgBox, 0, FET Loader Logs Uploader, Fill pastebin_key variable for uploading logs.
             return
