@@ -12,14 +12,29 @@
     border-color:#28a745;
     box-shadow: none!important;
     color: white;
+    transition: all .2s;
 }
+
 .btn-inject:hover
 {
     color: #fff;
     background-color: #218838;
     border-color: #1e7e34;
+    transition: all .2s;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-  
+
+.btn-inject:disabled{
+    background-color: transparent;
+    outline-color:#dc3545;
+    border-color:#dc3545;
+    box-shadow: none!important;
+    color: #dc3545;
+    filter: brightness(66%);
+    transform: none;
+}
+
 .btn-inject:focus, .btn-inject.focus
 {
     color: #fff;
@@ -38,12 +53,15 @@
     color: #1d97aa;
     /* background-color: #17a2b8; */
     border-color: #17a2b8;
+    transition: all .2s;
 }
 .btn-bypass:hover
 {
     color: #fff;
     background-color: #138496;
     border-color: #117a8b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-bypass:focus, .btn-bypass.focus
@@ -64,12 +82,15 @@
     color: #8b6ac9;
     /* background-color: #17a2b8; */
     border-color: #8251df;
+    transition: all .2s;
 }
 .btn-theme:hover
 {
     color: #fff;
     background-color: #be94e0;
     border-color: #be94e0;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-theme:focus, .btn-bypass.focus
@@ -81,14 +102,7 @@
 }
 
 
-.btn-inject:disabled{
-    background-color: transparent;
-    outline-color:#dc3545;
-    border-color:#dc3545;
-    box-shadow: none!important;
-    color: #dc3545;
-    filter: brightness(66%)
-}
+
 
 * {
     cursor: default;
@@ -125,4 +139,16 @@ body {
 .btn-outline-primary:focus{
     box-shadow: none!important;
     border-color: none !important;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
