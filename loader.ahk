@@ -21,11 +21,11 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     2.2.9
-;@Ahk2Exe-SetVersion            2.2.9
+;@Ahk2Exe-SetProductVersion     2.2.9.1
+;@Ahk2Exe-SetVersion            2.2.9.1
 
 global script = "FET Loader"
-global version = "v2.2.9"
+global version = "v2.2.9.1"
 global build_type = "release" ; release or alpha or beta
 global pastebin_key = "" ; Pastebin API Key
 
@@ -64,34 +64,42 @@ RunAsAdmin()
 ShowAbout() ;for old gui
 {
 	Logging(1,"Building About GUI...")
-	IfNotExist, %A_TEMP%\cheats.ini
-	{
-		cheatsCount = "Не удалось получить список читов"
-	} else {
-		IniRead, cheatlist, %A_TEMP%\cheats.ini, cheatlist, cheatlist
-		StringSplit, cheatss, cheatlist, |
-		cheatsCount := cheatss0
-	}
 	Gui, About:New
 	Gui, About:Font, s9
 	Gui, About:Show, w315 h155, %script% %version% | About
 	Gui, About:Add, Text, x112 y9 w100 h20 +Center, %script%
-	Gui, About:Add, Text, x59 y29 w200 h30 +Center, %string_desc%
-	Gui, About:Add, Link, x79 y69 w200 h20 +Center, %string_devs% <a href="https://m4x3r.xyz/">%string_dev1%</a> and <a href="https://gl1c1n.life/">%string_dev2%</a>
-	Gui, About:Add, Text, x59 y89 w200 h20 +Center, %string_count% %cheatsCount%
+	Gui, About:Add, Text, x59 y29 w200 h30 +Center, FET лоадер для FET пацанов от разработчиков из FETьмы
+	Gui, About:Add, Link, x79 y69 w200 h20 +Center, Разработчики: <a href="https://m4x3r.xyz/">m4x3r</a>, <a href="https://gl1c1n.life/">Gl1c1n</a> и <a href="https://rf0x3d.su">rf0x3d</a>
 	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/clangremlini/fet-loader">Github</a>
 	Gui, About:Add, Link, x140 y115 w100 h20 +Center, <a href="https://t.me/fetloader">Telegram</a>
-	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://qiwi.com/n/m4x3r1337">Donate</a>
+	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://fetloader.xyz">Site</a>
 	Logging(1,"done.")
 	return  
 }
 
 
+ShowAboutFromNewGui(neutron) ; пиздец
+{
+    ShowAbout()
+}
+
 
 RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
 RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
 RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
+RegRead, isReaded, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer
 
+if (!isReaded)
+{
+    ShowAbout()
+    MsgBox, 1, FET Loader Disclaimer, Если вы загрузили лоадер из непроверенных источников - мы полностью снимаем с себя ответственность в случае заражения вашей системы каким либо из вирусов.`n`nВы согласны?
+    IfMsgBox, OK
+    {
+        RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer, Yes
+    } else {
+        ExitApp
+    }
+}
  
 
 Logging(1,"Starting "script " " version "...")
