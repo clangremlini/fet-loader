@@ -47,6 +47,8 @@ CoordMode, Mouse, Screen
 FileDelete, C:\FET Loader\cheats.ini
 FileDelete, C:\FET Loader\*.dll
 
+RunAsAdmin()
+
 ConfigOpen() ;for old gui
 {
     run, C:\FET Loader\config.ini
@@ -77,12 +79,10 @@ ShowAbout() ;for old gui
 	return  
 }
 
-
 ShowAboutFromNewGui(neutron) ; пиздец
 {
     ShowAbout()
 }
-
 
 RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
 RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
@@ -91,20 +91,17 @@ RegRead, isReaded, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer
 
 if (!isReaded)
 {
-    ShowAbout()
-    MsgBox, 1, FET Loader Disclaimer, Если вы загрузили лоадер из непроверенных источников - мы полностью снимаем с себя ответственность в случае заражения вашей системы каким либо из вирусов.`n`nВы согласны?
+    MsgBox, 1, FET Loader Disclaimer, Если вы загрузили лоадер из непроверенных источников - мы полностью снимаем с себя ответственность в случае заражения вашей системы каким либо из вирусов.`nУбедитесь что загрузили лоадер с проверенных источников, таких как:`nGitHub, официальный сайт fetloader.xyz, телеграм канал t.me/ayeloader.
     IfMsgBox, OK
     {
         RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer, Yes
+        ShowAbout()
     } else {
         ExitApp
     }
 }
  
-
 Logging(1,"Starting "script " " version "...")
-
-RunAsAdmin()
 
 IniRead, cheatrepo, C:\FET Loader\config.ini, settings, cheatrepo
 
@@ -170,7 +167,6 @@ FileInstall, Web\js\popper.min.js, Web\js\popper.min.js, 1
 FileInstall, Web\main.html, Web\main.bak, 1
 FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
 
-
 IniRead, oldgui, C:\FET Loader\config.ini, settings, oldgui
 IniRead, cheatlist, C:\FET Loader\cheats.ini, cheatlist, cheatlist
 IniRead, checkupdates, C:\FET Loader\config.ini, settings, checkupdates
@@ -218,8 +214,8 @@ GuiClose:
 NeutronClose:
     FileRemoveDir, temp, 1
     FileDelete, Web\main.html
-ExitApp
-return
+    ExitApp
+    return
 
 Load:
     Gui, Submit, NoHide
