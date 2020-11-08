@@ -3,16 +3,10 @@
 [![GPL-3.0 License][license-shield]][license-url]
 [![hackeri](https://img.shields.io/github/downloads/clangremlini/fet-loader/total.svg?style=flat-square)](https://github.com/clangremlini/fet-loader/releases) [![hackeri](https://img.shields.io/github/workflow/status/clangremlini/fet-loader/FET%20Loader%20CI?style=flat-square)](https://github.com/clangremlini/fet-loader/actions)
 
-<br />
-<p align="center">
-  <a href="https://github.com/clangremlini/fet-loader">
-    <img src="https://havoc-gay.club/JSR3ZLltl.png" alt="Logo">
-  </a>
 
-  <h3 align="center">A simple CS:GO cheats loader written in AHK.
 
-</h3>
-</p>
+<h3 align="center">A simple CS:GO cheats loader written in AHK.</h3>
+
 
 
 ## How to compile
