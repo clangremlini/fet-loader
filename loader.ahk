@@ -26,9 +26,8 @@
 
 global script = "FET Loader"
 global version = "v2.2.9.1"
-global build_type = "release" ; release or alpha or beta
+global build_status = "release" ; release or alpha or beta
 global pastebin_key = "" ; Pastebin API Key
-
 
 global times = 3 ; piece of shit, don't touch
 
@@ -48,6 +47,16 @@ FileDelete, C:\FET Loader\cheats.ini
 FileDelete, C:\FET Loader\*.dll
 
 RunAsAdmin()
+
+if (!cringe)
+{
+    global bruhshit := "unofficial build"
+}
+
+if (bruhshit = "unofficial build")
+{
+    MsgBox, 0, %script%, Вы используете неофициальную сборку лоадера.`nМы полностью снимаем с себя ответственность в случае заражения вашей системы каким либо из вирусов.
+}
 
 ConfigOpen() ;for old gui
 {
@@ -69,9 +78,9 @@ ShowAbout() ;for old gui
 	Gui, About:New
 	Gui, About:Font, s9
 	Gui, About:Show, w315 h155, %script% %version% | About
-	Gui, About:Add, Text, x112 y9 w100 h20 +Center, %script%
-	Gui, About:Add, Text, x59 y29 w200 h30 +Center, FET лоадер для FET пацанов от разработчиков из FETьмы
-	Gui, About:Add, Link, x79 y69 w200 h20 +Center, Разработчики: <a href="https://m4x3r.xyz/">m4x3r</a>, <a href="https://gl1c1n.life/">Gl1c1n</a> и <a href="https://rf0x3d.su">rf0x3d</a>
+	Gui, About:Add, Text, x112 y9 w100 h30 +Center, %script% | %bruhshit%
+	Gui, About:Add, Text, x59 y37 w200 h30 +Center, FET лоадер для FET пацанов от разработчиков из FETьмы
+	Gui, About:Add, Link, x75 y69 w200 h20 +Center, Разработчики: <a href="https://m4x3r.xyz/">m4x3r</a>, <a href="https://github.com/toxyxd">toxyxd</a> и <a href="https://rf0x3d.su">rf0x3d</a>
 	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/clangremlini/fet-loader">Github</a>
 	Gui, About:Add, Link, x140 y115 w100 h20 +Center, <a href="https://t.me/fetloader">Telegram</a>
 	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://fetloader.xyz">Site</a>
@@ -151,7 +160,8 @@ if (A_IsUnicode = true) {
 } else {
     Logging(1,"Compiler Type: ANSI")
 }
-Logging(1,"Compiler Version: "A_AhkVersion)
+; Logging(1,"Compiler Version: "A_AhkVersion)
+; useless
 Logging(1,"---ENV---")
 Logging(1, "")
 
@@ -174,7 +184,7 @@ IniRead, cheatrepo, C:\FET Loader\config.ini, settings, cheatrepo
 
 Logging(1, "done.")
 
-if (checkupdates = "true" and build_type = "release")
+if (checkupdates = "true" and build_status = "release")
 {
     Logging(1,"Checking updates...")
     OTA.checkupd()
@@ -222,7 +232,7 @@ Load:
 
     Inject(neutron, event)
     {
-        if (build_type != "release")
+        if (build_status != "release")
         {
             MsgBox % "[DEBUG] Trying to inject " event
         }
