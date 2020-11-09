@@ -96,7 +96,14 @@ ShowAboutFromNewGui(neutron) ; пиздец
 RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
 RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
 RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
+RegRead, winsbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, CurrentBuild
 RegRead, isReaded, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer
+
+if (winsbuild = "7600" or winsbuild = "7601")
+{
+    MsgBox, 0, %script%, Вы используете не поддерживаемую версию ОС. Поддержки Windows 7 никогда не будет. Пожалуйста обновитесь до Windows 10
+    ExitApp
+}
 
 if (!isReaded)
 {
