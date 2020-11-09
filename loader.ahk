@@ -25,7 +25,7 @@
 ;@Ahk2Exe-SetVersion            2.3
 
 global script = "FET Loader"
-global version = "v2.3.1"
+global version = "v2.3"
 global build_status = "release" ; release or alpha or beta
 global pastebin_key = "" ; Pastebin API Key
 
