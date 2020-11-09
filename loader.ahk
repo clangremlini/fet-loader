@@ -160,6 +160,7 @@ SetWorkingDir, C:\FET Loader
 FileCreateDir, Web
 FileCreateDir, Web\js
 FileCreateDir, Web\css
+FileInstall, Web\js\iniparser.js, Web\js\iniparser.js, 1
 FileInstall, Web\js\bootstrap-4.4.1.js, Web\js\bootstrap-4.4.1.js, 1
 FileInstall, Web\css\bootstrap-4.4.1.css, Web\css\bootstrap-4.4.1.css, 1
 FileInstall, Web\js\jquery-3.4.1.min.js, Web\js\jquery-3.4.1.min.js, 1
@@ -202,7 +203,7 @@ else
     {
     total_lines = %A_Index%
     }
-    guiheight := (total_lines - 2) * 40 - 1 + 40
+    guiheight := (total_lines - 2) * 40 + 40
     neutron.Show("w320 h" guiheight )
     neutron.Gui("+LabelNeutron")
     return
@@ -256,7 +257,7 @@ Load:
             {   
                 IfNotExist, C:\FET Loader\%dll%
                 {
-                    Logging(1,"Trying download " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " to C:\FET Loader\"dll)
+                    Logging(1,"Trying to download " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " to C:\FET Loader\"dll)
                     UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, C:\FET Loader\%dll%
                     if (ErrorLevel = "0")
                     {
