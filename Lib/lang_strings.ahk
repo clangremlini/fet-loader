@@ -69,6 +69,10 @@ if (language = "en")
     global string_new_version := "A new version is available."
     global string_want_download := "Want to download the update?"
     global string_changelog := "Changelog:"
+    global string_unofficial_build := "You are using an unofficial loader build.`nWe completely disclaim responsibility in case of infection of your system with any of the viruses."
+    global string_outdated_os := "You are using an unsupported OS version. There will never be support for Windows 7. Please upgrade to Windows 10"
+    global string_disclaimer := "If you downloaded the loader from unverified sources, we completely disclaim responsibility in case of infection of your system with any of the viruses.`nMake sure that you downloaded the loader from trusted sources, such as:`nGitHub, official fetloader.xyz website, telegram channel t.me/ayeloader."
+    global string_error := "An error occurred while executing the program. Details can be found in the log file."
 
 }
 if (language = "ru") 
@@ -85,36 +89,10 @@ if (language = "ru")
     global string_new_version := "Доступна новая версия."
     global string_want_download := "Хотите загрузить обновление?"
     global string_changelog := "Список изменений:"
-}
-if (language = "eblo") 
-{
-    global string_load := "Соснуть хуй"
-    global string_bypass := "Насрать VAC bypass"
-    global string_config := "Хуенфиг"
-    global string_about := "Докс"
-    global string_pid0 := "ААХАХАХАХ ДАУН КСГО ЗАПУСТИ ЛМАО"
-    global string_nosteam := "Установи Steam, клоун."
-    global string_success := "твоя мама выебана успешна"
-    global string_warning_custom_dll := "Мы не будем тебе помогать если у тебя нахуй система полетит винда нахуй слетит это не наша вина.`nПонял?"
-    global string_no_dll := "ало уебок длл выбери"
-    global string_new_version := "A new version is available."
-    global string_want_download := "Want to download the update?"
-    global string_changelog := "Changelog:"
-}
-if (language = "hvh") 
-{
-    global string_load := "Заижектить фри хуйню"
-    global string_bypass := "Получить вак"
-    global string_config := "Сетинг"
-    global string_about := "уиды овнеров"
-    global string_pid0 := "але нищий даун запусти кс хуесос"
-    global string_nosteam := "АЫЖАЫАХЫАЗХЫЗ БРЕЙНА 0 БЕЗ СТИМА"
-    global string_success := "ыазыазы нищита с кряком ору"
-    global string_warning_custom_dll := "если у тебя минус винда нам абсолютно похуй потому что ты сам виноват дауна сын"
-    global string_no_dll := "нищ, выбери длл."
-    global string_new_version := "Доступна новая версия."
-    global string_want_download := "Хотите загрузить обновление?"
-    global string_changelog := "Список изменений:"
+    global string_unofficial_build := "Вы используете неофициальную сборку лоадера.`nМы полностью снимаем с себя ответственность в случае заражения вашей системы каким либо из вирусов."
+    global string_outdated_os := "Вы используете не поддерживаемую версию ОС. Поддержки Windows 7 никогда не будет. Пожалуйста обновитесь до Windows 10"
+    global string_disclaimer := "Если вы загрузили лоадер из непроверенных источников - мы полностью снимаем с себя ответственность в случае заражения вашей системы каким либо из вирусов.`nУбедитесь что загрузили лоадер с проверенных источников, таких как:`nGitHub, официальный сайт fetloader.xyz, телеграм канал t.me/ayeloader."
+    global string_error := "При выполнении программы произошла ошибка. Подробности можно найти в логфайле."
 }
 if (language = "ukr") 
 {
@@ -130,4 +108,8 @@ if (language = "ukr")
     global string_new_version := "Доступна нова версія."
     global string_want_download := "Хочете завантажити оновлення?"
     global string_changelog := "Список змін:"
+    global string_unofficial_build := "Ви використовуєте неофіційну збірку лоадера. `nМи повністю знімаємо з себе відповідальність в разі зараження вашої системи будь-яким з вірусів."
+    global string_outdated_os := "Ви використовуєте не підтримувану версію ОС. Підтримки Windows 7 ніколи не буде. Будь ласка оновіться до Windows 10"
+    global string_disclaimer := "Якщо ви завантажили лоадер з неперевірених джерел - ми повністю знімаємо з себе відповідальність в разі зараження вашої системи будь-яким з вірусів.`nПереконайтеся що завантажили лоадер з перевірених джерел, таких як:`nGitHub, офіційний сайт fetloader.xyz, телеграм канал t.me/ayeloader"
+    global string_error := "При виконанні програми сталася помилка. Подробиці можна знайти в логфайлів."
 }

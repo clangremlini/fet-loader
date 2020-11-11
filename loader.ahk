@@ -21,32 +21,41 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     2.3
-;@Ahk2Exe-SetVersion            2.3
+;@Ahk2Exe-SetProductVersion     2.4
+;@Ahk2Exe-SetVersion            2.4
 
 global script = "FET Loader"
-global version = "v2.3"
+global version = "v2.4"
 global build_status = "release" ; release or alpha or beta
-global pastebin_key = "" ; Pastebin API Key
-
 global times = 3 ; piece of shit, don't touch
 
 #NoEnv
 #NoTrayIcon
+#Include Lib\Neutron.ahk
+#Include Lib\Logging.ahk
+#Include Lib\lang_strings.ahk 
+#Include Lib\OTA.ahk
+#Include Lib\functions.ahk
+#SingleInstance Off
+
 SetBatchLines, -1
 CoordMode, Mouse, Screen
 
-#Include Lib\Neutron.ahk
-#Include Lib\Logging.ahk
-#include Lib\lang_strings.ahk 
-#include Lib\OTA.ahk
-#include Lib\Pastebin.ahk
-#SingleInstance Off
-
+FileDelete, C:\FET Loader\Web\main.*
 FileDelete, C:\FET Loader\cheats.ini
 FileDelete, C:\FET Loader\*.dll
 
 RunAsAdmin()
+
+RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
+RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
+RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
+RegRead, winsbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, CurrentBuild
+RegRead, isReaded, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer
+IniRead, cheatrepo, C:\FET Loader\config.ini, settings, cheatrepo
+IniRead, oldgui, C:\FET Loader\config.ini, settings, oldgui
+IniRead, cheatlist, C:\FET Loader\cheats.ini, cheatlist, cheatlist
+IniRead, checkupdates, C:\FET Loader\config.ini, settings, checkupdates
 
 if (!cringe)
 {
@@ -55,73 +64,32 @@ if (!cringe)
 
 if (bruhshit = "unofficial build")
 {
-    MsgBox, 0, %script%, Вы используете неофициальную сборку лоадера.`nМы полностью снимаем с себя ответственность в случае заражения вашей системы каким либо из вирусов.
+    MsgBox, 0, %script%, %string_unofficial_build%
 }
-
-ConfigOpen() ;for old gui
-{
-    run, C:\FET Loader\config.ini
-}
-
-RunAsAdmin()
-{
-    if (A_IsAdmin = false) 
-    { 
-        Logging(1,"Restarting as admin...")
-        Run *RunAs "%A_ScriptFullPath%" ,, UseErrorLevel
-        ExitApp
-    }
-}
-ShowAbout() ;for old gui
-{
-	Logging(1,"Building About GUI...")
-	Gui, About:New
-	Gui, About:Font, s9
-	Gui, About:Show, w315 h155, %script% %version% | About
-	Gui, About:Add, Text, x112 y9 w100 h30 +Center, %script% | %bruhshit%
-	Gui, About:Add, Text, x59 y37 w200 h30 +Center, FET лоадер для FET пацанов от разработчиков из FETьмы
-	Gui, About:Add, Link, x75 y69 w200 h20 +Center, Разработчики: <a href="https://m4x3r.xyz/">m4x3r</a>, <a href="https://github.com/toxyxd">toxyxd</a> и <a href="https://rf0x3d.su">rf0x3d</a>
-	Gui, About:Add, Link, x50 y115 w100 h20 +Center, <a href="https://github.com/clangremlini/fet-loader">Github</a>
-	Gui, About:Add, Link, x140 y115 w100 h20 +Center, <a href="https://t.me/fetloader">Telegram</a>
-	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://fetloader.xyz">Site</a>
-	Logging(1,"done.")
-	return  
-}
-
-ShowAboutFromNewGui(neutron) ; пиздец
-{
-    ShowAbout()
-}
-
-RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
-RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
-RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
-RegRead, winsbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, CurrentBuild
-RegRead, isReaded, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer
 
 if (winsbuild = "7600" or winsbuild = "7601")
 {
-    MsgBox, 0, %script%, Вы используете не поддерживаемую версию ОС. Поддержки Windows 7 никогда не будет. Пожалуйста обновитесь до Windows 10
+    MsgBox, 0, %script%, %string_outdated_os%
     ExitApp
 }
 
 if (!isReaded)
 {
-    MsgBox, 1, FET Loader Disclaimer, Если вы загрузили лоадер из непроверенных источников - мы полностью снимаем с себя ответственность в случае заражения вашей системы каким либо из вирусов.`nУбедитесь что загрузили лоадер с проверенных источников, таких как:`nGitHub, официальный сайт fetloader.xyz, телеграм канал t.me/ayeloader.
+    MsgBox, 1, %script% Disclaimer, %string_disclaimer%
     IfMsgBox, OK
     {
         RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer, Yes
         ShowAbout()
-    } else {
+    }
+    else
+    {
         ExitApp
     }
 }
  
 Logging(1,"Starting "script " " version "...")
-
-IniRead, cheatrepo, C:\FET Loader\config.ini, settings, cheatrepo
-
 Logging(1, "Creating folders and downloading files...")
+
 IfNotExist, C:\FET Loader\cheats.ini
 {	
     Logging(1, "Getting cheat list...")
@@ -167,8 +135,6 @@ if (A_IsUnicode = true) {
 } else {
     Logging(1,"Compiler Type: ANSI")
 }
-; Logging(1,"Compiler Version: "A_AhkVersion)
-; useless
 Logging(1,"---ENV---")
 Logging(1, "")
 
@@ -184,11 +150,6 @@ FileInstall, Web\js\jquery-3.4.1.min.js, Web\js\jquery-3.4.1.min.js, 1
 FileInstall, Web\js\popper.min.js, Web\js\popper.min.js, 1
 FileInstall, Web\main.html, Web\main.bak, 1
 FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
-
-IniRead, oldgui, C:\FET Loader\config.ini, settings, oldgui
-IniRead, cheatlist, C:\FET Loader\cheats.ini, cheatlist, cheatlist
-IniRead, checkupdates, C:\FET Loader\config.ini, settings, checkupdates
-IniRead, cheatrepo, C:\FET Loader\config.ini, settings, cheatrepo
 
 Logging(1, "done.")
 
@@ -330,26 +291,3 @@ Load:
             }
         }
     }
-
-Bypass(neutron)
-{
-    IfNotExist, C:\FET Loader\vac-bypass.exe
-    {
-        Logging(1,"Downloading vac-bypass.exe...")
-        UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/vac-bypass.exe, C:\FET Loader\vac-bypass.exe
-        Logging(1, "done.")
-    }
-    Logging(1, "Running bypass...")
-    Run, C:\FET Loader\vac-bypass.exe
-    Logging(1, "done.")
-    return
-}
-
-OpenSource(neutron) ; костыли по другому не работают
-{
-    Run, https://github.com/clangremlini/fet-loader
-}
-UploadLog(neutron)
-{
-    Pastebin.UploadLog()
-}
