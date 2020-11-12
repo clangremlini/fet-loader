@@ -2,11 +2,11 @@
 {
 	if (status = 1)
 	{
-		FileAppend, [LOG]%A_DD%.%A_MM%.%A_YYYY% - %A_Hour%:%A_Min%:%A_Sec% - %text%`n, C:\FET Loader\logs.log
+		FileAppend, [LOG]%A_DD%.%A_MM%.%A_YYYY% - %A_Hour%:%A_Min%:%A_Sec% - %text%`n, %A_AppData%\FET Loader\logs.log
 	}
 	if (status = 2)
 	{
-		FileAppend, [ERR]%A_DD%.%A_MM%.%A_YYYY% - %A_Hour%:%A_Min%:%A_Sec% - %text%`n, C:\FET Loader\logs.log
+		FileAppend, [ERR]%A_DD%.%A_MM%.%A_YYYY% - %A_Hour%:%A_Min%:%A_Sec% - %text%`n, %A_AppData%\FET Loader\logs.log
 	}
 }
 

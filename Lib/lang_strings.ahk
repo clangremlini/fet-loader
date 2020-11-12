@@ -2,28 +2,28 @@
 
 #Include Lib\Logging.ahk
 
-IfNotExist, C:\FET Loader
+IfNotExist, %A_AppData%\FET Loader
 {	
 	Logging(1, "Creating folder...")
-	FileCreateDir, C:\FET Loader
+	FileCreateDir, %A_AppData%\FET Loader
 }
-IfNotExist, C:\FET Loader\Web
+IfNotExist, %A_AppData%\FET Loader\Web
 {	
-	FileCreateDir, C:\FET Loader\Web
+	FileCreateDir, %A_AppData%\FET Loader\Web
 }
-IfNotExist, C:\FET Loader\config.ini
+IfNotExist, %A_AppData%\FET Loader\config.ini
 {	
 	Logging(1, "Creating config file...")
-	IniWrite, true, C:\FET Loader\config.ini, settings, checkupdates
-	IniWrite, clangremlini/fetloader-dll-repo, C:\FET Loader\config.ini, settings, cheatrepo
-    IniWrite, false, C:\FET Loader\config.ini, settings, oldgui
+	IniWrite, true, %A_AppData%\FET Loader\config.ini, settings, checkupdates
+	IniWrite, clangremlini/fetloader-dll-repo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
+    IniWrite, false, %A_AppData%\FET Loader\config.ini, settings, oldgui
 	Logging(1, "done.")
 }
 
 
-checkConfigValue("C:\FET Loader\config.ini","settings","oldgui","false")
-checkConfigValue("C:\FET Loader\config.ini","settings","checkupdates","true")
-checkConfigValue("C:\FET Loader\config.ini","settings","cheatrepo","clangremlini/fetloader-dll-repo")
+checkConfigValue("%A_AppData%\FET Loader\config.ini","settings","oldgui","false")
+checkConfigValue("%A_AppData%\FET Loader\config.ini","settings","checkupdates","true")
+checkConfigValue("%A_AppData%\FET Loader\config.ini","settings","cheatrepo","clangremlini/fetloader-dll-repo")
 
 checkConfigValue(file,section,key,value)
 {   
@@ -35,16 +35,16 @@ checkConfigValue(file,section,key,value)
     }
 }
 
-IniRead, language, C:\FET Loader\config.ini, settings, language
+IniRead, language, %A_AppData%\FET Loader\config.ini, settings, language
 
 setLang()
 {
     if (A_Language = "0809" or A_Language = "0409") ; en_UK and en_US
-        IniWrite, en, C:\FET Loader\config.ini, settings, language
+        IniWrite, en, %A_AppData%\FET Loader\config.ini, settings, language
     if (A_Language = "0419") ; ru_RU
-	    IniWrite, ru, C:\FET Loader\config.ini, settings, language
+	    IniWrite, ru, %A_AppData%\FET Loader\config.ini, settings, language
     if (A_Language = "0422") ; ukr
-        IniWrite, ukr, C:\FET Loader\config.ini, settings, language
+        IniWrite, ukr, %A_AppData%\FET Loader\config.ini, settings, language
 }
 
 if (language = "ERROR")
@@ -53,7 +53,7 @@ if (language = "ERROR")
 }
 
 
-IniRead, language, C:\FET Loader\config.ini, settings, language
+IniRead, language, %A_AppData%\FET Loader\config.ini, settings, language
 if (language = "en") 
 {
     global string_load := "Load"

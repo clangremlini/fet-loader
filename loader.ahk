@@ -41,9 +41,9 @@ global times = 3 ; piece of shit, don't touch
 SetBatchLines, -1
 CoordMode, Mouse, Screen
 
-FileDelete, C:\FET Loader\Web\main.*
-FileDelete, C:\FET Loader\cheats.ini
-FileDelete, C:\FET Loader\*.dll
+FileDelete, %A_AppData%\FET Loader\Web\main.*
+FileDelete, %A_AppData%\FET Loader\cheats.ini
+FileDelete, %A_AppData%\FET Loader\*.dll
 
 RunAsAdmin()
 
@@ -52,10 +52,10 @@ RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
 RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
 RegRead, winsbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, CurrentBuild
 RegRead, isReaded, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer
-IniRead, cheatrepo, C:\FET Loader\config.ini, settings, cheatrepo
-IniRead, oldgui, C:\FET Loader\config.ini, settings, oldgui
-IniRead, cheatlist, C:\FET Loader\cheats.ini, cheatlist, cheatlist
-IniRead, checkupdates, C:\FET Loader\config.ini, settings, checkupdates
+IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
+IniRead, oldgui, %A_AppData%\FET Loader\config.ini, settings, oldgui
+IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
+IniRead, checkupdates, %A_AppData%\FET Loader\config.ini, settings, checkupdates
 
 if (!cringe)
 {
@@ -90,22 +90,22 @@ if (!isReaded)
 Logging(1,"Starting "script " " version "...")
 Logging(1, "Creating folders and downloading files...")
 
-IfNotExist, C:\FET Loader\cheats.ini
+IfNotExist, %A_AppData%\FET Loader\cheats.ini
 {	
     Logging(1, "Getting cheat list...")
-    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/cheats.ini, C:\FET Loader\cheats.ini
+    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/cheats.ini, %A_AppData%\FET Loader\cheats.ini
     Logging(1, "done.")
 }
-IfNotExist, C:\FET Loader\vac-bypass.exe
+IfNotExist, %A_AppData%\FET Loader\vac-bypass.exe
 {
     Logging(1,"Downloading vac-bypass.exe...")
-    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/vac-bypass.exe, C:\FET Loader\vac-bypass.exe
+    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/vac-bypass.exe, %A_AppData%\FET Loader\vac-bypass.exe
     Logging(1, "done.")
 }
-IfNotExist, C:\FET Loader\emb.exe
+IfNotExist, %A_AppData%\FET Loader\emb.exe
 {
     Logging(1,"Downloading emb.exe...")
-    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/emb.exe, C:\FET Loader\emb.exe
+    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/emb.exe, %A_AppData%\FET Loader\emb.exe
     Logging(1, "done.")
 }
 Logging(1,"done.")
@@ -139,7 +139,7 @@ Logging(1,"---ENV---")
 Logging(1, "")
 
 Logging(1, "Unpacking GUI...")
-SetWorkingDir, C:\FET Loader
+SetWorkingDir, %A_AppData%\FET Loader
 FileCreateDir, Web
 FileCreateDir, Web\js
 FileCreateDir, Web\css
@@ -177,7 +177,7 @@ else
     FileAppend, %newgui%, Web\main.html 
     neutron := new NeutronWindow()
     neutron.Load("Web\main.html")
-    Loop, Read, C:\FET Loader\cheats.ini
+    Loop, Read, %A_AppData%\FET Loader\cheats.ini
     {
     total_lines = %A_Index%
     }
@@ -228,15 +228,15 @@ Load:
         if (PID > 0 and event != "Load DLL") ;govnokod mne poxui
         {
             Logging(1,"Initialized dll injection")
-            IniRead, dll, C:\FET Loader\cheats.ini, cheats, %event%
-            IniRead, cheatrepo, C:\FET Loader\config.ini, settings, cheatrepo
+            IniRead, dll, %A_AppData%\FET Loader\cheats.ini, cheats, %event%
+            IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
 
             Loop 3
             {   
-                IfNotExist, C:\FET Loader\%dll%
+                IfNotExist, %A_AppData%\FET Loader\%dll%
                 {
-                    Logging(1,"Trying to download " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " to C:\FET Loader\"dll)
-                    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, C:\FET Loader\%dll%
+                    Logging(1,"Trying to download " DLL " from https://github.com/" cheatrepo "/raw/master/"dll " to %A_AppData%\FET Loader\"dll)
+                    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, %A_AppData%\FET Loader\%dll%
                     if (ErrorLevel = "0")
                     {
                         Logging(1, "done.")
@@ -250,17 +250,17 @@ Load:
                     
                 }
             }
-            IfNotExist, C:\FET Loader\emb.exe
+            IfNotExist, %A_AppData%\FET Loader\emb.exe
             {
                 Logging(1,"Downloading emb.exe...")
-                UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/emb.exe, C:\FET Loader\emb.exe
+                UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/emb.exe, %A_AppData%\FET Loader\emb.exe
                 Logging(1, "done.")
             }
             Logging(1,"Running emb...")
-            Run, C:\FET Loader\emb.exe
+            Run, %A_AppData%\FET Loader\emb.exe
             Logging(1, "done.")
             Sleep, 1500
-            TO_LOAD = C:\FET Loader\%dll%
+            TO_LOAD = %A_AppData%\FET Loader\%dll%
             Logging(1,"Injecting " TO_LOAD "...")
             Inject_Dll(PID,TO_LOAD)
             Logging(1,"Injected " TO_LOAD)
@@ -282,7 +282,7 @@ Load:
                 {
                     Logging(1,"Injecting custom dll...")
                     Logging(1,"Running emb...")
-                    Run, C:\FET Loader\emb.exe
+                    Run, %A_AppData%\FET Loader\emb.exe
                     Logging(1, "done.")
                     Sleep, 1500
                     Inject_Dll(PID,DLL)

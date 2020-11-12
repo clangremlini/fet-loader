@@ -1,6 +1,6 @@
 ﻿ConfigOpen() ;for old gui
 {
-    run, C:\FET Loader\config.ini
+    run, %A_AppData%\FET Loader\config.ini
 }
 RunAsAdmin()
 {
@@ -28,14 +28,14 @@ ShowAbout(neutron)
 }
 Bypass(neutron)
 {
-    IfNotExist, C:\FET Loader\vac-bypass.exe
+    IfNotExist, %A_AppData%\FET Loader\vac-bypass.exe
     {
         Logging(1,"Downloading vac-bypass.exe...")
-        UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/vac-bypass.exe, C:\FET Loader\vac-bypass.exe
+        UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/vac-bypass.exe, %A_AppData%\FET Loader\vac-bypass.exe
         Logging(1, "done.")
     }
     Logging(1, "Running bypass...")
-    Run, C:\FET Loader\vac-bypass.exe
+    Run, %A_AppData%\FET Loader\vac-bypass.exe
     Logging(1, "done.")
     return
 }
