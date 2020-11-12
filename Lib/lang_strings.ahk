@@ -14,7 +14,6 @@ IfNotExist, C:\FET Loader\Web
 IfNotExist, C:\FET Loader\config.ini
 {	
 	Logging(1, "Creating config file...")
-	IniWrite, false, C:\FET Loader\config.ini, settings, custominject
 	IniWrite, true, C:\FET Loader\config.ini, settings, checkupdates
 	IniWrite, clangremlini/fetloader-dll-repo, C:\FET Loader\config.ini, settings, cheatrepo
     IniWrite, false, C:\FET Loader\config.ini, settings, oldgui

@@ -11,7 +11,7 @@ RunAsAdmin()
         ExitApp
     }
 }
-ShowAbout() ;for old gui
+ShowAbout(neutron)
 {
 	Logging(1,"Building About GUI...")
 	Gui, About:New
@@ -25,10 +25,6 @@ ShowAbout() ;for old gui
 	Gui, About:Add, Link, x230 y115 w100 h20 +Center, <a href="https://fetloader.xyz">Site</a>
 	Logging(1,"done.")
 	return  
-}
-ShowAboutFromNewGui(neutron) ; пиздец
-{
-    ShowAbout()
 }
 Bypass(neutron)
 {

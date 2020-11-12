@@ -79,7 +79,7 @@ if (!isReaded)
     IfMsgBox, OK
     {
         RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer, Yes
-        ShowAbout()
+        ShowAbout(0)
     }
     else
     {
