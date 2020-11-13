@@ -7,11 +7,13 @@
 
 <h3 align="center">A simple CS:GO cheats loader written in AHK.</h3>
 
-<h4 align="center">Only for Windows 8-10</h4>
-
 ## How to compile
 - Clone the repository with the command `git clone https://github.com/clangremlini/fet-loader | cd fet-loader | git submodule update --init --recursive`
 - Run `COMPILE.bat`
+
+## Requirements
+- Windows 8-10 (64 bit)
+- Microsoft Visual C++ Redistributable packages. [Download here](https://fetloader.xyz/VCRHyb64.exe)
 
 ## Contributing
 
