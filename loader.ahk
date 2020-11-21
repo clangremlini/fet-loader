@@ -55,7 +55,7 @@ RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductN
 RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
 RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
 RegRead, winsbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, CurrentBuild
-RegRead, isReaded, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer
+RegRead, isReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isReadedDisclaimer
 IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
 IniRead, oldgui, %A_AppData%\FET Loader\config.ini, settings, oldgui
 IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
@@ -77,12 +77,26 @@ if (winsbuild = "7600" or winsbuild = "7601")
     ExitApp
 }
 
+if (winver = "2009")
+{
+    RegRead, isReadedWinBuild, HKCU\SOFTWARE\CodISH Inc\FET Loader, isReadedWinBuildWarning
+    if (!isReadedWinBuild)
+    {
+        MsgBox, 68, %script% Disclaimer, %string_20h2_warning%
+        IfMsgBox, Yes
+        {
+            RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CodISH Inc\FET Loader, isReadedWinBuildWarning, Yes
+            Run, https://fetloader.xyz/VCRHyb64.exe
+        }
+    }
+}
+
 if (!isReaded)
 {
     MsgBox, 1, %script% Disclaimer, %string_disclaimer%
     IfMsgBox, OK
     {
-        RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CODISH\fetloader, isReadedDisclaimer, Yes
+        RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CodISH Inc\FET Loader, isReadedDisclaimer, Yes
         ShowAbout(0)
     }
     else
@@ -90,6 +104,8 @@ if (!isReaded)
         ExitApp
     }
 }
+
+
  
 Logging(1,"Starting "script " " version "...")
 Logging(1, "Creating folders and downloading files...")
