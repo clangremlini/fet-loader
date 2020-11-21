@@ -21,11 +21,11 @@ IfNotExist, %A_AppData%\FET Loader\config.ini
 }
 
 
-checkConfigValue("%A_AppData%\FET Loader\config.ini","settings","oldgui","false")
-checkConfigValue("%A_AppData%\FET Loader\config.ini","settings","checkupdates","true")
-checkConfigValue("%A_AppData%\FET Loader\config.ini","settings","cheatrepo","clangremlini/fetloader-dll-repo")
+isConfigValue(A_AppData "\FET Loader\config.ini","settings","oldgui","false")
+isConfigValue(A_AppData "\FET Loader\config.ini","settings","checkupdates","true")
+isConfigValue(A_AppData "\FET Loader\config.ini","settings","cheatrepo","clangremlini/fetloader-dll-repo")
 
-checkConfigValue(file,section,key,value)
+isConfigValue(file,section,key,value)
 {   
     IniRead, output_key, %file%, %section%, %key%
     if (output_key = "ERROR")
