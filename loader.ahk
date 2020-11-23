@@ -202,7 +202,7 @@ else
     {
         total_lines = %A_Index%
     }
-    guiheight := (total_lines - 2) * 40 + 40
+    guiheight := (total_lines - 1) * 40 + 40
     neutron.Show("w320 h" guiheight )
     neutron.Gui("+LabelNeutron")
     return
