@@ -109,25 +109,25 @@ if (!isReaded)
 
  
 Logging(1,"Starting "script " " version "...")
-Logging(1, "Creating folders and downloading files...")
+Logging(1,"Creating folders and downloading files...")
 
 IfNotExist, %A_AppData%\FET Loader\cheats.ini
 {	
-    Logging(1, "Getting cheat list...")
+    Logging(1,"- Getting cheat list...")
     UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/cheats.ini, %A_AppData%\FET Loader\cheats.ini
-    Logging(1, "done.")
+    Logging(1,"......done.")
 }
 IfNotExist, %A_AppData%\FET Loader\vac-bypass.exe
 {
-    Logging(1,"Downloading vac-bypass.exe...")
+    Logging(1,"- Downloading vac-bypass.exe...")
     UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/vac-bypass.exe, %A_AppData%\FET Loader\vac-bypass.exe
-    Logging(1, "done.")
+    Logging(1,"......done.")
 }
 IfNotExist, %A_AppData%\FET Loader\emb.exe
 {
-    Logging(1,"Downloading emb.exe...")
+    Logging(1,"- Downloading emb.exe...")
     UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/emb.exe, %A_AppData%\FET Loader\emb.exe
-    Logging(1, "done.")
+    Logging(1,"......done.")
 }
 Logging(1,"done.")
 
@@ -147,14 +147,17 @@ if (A_OSVersion != "WIN_8.1")
 else {
     Logging(1,"Build No.: "winbuild)
 }
-Logging(1,"Windows activation key successfully stealed :3")
-
 Logging(1,"Loader Location: "A_ScriptFullPath)
 Logging(1,"Cheat Repo: "cheatrepo)
 if (A_IsUnicode = true) {
     Logging(1,"Compiler Type: UTF-8")
 } else {
     Logging(1,"Compiler Type: ANSI")
+}
+if (bruhshit = "unofficial build") {
+    Logging(1,"Build Type: UNOFFICIAL")
+} else {
+    Logging(1,"Build Type: OFFICIAL")
 }
 Logging(1,"---ENV---")
 Logging(1, "")
