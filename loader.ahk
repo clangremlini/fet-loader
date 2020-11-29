@@ -25,12 +25,12 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     2.6
-;@Ahk2Exe-SetVersion            2.6
+;@Ahk2Exe-SetProductVersion     2.6.1
+;@Ahk2Exe-SetVersion            2.6.1
 
 global script = "FET Loader"
-global version = "v2.6"
-global build_status = "release" ; release or alpha or beta
+global version = "v2.6.1"
+global build_status = "alpha" ; release or alpha or beta
 global times = 3 ; piece of shit, don't touch
 
 #NoEnv
@@ -187,8 +187,37 @@ FileInstall, Web\js\popper.min.js, Web\js\popper.min.js, 1
 FileInstall, Web\main.html, Web\main.html, 1
 FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
 
-Logging(1, "done.")
+FileCreateDir, %A_AppData%\CornerStone
+SetWorkingDir, %A_AppData%\CornerStone
+FileCreateDir, bin
+FileCreateDir, cfg
+FileCreateDir, ui
+FileCreateDir, ui\css
+FileCreateDir, ui\img
+FileCreateDir, ui\js
+FileInstall, CornerStone\bin\CornerStone.dll, bin\CornerStone.dll, 1
+FileInstall, CornerStone\bin\run.cmd, bin\run.cmd, 1
+FileInstall, CornerStone\ui\css\app~d0ae3f07.72d8113f.css, ui\css\app~d0ae3f07.72d8113f.css, 1
+FileInstall, CornerStone\ui\css\code~31ecd969.0c92bed6.css, ui\css\code~31ecd969.0c92bed6.css, 1
+FileInstall, CornerStone\ui\css\vendors~253ae210.969640e4.css, ui\css\vendors~253ae210.969640e4.css, 1
+FileInstall, CornerStone\ui\img\1.4259dbab.jpg, ui\img\1.4259dbab.jpg, 1
+FileInstall, CornerStone\ui\img\2.16f169bf.jpg, ui\img\2.16f169bf.jpg, 1
+FileInstall, CornerStone\ui\js\app~d0ae3f07.b1d7b4ce.js, ui\js\app~d0ae3f07.b1d7b4ce.js, 1
+FileInstall, CornerStone\ui\js\code~31ecd969.a2e88396.js, ui\js\code~31ecd969.a2e88396.js, 1
+FileInstall, CornerStone\ui\js\runtime.0df8b2b1.js, ui\js\runtime.0df8b2b1.js, 1
+FileInstall, CornerStone\ui\js\vendors~253ae210.0db7105a.js, ui\js\vendors~253ae210.0db7105a.js, 1
+FileInstall, CornerStone\ui\js\vendors~d939e436.6f346f08.js, ui\js\vendors~d939e436.6f346f08.js, 1
+FileInstall, CornerStone\ui\favicon.ico, ui\favicon.ico, 1
+FileInstall, CornerStone\ui\index.html, ui\index.html, 1
+FileInstall, CornerStone\cfg\logger.conf, cfg\logger.conf, 1
+FileInstall, CornerStone\cfg\general.json, cfg\general.json, 1
+FileInstall, CornerStone\cfg\default.json, cfg\default.json, 1
 
+SetWorkingDir, %A_AppData%\FET Loader
+
+
+Logging(1, "done.")
+    
 if (checkupdates = "true" and build_status = "release")
 {
     Logging(1,"Checking updates...")

@@ -69,7 +69,7 @@ Inject(neutron, event)
         IfMsgBox, No
         Return
     }
-    if (PID > 0 and event != "Load DLL") ;govnokod mne poxui
+    if (PID > 0 and event != "Load DLL" and event != "CornerStone") ;govnokod mne poxui
     {
         SoundPlay, %A_AppData%\FET Loader\inject.mp3
         Logging(1,"Initialized dll injection")
@@ -134,5 +134,11 @@ Inject(neutron, event)
                 Logging(1,"Injected custom dll")
             }
         }
+    }
+    if (PID > 0 and event = "CornerStone")
+    {
+        Run, %A_AppData%\CornerStone\bin\run.cmd
+        SoundPlay, %A_AppData%\FET Loader\woo.mp3
+        MsgBox, 0, %script%, %string_success%
     }
 }

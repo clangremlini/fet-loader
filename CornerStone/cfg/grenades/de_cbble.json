@@ -1,0 +1,497 @@
+{
+  "grenades": [
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -865.97,
+        "y": -80.03,
+        "z": 128.03
+      },
+      "angles": {
+        "pitch": -4.8,
+        "yaw": -48.93
+      },
+      "id": "58fd17cd-7583-49da-a056-1f30e04d08d9",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -670.98,
+        "y": -508.03,
+        "z": -31.97
+      },
+      "angles": {
+        "pitch": -23.24,
+        "yaw": -40.93
+      },
+      "id": "8b4b25a8-4f60-452d-9158-517fbd2cb79c",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -397.82,
+        "y": -760.03,
+        "z": -95.67
+      },
+      "angles": {
+        "pitch": -18.23,
+        "yaw": 33.11
+      },
+      "id": "cb59fbba-39de-4b76-bdc9-4f7a2502fa1c",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -1024.03,
+        "y": -1234.64,
+        "z": -87.97
+      },
+      "angles": {
+        "pitch": -42.19,
+        "yaw": 165.99
+      },
+      "id": "e73a5fb4-2f2b-4654-a027-6684f7e6a0f6",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -2527.87,
+        "y": -1905.61,
+        "z": 48.03
+      },
+      "angles": {
+        "pitch": -20.1,
+        "yaw": 80.96
+      },
+      "id": "aaadebc6-bf47-445b-a212-136f3b9780eb",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -2981.86,
+        "y": -431.57,
+        "z": 10.71
+      },
+      "angles": {
+        "pitch": -60.58,
+        "yaw": -76.17
+      },
+      "id": "16c6ca07-aece-4134-a626-5b381f14f072",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -2983.96,
+        "y": -744.07,
+        "z": 11.97
+      },
+      "angles": {
+        "pitch": -29.42,
+        "yaw": -35.56
+      },
+      "id": "9a9a21ad-d782-4d54-bc62-450def38693d",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -3168.03,
+        "y": 79.97,
+        "z": -29.97
+      },
+      "angles": {
+        "pitch": -45.99,
+        "yaw": -63.28
+      },
+      "id": "e828d070-da0f-470d-843c-82f0bb9e2818",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -3295.99,
+        "y": 79.97,
+        "z": -29.97
+      },
+      "angles": {
+        "pitch": -37.1,
+        "yaw": -50.83
+      },
+      "id": "c3a73656-0162-463e-a850-01b81b541c91",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -3293.98,
+        "y": 208.03,
+        "z": 0.03
+      },
+      "angles": {
+        "pitch": -48.98,
+        "yaw": 59.7
+      },
+      "id": "ad6bbc85-97db-4aa6-bd14-15e86bed689f",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -1425.93,
+        "y": 2070.02,
+        "z": -54.97
+      },
+      "angles": {
+        "pitch": -26.72,
+        "yaw": -122.32
+      },
+      "id": "2b7e01dc-d9fb-4976-add0-3560b7846f13",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 47.97,
+        "y": -16.03,
+        "z": -23.18
+      },
+      "angles": {
+        "pitch": -38.78,
+        "yaw": -88.37
+      },
+      "id": "f5bc36b3-4870-4736-b355-2e1c4ff53a8e",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -865.97,
+        "y": -80.03,
+        "z": 128.03
+      },
+      "angles": {
+        "pitch": -4.37,
+        "yaw": -51.09
+      },
+      "id": "148542c9-6c18-43a7-98a9-2658cc2186d9",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -752.03,
+        "y": -80.02,
+        "z": 128.03
+      },
+      "angles": {
+        "pitch": -1.24,
+        "yaw": -118.23
+      },
+      "id": "b80a5096-7bc9-47cc-a5ee-8a88cb7e92f5",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -780.03,
+        "y": 112,
+        "z": 128.03
+      },
+      "angles": {
+        "pitch": 1.58,
+        "yaw": -89.38
+      },
+      "id": "4c7ab77c-cc18-4f87-b7ae-05fa4a887992",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -2910.08,
+        "y": -978.47,
+        "z": 31.77
+      },
+      "angles": {
+        "pitch": -21.4,
+        "yaw": -71.57
+      },
+      "id": "d17def04-1423-43f4-a39d-8c8f731a2e7a",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 230.8,
+        "y": -305.61,
+        "z": -63.97
+      },
+      "angles": {
+        "pitch": -12.55,
+        "yaw": -9.72
+      },
+      "id": "10d51e16-9f5b-4823-a57c-3df9d614fcb3",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -155.98,
+        "y": -16.03,
+        "z": -31.97
+      },
+      "angles": {
+        "pitch": 1.6,
+        "yaw": -26.61
+      },
+      "id": "696117f4-f618-48bb-baf0-267198b4b2f9",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -126.24,
+        "y": -239.96,
+        "z": -31.97
+      },
+      "angles": {
+        "pitch": -54.02,
+        "yaw": 45.83
+      },
+      "id": "2a928e9e-7de7-4cf4-b616-35757cebaac5",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 47.97,
+        "y": -239.97,
+        "z": -31.97
+      },
+      "angles": {
+        "pitch": -33.52,
+        "yaw": 27.96
+      },
+      "id": "475f1ec2-3eb5-4ff9-90fb-5c4b1bb4b333",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -865.97,
+        "y": -80.03,
+        "z": 128.03
+      },
+      "angles": {
+        "pitch": -8.93,
+        "yaw": -82.21
+      },
+      "id": "4631f0a6-a516-4ffa-b19f-3e6b60a4ffe3",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -641.97,
+        "y": 366.28,
+        "z": 0.03
+      },
+      "angles": {
+        "pitch": -15.93,
+        "yaw": -105.12
+      },
+      "id": "f8e3c443-0e34-42bc-a1d9-2e2e9eb84ab7",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -2863.97,
+        "y": 560.03,
+        "z": 0.03
+      },
+      "angles": {
+        "pitch": -11.39,
+        "yaw": -10.74
+      },
+      "id": "a09bd0f5-6674-4655-bd06-21da01b7454c",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -2544.03,
+        "y": -605.01,
+        "z": 27.47
+      },
+      "angles": {
+        "pitch": -30.84,
+        "yaw": -84.48
+      },
+      "id": "5a0d8968-7c26-4ed8-95b5-75e03f52594a",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -2899.5,
+        "y": -2009.88,
+        "z": 48.03
+      },
+      "angles": {
+        "pitch": -47.17,
+        "yaw": 139.52
+      },
+      "id": "f5f71f0a-4bf3-4c68-8890-f7dab2b9db0f",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -1809.76,
+        "y": -1392.62,
+        "z": 0.03
+      },
+      "angles": {
+        "pitch": -32.95,
+        "yaw": -33.68
+      },
+      "id": "50439a13-f4a9-4955-8ced-774ded287b7b",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -1700.08,
+        "y": -1012.54,
+        "z": 0.03
+      },
+      "angles": {
+        "pitch": -57.7,
+        "yaw": 133.78
+      },
+      "id": "2a27f9b2-d7f8-4905-87ad-863a595d1851",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -2649.68,
+        "y": -58.52,
+        "z": -87.97
+      },
+      "angles": {
+        "pitch": -5.38,
+        "yaw": 162.7
+      },
+      "id": "115a41b5-9208-45ba-9875-c3bc736d3cea",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -2640.03,
+        "y": -35.97,
+        "z": -223.97
+      },
+      "angles": {
+        "pitch": -4.28,
+        "yaw": 158.38
+      },
+      "id": "e3d8c167-e74d-4ff1-b153-95209137ffec",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    }
+  ]
+}

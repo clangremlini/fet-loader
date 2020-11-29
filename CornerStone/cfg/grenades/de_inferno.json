@@ -1,0 +1,888 @@
+{
+  "grenades": [
+    {
+      "grenade": 46,
+      "description": "Boost",
+      "pos": {
+        "x": 610.98,
+        "y": 1873.1,
+        "z": 134.19
+      },
+      "angles": {
+        "pitch": 7.97,
+        "yaw": 69.73
+      },
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "id": "a8603cd1-9cdf-4a9d-ac60-374936ea3f10"
+    },
+    {
+      "grenade": 46,
+      "description": "Spools",
+      "pos": {
+        "x": 460.92,
+        "y": 1828.96,
+        "z": 136.06
+      },
+      "angles": {
+        "pitch": 2.06,
+        "yaw": "85.43"
+      },
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "id": "053662e6-15b8-42a3-9b30-b0453fef38de"
+    },
+    {
+      "grenade": 46,
+      "description": "Triple box",
+      "pos": {
+        "x": 479.27,
+        "y": 2017.95,
+        "z": 128.41
+      },
+      "angles": {
+        "pitch": -41.54,
+        "yaw": 121.8
+      },
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "id": "14f74044-6aad-436b-8bc4-dd13e801ccab"
+    },
+    {
+      "grenade": 43,
+      "description": "Banana",
+      "pos": {
+        "x": -668.08,
+        "y": 592.76,
+        "z": -22
+      },
+      "angles": {
+        "pitch": -17.08,
+        "yaw": 59.62
+      },
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "id": "70ca8fb2-cbcf-4d86-a443-b3e600185054"
+    },
+    {
+      "grenade": 43,
+      "description": "New grenade",
+      "pos": {
+        "x": 1314.03,
+        "y": 216.03,
+        "z": 135.83
+      },
+      "angles": {
+        "pitch": -35.52,
+        "yaw": 95.08
+      },
+      "mode": 1,
+      "duration": 0,
+      "actions": 2,
+      "id": "6a61a506-ae5d-4c0d-8e63-3a652b441e9d"
+    },
+    {
+      "grenade": 45,
+      "description": "Arch",
+      "pos": {
+        "x": 1518,
+        "y": 792.03,
+        "z": 139.95
+      },
+      "angles": {
+        "pitch": -31.7,
+        "yaw": 141.8
+      },
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "id": "a8dad698-7231-4aa7-a731-8fc0f90130b1"
+    },
+    {
+      "grenade": 45,
+      "description": "Long",
+      "pos": {
+        "x": 1517.93,
+        "y": 951.97,
+        "z": 147.78
+      },
+      "angles": {
+        "pitch": -34.16,
+        "yaw": 170.59
+      },
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "id": "80731247-2fca-4ab5-ba31-85ecfe6f4f5c"
+    },
+    {
+      "grenade": 45,
+      "description": "Banana start",
+      "pos": {
+        "x": 1439.97,
+        "y": 2956.14,
+        "z": 131.34
+      },
+      "angles": {
+        "pitch": "-18.5",
+        "yaw": "-132.49"
+      },
+      "mode": 3,
+      "duration": "490",
+      "actions": 5,
+      "id": "2c0ad2ed-0afe-4332-9e99-9a1daee84dff"
+    },
+    {
+      "grenade": 46,
+      "description": "Bomb",
+      "pos": {
+        "x": 908,
+        "y": 3295.65,
+        "z": 144.03
+      },
+      "angles": {
+        "pitch": -48.21,
+        "yaw": -125.8
+      },
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "id": "6da97183-957e-4296-82dc-316f6ff2b0e2"
+    },
+    {
+      "grenade": 45,
+      "description": "Middle",
+      "pos": {
+        "x": 2414.9,
+        "y": 1207.91,
+        "z": 165.89
+      },
+      "angles": {
+        "pitch": -2.39,
+        "yaw": -148.08
+      },
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "id": "9925bea2-e5d1-4964-8d02-a005e6961e48"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -656.01,
+        "y": 514.09,
+        "z": 20.02
+      },
+      "angles": {
+        "pitch": -33.38,
+        "yaw": -0.23
+      },
+      "description": "Middle",
+      "id": "b20065a9-d18a-4e96-9f53-8a6fb365f7f0",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 373.97,
+        "y": "466.9",
+        "z": 81.2
+      },
+      "angles": {
+        "pitch": "-17",
+        "yaw": "9.64"
+      },
+      "description": "Moto",
+      "id": "883e6746-c4bf-4e87-b021-0ff3f6dd8a37",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 716.03,
+        "y": 692.48,
+        "z": 95.03
+      },
+      "angles": {
+        "pitch": -9.74,
+        "yaw": -24.82
+      },
+      "description": "Short",
+      "id": "0f2600c0-fe75-4223-b372-ef2919c9140d",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 962.14,
+        "y": 434.03,
+        "z": 88.03
+      },
+      "angles": {
+        "pitch": -47.01,
+        "yaw": 25.88
+      },
+      "description": "Library",
+      "id": "d0db6596-0b00-4120-8a71-ee5b85bc52e3",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 726.15,
+        "y": 217.27,
+        "z": 94.33
+      },
+      "angles": {
+        "pitch": -26.29,
+        "yaw": 42.48
+      },
+      "description": "Middle",
+      "id": "740f1163-9ccc-462c-acc2-1bdf22fbe692",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 726.15,
+        "y": 217.27,
+        "z": 94.33
+      },
+      "angles": {
+        "pitch": -26.29,
+        "yaw": 42.48
+      },
+      "description": "Arches",
+      "id": "cf120d55-4430-4fe8-9938-fd0d1f99dc5b",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 366.99,
+        "y": -288.62,
+        "z": 96.03
+      },
+      "angles": {
+        "pitch": -40.18,
+        "yaw": 36.82
+      },
+      "description": "Middle",
+      "id": "0851170d-28ed-4bc1-a7ec-f3f605300ff9",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1314.01,
+        "y": 344.68,
+        "z": 128.4
+      },
+      "angles": {
+        "pitch": -16.81,
+        "yaw": -50.2
+      },
+      "description": "Bombsite A",
+      "id": "844c65d5-06a9-4c4f-b865-3e22e12b2eca",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 2147.97,
+        "y": 1225.97,
+        "z": 172.18
+      },
+      "angles": {
+        "pitch": -37.86,
+        "yaw": -106.95
+      },
+      "description": "Short",
+      "id": "1b270e16-3e0d-4f4c-a7cb-384767748141",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1867.97,
+        "y": 1304.02,
+        "z": 160.03
+      },
+      "angles": {
+        "pitch": -48.39,
+        "yaw": -85.85
+      },
+      "description": "Balcony",
+      "id": "cd0f68da-5c7c-4a8e-9438-b88ba3a08bcb",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1867.97,
+        "y": 1304.02,
+        "z": 160.03
+      },
+      "angles": {
+        "pitch": -48.39,
+        "yaw": -85.85
+      },
+      "description": "Middle",
+      "id": "fd7276bf-54f3-42d8-b2c3-4a8ccddd7767",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 2048.17,
+        "y": 1915.88,
+        "z": 167.03
+      },
+      "angles": {
+        "pitch": -41.73,
+        "yaw": -84.23
+      },
+      "description": "Bombsite A",
+      "id": "d6e76c08-8f66-4c62-82d4-666c313cab54",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 2535.1,
+        "y": 2093.03,
+        "z": 132.03
+      },
+      "angles": {
+        "pitch": -15.59,
+        "yaw": -129.8
+      },
+      "description": "Middle",
+      "id": "3884f780-de75-4446-93d5-ae1df3a58827",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1960.69,
+        "y": 2638.12,
+        "z": 128.03
+      },
+      "angles": {
+        "pitch": -41.63,
+        "yaw": 175.7
+      },
+      "description": "Fountain",
+      "id": "d8637bab-bd4a-456c-a9c2-256d73f01f24",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1912.32,
+        "y": 2614.82,
+        "z": 250.7
+      },
+      "angles": {
+        "pitch": -37.88,
+        "yaw": 158.62
+      },
+      "description": "Spools",
+      "id": "a8e7cbb2-18d4-410b-b208-e79fcddf187c",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1667.82,
+        "y": 2972.87,
+        "z": 131.77
+      },
+      "angles": {
+        "pitch": -14.45,
+        "yaw": -156.35
+      },
+      "description": "B Cart",
+      "id": "cab3fca2-c0a8-4339-a40d-b58df609d7bd",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 273.99,
+        "y": 2910.03,
+        "z": 160.03
+      },
+      "angles": {
+        "pitch": -1.57,
+        "yaw": -37.51
+      },
+      "description": "B Cart",
+      "id": "6e4e4d00-6d5b-4a68-8ccc-5387eed779fb",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 297.06,
+        "y": 1567.58,
+        "z": 113.63
+      },
+      "angles": {
+        "pitch": -48.88,
+        "yaw": 85.14
+      },
+      "description": "Spools",
+      "id": "7eebf4db-4047-4cd5-a3f8-2179cda1178c",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 110.84,
+        "y": 1569.61,
+        "z": 132.02
+      },
+      "angles": {
+        "pitch": -33.92,
+        "yaw": 57.79
+      },
+      "description": "Tree (CT)",
+      "id": "f50a408e-1c6e-40e5-b0c5-835d877d77a6",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 339.97,
+        "y": 2027.93,
+        "z": 128.03
+      },
+      "angles": {
+        "pitch": -40.19,
+        "yaw": 42.93
+      },
+      "description": "Tree (CT deep)",
+      "id": "a48c7340-fb07-4831-a2a7-bc38422d69a1",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 460.45,
+        "y": 1828.48,
+        "z": 136.11
+      },
+      "angles": {
+        "pitch": -22.19,
+        "yaw": 85.94
+      },
+      "description": "Spools (close)",
+      "id": "9f208a2b-6b0f-452c-b38c-ed914c19ad12",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -79.45,
+        "y": 1330.03,
+        "z": 106.71
+      },
+      "angles": {
+        "pitch": -34.46,
+        "yaw": 66.02
+      },
+      "description": "Bombsite B",
+      "id": "91b6b82f-69f0-4ac7-ab1f-7d3da952ac17",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1327.17,
+        "y": 1247.97,
+        "z": 160.62
+      },
+      "angles": {
+        "pitch": -12.36,
+        "yaw": -58.31
+      },
+      "description": "Middle",
+      "id": "55eabee5-87b2-4aa4-a807-674ab5abe0d6",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 257.05,
+        "y": 61.84,
+        "z": 220.03
+      },
+      "angles": {
+        "pitch": -37.83,
+        "yaw": 0.49
+      },
+      "description": "Bombsite A",
+      "id": "1c006975-339e-4e7b-aa21-efa3c9597589",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 339.98,
+        "y": 2027.88,
+        "z": 128.03
+      },
+      "angles": {
+        "pitch": -47.98,
+        "yaw": 75.9
+      },
+      "description": "Sandwich",
+      "id": "bb181ba2-7450-4ab1-b1c1-05dd8e11afc6",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 404.11,
+        "y": 1853.35,
+        "z": 226.03
+      },
+      "angles": {
+        "pitch": -16.97,
+        "yaw": 103.83
+      },
+      "description": "Dark",
+      "id": "5e57b872-9dba-42b2-972e-d8bbacff43c0",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 437.97,
+        "y": 1804.75,
+        "z": 226.03
+      },
+      "angles": {
+        "pitch": 7.4,
+        "yaw": 85.62
+      },
+      "description": "Spools",
+      "id": "35ff3ad7-f2ba-4cd7-aa7c-42d9f836094d",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 875.97,
+        "y": 2383.32,
+        "z": 145.34
+      },
+      "angles": {
+        "pitch": -16.29,
+        "yaw": 167
+      },
+      "description": "New box",
+      "id": "fef40b91-689c-4cc2-a63e-56ace9bc6e8c",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 1032.54,
+        "y": 3263.44,
+        "z": 128.03
+      },
+      "angles": {
+        "pitch": -47.66,
+        "yaw": -142.9
+      },
+      "description": "Spools",
+      "id": "b3e027d6-101b-4a15-8a4b-7b39385853c4",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 1780.12,
+        "y": 31.78,
+        "z": 128.13
+      },
+      "angles": {
+        "pitch": -11.26,
+        "yaw": 35.55
+      },
+      "description": "Bombsite A",
+      "id": "73d5b30b-1236-41f8-9cee-8cd0827b8cc2",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 1314.03,
+        "y": 216.03,
+        "z": 134.87
+      },
+      "angles": {
+        "pitch": -21.1,
+        "yaw": -19.38
+      },
+      "description": "Pit",
+      "id": "a0b4bbf0-bc79-4517-88d7-80c9566ac78b",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 1131.03,
+        "y": 590,
+        "z": 121.55
+      },
+      "angles": {
+        "pitch": -18.96,
+        "yaw": -41.47
+      },
+      "description": "Patio",
+      "id": "9788462c-437f-47ab-93d7-c7b3ed81b9a0",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 1179.82,
+        "y": 434.03,
+        "z": 115.02
+      },
+      "angles": {
+        "pitch": -21.69,
+        "yaw": 49.64
+      },
+      "description": "Cubby",
+      "id": "f3a2ccec-cc04-40c0-9c67-628d4305ac37",
+      "mode": 2,
+      "duration": 200,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 315.3,
+        "y": 1603.96,
+        "z": 116.89
+      },
+      "angles": {
+        "pitch": -29.84,
+        "yaw": 76.97
+      },
+      "description": "Bombsite B",
+      "id": "ea58c1aa-aae9-4fe1-8fe3-f4994fc29850",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 610.97,
+        "y": 1873.03,
+        "z": 134.18
+      },
+      "angles": {
+        "pitch": -44.53,
+        "yaw": -0.18
+      },
+      "description": "Banana",
+      "id": "2c159d49-34db-4300-b204-25ab21d54590",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 498.97,
+        "y": 2444.03,
+        "z": 160.03
+      },
+      "angles": {
+        "pitch": 1.03,
+        "yaw": 167.77
+      },
+      "description": "Bombsite B",
+      "id": "bf071bde-7c84-42d4-8cdf-f5fe7df3e4a5",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 543.37,
+        "y": 3362.03,
+        "z": 160.03
+      },
+      "angles": {
+        "pitch": -43.83,
+        "yaw": -87.61
+      },
+      "description": "Bombsite B",
+      "id": "4a7d1d57-282e-4ac7-bfb2-b2ab636a32ed",
+      "mode": 0,
+      "duration": 0,
+      "actions": 3
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 1826.89,
+        "y": 1904.97,
+        "z": 160.03
+      },
+      "angles": {
+        "pitch": -30.84,
+        "yaw": -89.96
+      },
+      "description": "Long",
+      "id": "d59fdd53-63ad-4bb5-be70-fff98b7235b6",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 2001.34,
+        "y": 1225.99,
+        "z": 174.03
+      },
+      "angles": {
+        "pitch": -35.29,
+        "yaw": -87.66
+      },
+      "description": "Bombsite A",
+      "id": "ff7c011d-35b3-475d-b9f0-c0008026ff07",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 1534.72,
+        "y": -274.18,
+        "z": 256.03
+      },
+      "angles": {
+        "pitch": -9.21,
+        "yaw": -36.02
+      },
+      "description": "Balcony",
+      "id": "11557b3f-403f-414a-83f9-ed43cea07da4",
+      "mode": 2,
+      "duration": 111,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 1517.97,
+        "y": 727.97,
+        "z": 138.51
+      },
+      "angles": {
+        "pitch": -18.89,
+        "yaw": -162.34
+      },
+      "description": "Middle",
+      "id": "cc3dc162-0f28-427c-8561-53b271a6c8ee",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1314.03,
+        "y": 829.98,
+        "z": 148.64
+      },
+      "angles": {
+        "pitch": -56.07,
+        "yaw": -5.06
+      },
+      "description": "Bicycle",
+      "id": "0169230c-c5ed-434f-9748-e61b0461d21b",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    }
+  ]
+}

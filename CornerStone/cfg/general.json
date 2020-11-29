@@ -1,0 +1,21 @@
+{
+    "general": {
+        "showConsole": "true",
+        "useIngameMessages": "true",
+        "useIngameSounds": "true",
+        "httpServer": "0.0.0.0:8081",
+        "enabledSound": "buttons\/button3",
+        "disabledSound": "buttons\/button2",
+        "showScoresKey": "109"
+    },
+    "activeConfig": "default",
+    "configs": [
+        {
+            "name": "Default",
+            "uuid": "default",
+            "filename": "default.json",
+            "description": "Default CornerStone configuration.",
+            "locked": "true"
+        }
+    ]
+}

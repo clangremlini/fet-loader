@@ -1,0 +1,140 @@
+{
+  "grenades": [
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -299.97,
+        "y": -1163.99,
+        "z": 77.7
+      },
+      "angles": {
+        "pitch": -16.66,
+        "yaw": 90.35
+      },
+      "description": "X-box",
+      "id": "4df69275-2830-485c-a461-af10a60e826f",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 757.08,
+        "y": -347.97,
+        "z": 8.03
+      },
+      "angles": {
+        "pitch": -38.39,
+        "yaw": 74.67
+      },
+      "description": "Long start",
+      "id": "81241fe5-5cb9-4b1b-b989-ea6448cd7a4e",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -149.03,
+        "y": 1208.31,
+        "z": -0.41
+      },
+      "angles": {
+        "pitch": -21.11,
+        "yaw": 132.12
+      },
+      "description": "CT",
+      "id": "deaddad1-f2f5-49b5-93aa-d51dc53125b5",
+      "mode": 2,
+      "duration": 200,
+      "actions": 5
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -986.42,
+        "y": 2553.26,
+        "z": 1.64
+      },
+      "angles": {
+        "pitch": -27.26,
+        "yaw": -143.93
+      },
+      "description": "Tunnel",
+      "id": "34e6eabd-98c8-42f9-b862-7b4c7ae4a392",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -1037.97,
+        "y": 2102.03,
+        "z": -5.88
+      },
+      "angles": {
+        "pitch": -30.33,
+        "yaw": -140.38
+      },
+      "id": "1b8c81d2-df67-4373-a799-4e8823adff38",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -1707.97,
+        "y": 1620.03,
+        "z": 5.46
+      },
+      "angles": {
+        "pitch": 9.45,
+        "yaw": 75.2
+      },
+      "id": "73211d62-1af5-4021-924d-20c54a18b036",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -1132.3,
+        "y": 2436.85,
+        "z": 28.81
+      },
+      "angles": {
+        "pitch": -0.16,
+        "yaw": -123.73
+      },
+      "description": "Corner (car)",
+      "id": "237498f7-49f6-4b4e-8c64-27295761215c",
+      "mode": 1,
+      "duration": 0,
+      "actions": 3
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -1620.87,
+        "y": 1924.26,
+        "z": -1.11
+      },
+      "angles": {
+        "pitch": 11.52,
+        "yaw": -158.58
+      },
+      "id": "61179775-2f1b-4401-8fd7-a59426445eb7",
+      "mode": 1,
+      "duration": 0,
+      "actions": 2,
+      "description": "Unknown"
+    }
+  ]
+}

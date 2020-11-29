@@ -1,0 +1,363 @@
+{
+  "grenades": [
+    {
+      "grenade": 45,
+      "description": "Left",
+      "pos": {
+        "x": 1535.97,
+        "y": 1775.97,
+        "z": -223.97
+      },
+      "angles": {
+        "pitch": "-12.78",
+        "yaw": -112.5
+      },
+      "mode": 2,
+      "duration": "350",
+      "actions": 1,
+      "id": "31670868-8e61-49e2-ade1-155310e3caca"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -638.51,
+        "y": 1595.79,
+        "z": -171.73
+      },
+      "angles": {
+        "pitch": -5.79,
+        "yaw": -59.3
+      },
+      "description": "Site (letft)",
+      "id": "f9be2465-2fb4-4da5-a2bc-374d0d60cc91",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -832.11,
+        "y": 1522.48,
+        "z": -222.97
+      },
+      "angles": {
+        "pitch": -12,
+        "yaw": -54.37
+      },
+      "description": "Connector",
+      "id": "1d24d832-3c55-4361-8ef7-ba217dd5ce86",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -368,
+        "y": 1236.03,
+        "z": -136.95
+      },
+      "angles": {
+        "pitch": -65.01,
+        "yaw": -71.16
+      },
+      "id": "779faff7-85fa-493f-8b70-7016a47204fd",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -492.99,
+        "y": 1236,
+        "z": -86.9
+      },
+      "angles": {
+        "pitch": -29.02,
+        "yaw": -55.7
+      },
+      "id": "0c598f86-b861-4c04-aa7b-4a83598fbcb7",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -555.03,
+        "y": 1262.03,
+        "z": -212.59
+      },
+      "angles": {
+        "pitch": -67.91,
+        "yaw": -50.79
+      },
+      "id": "5f48505d-87b7-4138-a835-cacfd0b624c7",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -832.15,
+        "y": 1268.01,
+        "z": -222.97
+      },
+      "angles": {
+        "pitch": -37.76,
+        "yaw": -41.96
+      },
+      "id": "8b05b2c1-7ae2-484d-b3bf-1a10452905d5",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -655.9,
+        "y": -423.66,
+        "z": 16.03
+      },
+      "angles": {
+        "pitch": -46.62,
+        "yaw": 11.91
+      },
+      "id": "da571940-73a9-491a-adca-fa8492f2a5a2",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -639.97,
+        "y": -583.98,
+        "z": 16.03
+      },
+      "angles": {
+        "pitch": -29.23,
+        "yaw": 63.79
+      },
+      "id": "8d763c40-1487-4bb4-95f7-a3122c8f7ccf",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -720.03,
+        "y": -504.01,
+        "z": 16.02
+      },
+      "angles": {
+        "pitch": -36.68,
+        "yaw": -5.16
+      },
+      "id": "a40b5663-56df-4672-933a-6ed2a1a2de81",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1021.1,
+        "y": -254.97,
+        "z": -215.97
+      },
+      "angles": {
+        "pitch": -38.39,
+        "yaw": 154.56
+      },
+      "id": "fb86bdd8-93d3-4af7-b6b5-91b09435752e",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -645.45,
+        "y": 1697.73,
+        "z": -209.97
+      },
+      "angles": {
+        "pitch": -15.92,
+        "yaw": -60.62
+      },
+      "description": "Connector (deep)",
+      "id": "a100988d-918a-47fa-9f6e-fdcbf3fb3ce8",
+      "mode": 3,
+      "duration": 660,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -463.53,
+        "y": 1573.28,
+        "z": -206.29
+      },
+      "angles": {
+        "pitch": -46.48,
+        "yaw": -78.53
+      },
+      "description": "Electric (left)",
+      "id": "beb02f3e-c42d-4189-a979-e480977f1587",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -481.86,
+        "y": 1724.93,
+        "z": -209.97
+      },
+      "angles": {
+        "pitch": -22.22,
+        "yaw": -82.35
+      },
+      "description": "Electric (right)",
+      "id": "7d452451-836d-4e54-b787-8dc8abebd742",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -850.85,
+        "y": 454.75,
+        "z": -215.97
+      },
+      "angles": {
+        "pitch": -29.36,
+        "yaw": 1.57
+      },
+      "description": "Ivy",
+      "id": "9735133b-7612-4fd0-b44d-37d59337edcd",
+      "mode": 2,
+      "duration": 900,
+      "actions": 5
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -1146.31,
+        "y": -1043.48,
+        "z": -95.97
+      },
+      "angles": {
+        "pitch": -7.15,
+        "yaw": -2.93
+      },
+      "description": "Center",
+      "id": "3b841357-45f3-4f63-bf36-a3f80a7d68e4",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -1055.99,
+        "y": -1608.03,
+        "z": -151.97
+      },
+      "angles": {
+        "pitch": -4.49,
+        "yaw": -23.06
+      },
+      "description": "Upper",
+      "id": "d60f9132-4ab5-4a4e-85c3-9d8746b79a74",
+      "mode": 2,
+      "duration": 120,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -1053.98,
+        "y": -1048.31,
+        "z": -95.97
+      },
+      "angles": {
+        "pitch": 4.13,
+        "yaw": 2.51
+      },
+      "fov": 2,
+      "description": "Train (close)",
+      "id": "242023fc-e81e-4a2b-9e4b-2abea3cd340e",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -1054.81,
+        "y": -1048.79,
+        "z": -95.97
+      },
+      "angles": {
+        "pitch": -10.49,
+        "yaw": 2.1
+      },
+      "fov": 2,
+      "description": "Train (far)",
+      "id": "78fc005d-30bd-4eac-be96-570d1d0dc24a",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -1144.58,
+        "y": -1044.08,
+        "z": -95.97
+      },
+      "angles": {
+        "pitch": -11.77,
+        "yaw": 2.32
+      },
+      "description": "Train (far)",
+      "id": "ef93d803-cbd3-47ca-a520-9f23964e9d1f",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -1054.76,
+        "y": -984.19,
+        "z": -95.97
+      },
+      "angles": {
+        "pitch": 11.25,
+        "yaw": -9.27
+      },
+      "description": "Backsite",
+      "id": "2fdf131a-d5f5-4c31-8368-7a5e3abf5da7",
+      "mode": 3,
+      "duration": 10,
+      "actions": 5
+    }
+  ]
+}

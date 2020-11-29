@@ -1,0 +1,1009 @@
+{
+  "grenades": [
+    {
+      "grenade": 45,
+      "description": "Short (right arch)",
+      "pos": {
+        "x": -160.03,
+        "y": 760.01,
+        "z": -134.59
+      },
+      "angles": {
+        "pitch": -60.6,
+        "yaw": -167.35
+      },
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "id": "ae31eead-d436-4f8f-bf7e-bc447df222c2"
+    },
+    {
+      "grenade": 45,
+      "description": "Short (left arch)",
+      "pos": {
+        "x": -161.03,
+        "y": 450.67,
+        "z": -69.07
+      },
+      "angles": {
+        "pitch": -50.82,
+        "yaw": -163.76
+      },
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "id": "f9e8353f-5369-42c5-bcab-7d3aaf0fecf5"
+    },
+    {
+      "grenade": 44,
+      "pos": {
+        "x": "815.97",
+        "y": -1416.39,
+        "z": -108.97
+      },
+      "angles": {
+        "pitch": 1.44,
+        "yaw": -172.54
+      },
+      "description": "Stairs",
+      "id": "7938a7af-2eb2-4d14-85de-f08fdf55dc29",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -762.01,
+        "y": -1306.02,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -21.12,
+        "yaw": -47.11
+      },
+      "description": "Palace",
+      "id": "37b63006-5439-4531-bb18-41830b27f499",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -1999.83,
+        "y": -246.97,
+        "z": -159.14
+      },
+      "angles": {
+        "pitch": -19.27,
+        "yaw": 75.5
+      },
+      "description": "B house",
+      "id": "6ed67493-42dc-4a41-b685-5b067cafecbf",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -264.03,
+        "y": -1504.03,
+        "z": -163.97
+      },
+      "angles": {
+        "pitch": -12.7,
+        "yaw": -121.83
+      },
+      "description": "Ticketbox",
+      "id": "509716da-5da9-4c95-b4b2-28b714763604",
+      "mode": 2,
+      "duration": 10,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -879.79,
+        "y": -2263.93,
+        "z": -171.12
+      },
+      "angles": {
+        "pitch": -8.61,
+        "yaw": 33.61
+      },
+      "description": "Ramp",
+      "id": "e75c5ef3-29c5-49f7-b25f-8f0decd30aca",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 816,
+        "y": -1547.97,
+        "z": -108.97
+      },
+      "angles": {
+        "pitch": -45.41,
+        "yaw": 174.13
+      },
+      "description": "Connector",
+      "id": "525dd420-7c4e-446c-8a7a-18604f948c42",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -349.27,
+        "y": 520.03,
+        "z": -79.97
+      },
+      "angles": {
+        "pitch": -13.51,
+        "yaw": 174.56
+      },
+      "description": "Car",
+      "id": "54cb11f0-59d7-4a99-aa0d-19f0a71ea31f",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 663.98,
+        "y": -1128.02,
+        "z": -127.97
+      },
+      "angles": {
+        "pitch": -68.07,
+        "yaw": -122.45
+      },
+      "description": "Site A (left)",
+      "id": "fc9e2c08-f647-4b14-9a56-9af8dc1d7b81",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 815.97,
+        "y": -1415.84,
+        "z": -108.97
+      },
+      "angles": {
+        "pitch": -0.82,
+        "yaw": 178.66
+      },
+      "description": "Site A (center)",
+      "id": "7ce52b18-adcf-433a-ae62-05e8964aaaba",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 815.97,
+        "y": -1332.88,
+        "z": -108.97
+      },
+      "angles": {
+        "pitch": -60.34,
+        "yaw": -161
+      },
+      "description": "Site A (right)",
+      "id": "42d4fd08-e07c-4b9c-a55e-26352f1c5436",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1135.97,
+        "y": 648,
+        "z": -261.38
+      },
+      "angles": {
+        "pitch": -28.07,
+        "yaw": -140.94
+      },
+      "description": "Connector",
+      "id": "6ed9ee8b-afce-4cf8-a607-25ae3ae127aa",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 398.99,
+        "y": 176.4,
+        "z": -249.42
+      },
+      "angles": {
+        "pitch": -47.09,
+        "yaw": -136.37
+      },
+      "description": "Connector",
+      "id": "d37957d2-0660-4341-959d-ac121cea2864",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -752.02,
+        "y": -57.11,
+        "z": -162.27
+      },
+      "angles": {
+        "pitch": -7.21,
+        "yaw": 139.39
+      },
+      "description": "Bombsite B",
+      "id": "23a39d7c-620d-4583-bcf9-3459c63125c5",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1423.97,
+        "y": -248.02,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -32,
+        "yaw": -170.45
+      },
+      "description": "DD",
+      "id": "1a0731ad-a21a-427c-8d9e-1b423a2b7598",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1423.95,
+        "y": -367.97,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -29.79,
+        "yaw": 175.9
+      },
+      "description": "Short (far)",
+      "id": "0e091f4a-e21b-4328-b7b5-f6fa8aaf1946",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1392,
+        "y": -1007.17,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -46.96,
+        "yaw": 172.78
+      },
+      "description": "Window",
+      "id": "81704441-824d-4870-b55a-30d71c9c507d",
+      "mode": 2,
+      "duration": 400,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1399.97,
+        "y": -1160.85,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -39.48,
+        "yaw": 159.81
+      },
+      "description": "Short",
+      "id": "0c067110-34e0-4f6f-bac7-a7c88a7a7e80",
+      "mode": 2,
+      "duration": 333,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1149.38,
+        "y": -1183.97,
+        "z": -205.57
+      },
+      "angles": {
+        "pitch": -40.47,
+        "yaw": -164.86
+      },
+      "description": "Stairs",
+      "id": "4d509639-6a54-4fd8-afe8-78b37238a763",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1083.77,
+        "y": -1020.23,
+        "z": -258.66
+      },
+      "angles": {
+        "pitch": -35.24,
+        "yaw": -145.38
+      },
+      "description": "CT",
+      "id": "fe46dbcc-b85c-41d4-bce5-8ec04f998db4",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 907.25,
+        "y": -1036.03,
+        "z": -251.97
+      },
+      "angles": {
+        "pitch": -10.89,
+        "yaw": -142.42
+      },
+      "description": "CT",
+      "id": "24d32d07-1b66-4a25-8047-314dcacde1a4",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 787.96,
+        "y": -1215.35,
+        "z": -108.97
+      },
+      "angles": {
+        "pitch": 5.12,
+        "yaw": -145.52
+      },
+      "description": "CT",
+      "id": "532db29f-2b13-43d9-8d01-1c5e475378d9",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -789.7,
+        "y": -1306.03,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -67.41,
+        "yaw": -10.55
+      },
+      "description": "Ramp",
+      "id": "26f8bda6-31e9-4af3-a14f-2f9aed9efd7a",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -1163.51,
+        "y": -2514.81,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -21.42,
+        "yaw": 34.75
+      },
+      "description": "Ramp",
+      "id": "9212b4cc-7aff-4dbe-a8ea-07be1d3869a0",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -2415.85,
+        "y": -115.76,
+        "z": -157.98
+      },
+      "angles": {
+        "pitch": -24.72,
+        "yaw": 43.91
+      },
+      "description": "B House",
+      "id": "e7a3628c-8ea2-4357-abbf-4ed02820951b",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -540.43,
+        "y": 521.02,
+        "z": -81.36
+      },
+      "angles": {
+        "pitch": -41.68,
+        "yaw": -179.88
+      },
+      "description": "Forest",
+      "id": "1ab4c079-e118-4370-a00e-05dd0213f5e8",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -835.16,
+        "y": 615.26,
+        "z": -79.08
+      },
+      "angles": {
+        "pitch": -65.32,
+        "yaw": -146.71
+      },
+      "description": "Window",
+      "id": "712853fc-b965-4070-9254-6f1c8bda582b",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -542.76,
+        "y": 615.97,
+        "z": -79.81
+      },
+      "angles": {
+        "pitch": -40.97,
+        "yaw": -168.22
+      },
+      "description": "Bombsite",
+      "id": "7f0d8684-97b9-46f2-ba0c-47fef6672d74",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -1872.03,
+        "y": -338.75,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -23.45,
+        "yaw": 108.61
+      },
+      "description": "Car",
+      "id": "3bed537a-18bd-4d55-bf80-2f2b7697ef1f",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 815.9,
+        "y": -1497.62,
+        "z": -108.97
+      },
+      "angles": {
+        "pitch": -26.86,
+        "yaw": -176.37
+      },
+      "description": "Jungle (help)",
+      "id": "43260aa0-3cef-411f-832b-af468ad61560",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1423.97,
+        "y": 71.97,
+        "z": -112.9
+      },
+      "angles": {
+        "pitch": -32.67,
+        "yaw": -163.35
+      },
+      "description": "Short Start",
+      "id": "f2586e45-b65e-4651-b61b-726be3caac03",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 16.03,
+        "y": -2375.97,
+        "z": -39.97
+      },
+      "angles": {
+        "pitch": 2.69,
+        "yaw": 76.13
+      },
+      "description": "Underwood",
+      "id": "f89c9092-3812-4912-b833-5b1712d74ccc",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 512.42,
+        "y": -1555.23,
+        "z": -263.97
+      },
+      "angles": {
+        "pitch": -22.51,
+        "yaw": 177.86
+      },
+      "description": "Sandwich",
+      "id": "3271d21b-6b5d-46f1-bac2-0d42b19b087e",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -31.43,
+        "y": -1418.03,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -13.4,
+        "yaw": -105.67
+      },
+      "description": "Ninja",
+      "id": "51441fce-9e82-46a8-8a86-fb7620117350",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 151.3,
+        "y": -2071.98,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -31.39,
+        "yaw": 99.79
+      },
+      "description": "Palace",
+      "id": "5a384e6e-b569-42a4-9706-c7cecb1c70e9",
+      "mode": 2,
+      "duration": 2,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -261.65,
+        "y": -1548.59,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -42.3,
+        "yaw": -9.6
+      },
+      "description": "Jungle",
+      "id": "2a7a6f82-1eca-4679-8b49-8ab029be399c",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 151.33,
+        "y": -1912.03,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -2.86,
+        "yaw": -159.74
+      },
+      "description": "Ramp",
+      "id": "fe9628f9-1cd2-489c-b8e6-ec7209222cca",
+      "mode": 2,
+      "duration": 20,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 59.57,
+        "y": -2086.42,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -6.53,
+        "yaw": 89.82
+      },
+      "description": "Ramp",
+      "accuracy": 2,
+      "id": "26e23941-de48-4e7f-a596-02730f8ea602",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -701.09,
+        "y": -2131.18,
+        "z": -179.97
+      },
+      "angles": {
+        "pitch": -42.6,
+        "yaw": 171.85
+      },
+      "description": "Bombsite A",
+      "id": "3dd9013f-7637-4371-ac09-76239d0b43e5",
+      "mode": 2,
+      "duration": 2,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -2411.97,
+        "y": -247.97,
+        "z": -164.74
+      },
+      "angles": {
+        "pitch": -19.95,
+        "yaw": 54.63
+      },
+      "description": "B House",
+      "id": "55ee4c62-9915-43da-90f4-681721c7a55b",
+      "mode": 2,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -1847.23,
+        "y": 488.29,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -6.59,
+        "yaw": 154.04
+      },
+      "description": "B House",
+      "id": "ab6c2a4d-f7d3-414c-ad5c-9526e4e54034",
+      "mode": 2,
+      "duration": 30,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -1832,
+        "y": 156.43,
+        "z": -163.98
+      },
+      "angles": {
+        "pitch": -24.03,
+        "yaw": 47.72
+      },
+      "description": "B House",
+      "id": "cd3e97c0-bae8-474b-9f88-fc5fa293b91f",
+      "mode": 2,
+      "duration": 30,
+      "actions": 1
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -1075.47,
+        "y": 571.11,
+        "z": -79.97
+      },
+      "angles": {
+        "pitch": -8.57,
+        "yaw": 142.97
+      },
+      "description": "Bombsite B",
+      "id": "b62e4cf7-fbfc-43c9-bffc-0c61cc48bd90",
+      "mode": 2,
+      "duration": 30,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -2415.97,
+        "y": -115.76,
+        "z": -157.97
+      },
+      "angles": {
+        "pitch": -21.75,
+        "yaw": 50.99
+      },
+      "description": "B House",
+      "id": "7dbc30c5-1237-4d0f-b065-57153222ce80",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 354.35,
+        "y": -694.73,
+        "z": -161.8
+      },
+      "angles": {
+        "pitch": -35.89,
+        "yaw": 177.66
+      },
+      "description": "Window",
+      "id": "550d3de2-cdc6-4d5d-aa18-b348e6a761b7",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1423.97,
+        "y": 34.83,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -27.62,
+        "yaw": -166.3
+      },
+      "description": "Window",
+      "id": "ea6e1e22-d849-4e17-bd59-e517e0fa7fad",
+      "mode": 3,
+      "duration": 230,
+      "actions": 5
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 399.18,
+        "y": 93.83,
+        "z": -224.63
+      },
+      "angles": {
+        "pitch": -10.24,
+        "yaw": -125.62
+      },
+      "description": "Connector (inner)",
+      "id": "14ff515a-1e0f-4601-9e93-7616aa9c3c1d",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 502.99,
+        "y": -168.03,
+        "z": -160
+      },
+      "angles": {
+        "pitch": -9.63,
+        "yaw": -138.52
+      },
+      "description": "Jungle",
+      "id": "fca3d2a2-dc2f-4426-bee2-87f1466a3d45",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -31.43,
+        "y": -1418.03,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -28.85,
+        "yaw": -116.71
+      },
+      "description": "CT",
+      "id": "d84130fe-252f-4cad-a2cb-b8b9d0aa9147",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -560.03,
+        "y": 503.73,
+        "z": -43.97
+      },
+      "angles": {
+        "pitch": -49.81,
+        "yaw": 169.1
+      },
+      "id": "b7001dac-8c24-43ce-956e-fb9fddf086ef",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -510.41,
+        "y": 615.97,
+        "z": -80.34
+      },
+      "angles": {
+        "pitch": -8.53,
+        "yaw": -171.6
+      },
+      "desctiption": "Bombsite B",
+      "id": "18f9d429-5a9c-4386-9dcf-8eaddfb42282",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -418.83,
+        "y": -328.03,
+        "z": -163.97
+      },
+      "angles": {
+        "pitch": -15.77,
+        "yaw": -100.55
+      },
+      "description": "Connector (inner deep)",
+      "id": "d5ae04cd-9d72-456d-baf0-eab90acf57a3",
+      "mode": 1,
+      "duration": 0,
+      "actions": 3
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -348.65,
+        "y": 480,
+        "z": -79.97
+      },
+      "angles": {
+        "pitch": 13.78,
+        "yaw": -179.85
+      },
+      "description": "Underground",
+      "id": "170dbad6-a476-426d-8b7c-b0beef3be334",
+      "mode": 0,
+      "duration": 0,
+      "actions": 3
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -220.03,
+        "y": -328.03,
+        "z": -163.97
+      },
+      "angles": {
+        "pitch": -16.76,
+        "yaw": -109.96
+      },
+      "description": "CT",
+      "id": "78e77ada-48e1-4c58-94df-c3476e09d953",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 181.97,
+        "y": -1719.97,
+        "z": -167.97
+      },
+      "angles": {
+        "pitch": -10.31,
+        "yaw": 166.86
+      },
+      "description": "Jungle",
+      "id": "525436c8-1d60-4c74-9308-50039dd57f41",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -160.03,
+        "y": 887.97,
+        "z": -135.33
+      },
+      "angles": {
+        "pitch": -50.22,
+        "yaw": -146.48
+      },
+      "description": "Kitchen Window",
+      "id": "7a892226-2baa-4335-a771-7fdc75676311",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -161.03,
+        "y": 576.03,
+        "z": -69.9
+      },
+      "angles": {
+        "pitch": -46.3,
+        "yaw": -158.01
+      },
+      "description": "Kitchen Door",
+      "id": "dce27370-f864-416f-91c2-b1fc12ce54e6",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -2026.4,
+        "y": -2029.97,
+        "z": -299.12
+      },
+      "angles": {
+        "pitch": -22.92,
+        "yaw": 38.67
+      },
+      "description": "Top mid",
+      "id": "4fb3dd77-1828-4ed7-8e66-0c4f5b50697c",
+      "mode": 3,
+      "duration": 500,
+      "actions": 5
+    }
+  ]
+}

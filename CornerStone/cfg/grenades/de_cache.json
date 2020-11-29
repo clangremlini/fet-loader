@@ -1,0 +1,757 @@
+{
+  "grenades": [
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1428.14,
+        "y": 513,
+        "z": 1612.45
+      },
+      "angles": {
+        "pitch": -55.46,
+        "yaw": 144.85
+      },
+      "description": "Site A (left)",
+      "id": "3dd8f2b0-fd05-4095-93da-0bf4bb14e76c",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 515,
+        "y": 1614.36,
+        "z": 1702.03
+      },
+      "angles": {
+        "pitch": -23.97,
+        "yaw": -177.04
+      },
+      "description": "Backsite",
+      "id": "a0f3f1f6-e571-442e-a431-8ae1b397a6c6",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 1344.3,
+        "y": 975.72,
+        "z": 1618.03
+      },
+      "angles": {
+        "pitch": -25.57,
+        "yaw": -138.02
+      },
+      "description": "Cement",
+      "id": "28b4123d-8a1f-4cd3-9344-98d52006d9c5",
+      "mode": 2,
+      "duration": 777,
+      "actions": 5
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 1428.49,
+        "y": 560.47,
+        "z": 1612.54
+      },
+      "angles": {
+        "pitch": -17.12,
+        "yaw": -175.48
+      },
+      "description": "White box",
+      "id": "ff6b7779-ef42-48a5-96c2-5e7c537168fb",
+      "mode": 2,
+      "duration": 55,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 2174.43,
+        "y": 396.64,
+        "z": 1612.61
+      },
+      "angles": {
+        "pitch": -17.41,
+        "yaw": 165.26
+      },
+      "decription": "Car",
+      "id": "78cd2ba0-e7a5-4b89-9771-3e5c2fa4628b",
+      "mode": 3,
+      "duration": 300,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 2643.27,
+        "y": 11.49,
+        "z": 1613.03
+      },
+      "angles": {
+        "pitch": -12.35,
+        "yaw": -179.7
+      },
+      "id": "aba3bc18-55c2-4da9-afd7-466cb6e464d9",
+      "mode": 3,
+      "duration": 444,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -906.14,
+        "y": 1090.62,
+        "z": 1693.5
+      },
+      "angles": {
+        "pitch": -16.74,
+        "yaw": 22.77
+      },
+      "id": "eefc6a87-c9da-453b-8d96-7b3f70b1bbc9",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1920.03,
+        "y": -183,
+        "z": 1688.22
+      },
+      "angles": {
+        "pitch": -59.27,
+        "yaw": 174.09
+      },
+      "id": "336bd09e-e2d5-4ab2-b53d-bd3fd49d159b",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1737.41,
+        "y": 215.03,
+        "z": 1614.03
+      },
+      "angles": {
+        "pitch": -11.02,
+        "yaw": 173.7
+      },
+      "id": "efd0b509-c3db-46c6-8928-55a4747ac2ec",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1735.72,
+        "y": 308.98,
+        "z": 1614.03
+      },
+      "angles": {
+        "pitch": -11.01,
+        "yaw": -173.61
+      },
+      "id": "47ebf47f-7f6e-4c15-bf38-9445468a132f",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -552.97,
+        "y": -121.97,
+        "z": 1663.03
+      },
+      "angles": {
+        "pitch": -18.02,
+        "yaw": 25.75
+      },
+      "description": "Boost",
+      "id": "7b2af39e-3bc7-4b1a-a994-982cfd9b2e54",
+      "mode": 2,
+      "duration": 355,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1762.1,
+        "y": 495.91,
+        "z": 1613.03
+      },
+      "angles": {
+        "pitch": -45.84,
+        "yaw": 139.41
+      },
+      "description": "NBK",
+      "id": "1679defb-330b-4b16-81cb-d7cb109f93da",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1729.97,
+        "y": 975.97,
+        "z": 1618.03
+      },
+      "angles": {
+        "pitch": -9.95,
+        "yaw": -154.81
+      },
+      "description": "Connector",
+      "id": "5036d936-3459-4072-b14a-aa7e05e4ecad",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1319.99,
+        "y": 1296.08,
+        "z": 1701.03
+      },
+      "angles": {
+        "pitch": -50.46,
+        "yaw": 147.13
+      },
+      "fov": 6,
+      "description": "NBK",
+      "id": "67bb72b8-f412-48c1-a988-e9c0928ee9e3",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1319.99,
+        "y": 1296.08,
+        "z": 1701.03
+      },
+      "angles": {
+        "pitch": -59.87,
+        "yaw": 176.88
+      },
+      "fov": 6,
+      "description": "Catwalk",
+      "id": "20ec0b94-b10a-4d14-889a-aa61d36da128",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1230.75,
+        "y": 1612.97,
+        "z": 1701.9
+      },
+      "angles": {
+        "pitch": -55.88,
+        "yaw": -164.52
+      },
+      "id": "43141be7-6b5b-4db5-bea7-8e23fb6361a4",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1311.21,
+        "y": 1601.9,
+        "z": 1701.02
+      },
+      "angles": {
+        "pitch": -53.19,
+        "yaw": -177.08
+      },
+      "id": "04245f8a-f59a-45d5-a1df-a68b4a2826e3",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1319.97,
+        "y": 1613,
+        "z": 1779.25
+      },
+      "angles": {
+        "pitch": -48.81,
+        "yaw": -176.6
+      },
+      "id": "6b227d99-90db-44e5-8e07-8b4810210026",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1015.44,
+        "y": 588.41,
+        "z": 1738.72
+      },
+      "angles": {
+        "pitch": -42.87,
+        "yaw": 158.22
+      },
+      "accuracy": 2,
+      "id": "19870d24-7b68-418d-b6ba-be9f3c46352d",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -429.97,
+        "y": 2261.97,
+        "z": 1718.03
+      },
+      "angles": {
+        "pitch": -1.42,
+        "yaw": -29.59
+      },
+      "id": "47798ce2-8a02-49e1-9034-c87b341b9f94",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -996.99,
+        "y": 1440.23,
+        "z": 1691.12
+      },
+      "angles": {
+        "pitch": -33.07,
+        "yaw": -46.51
+      },
+      "description": "Vent",
+      "id": "de9b21ed-da37-4f0e-acfc-420a9df1eb71",
+      "mode": 2,
+      "duration": 277,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -722.02,
+        "y": 257.99,
+        "z": 1619.15
+      },
+      "angles": {
+        "pitch": -24.09,
+        "yaw": -30.13
+      },
+      "description": "Mid",
+      "id": "4aec00b5-d3bd-46f4-80c2-3d71750942d4",
+      "mode": 2,
+      "duration": 1300,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": -617.96,
+        "y": -557.55,
+        "z": 1744.18
+      },
+      "angles": {
+        "pitch": -18.4,
+        "yaw": -42.66
+      },
+      "id": "bf70c9f6-de85-49fd-b72b-61cd5641faf2",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 827.97,
+        "y": -1463.97,
+        "z": 1614.03
+      },
+      "angles": {
+        "pitch": -26.82,
+        "yaw": 163.91
+      },
+      "id": "ed83bde4-b6c7-49c1-8955-d9232e7b6bd1",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 960.03,
+        "y": -1463.97,
+        "z": 1644.03
+      },
+      "angles": {
+        "pitch": -25.85,
+        "yaw": 163.75
+      },
+      "id": "f88ae06c-49f5-4d3e-a545-31a88c89ecde",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 282.45,
+        "y": -756.49,
+        "z": 1614.03
+      },
+      "angles": {
+        "pitch": -30.84,
+        "yaw": 136.87
+      },
+      "description": "Heaven",
+      "id": "9342dfb0-da32-496d-97e0-4b6b2c7eda72",
+      "mode": 2,
+      "duration": 0,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 499.45,
+        "y": -990.82,
+        "z": 1614.03
+      },
+      "angles": {
+        "pitch": -8.11,
+        "yaw": 133.27
+      },
+      "description": "CT",
+      "id": "ee634966-ce48-4a2e-83d1-a864dd7bf378",
+      "mode": 2,
+      "duration": 700,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 1319.94,
+        "y": 1296.71,
+        "z": 1701.03
+      },
+      "angles": {
+        "pitch": -20.38,
+        "yaw": -119.02
+      },
+      "description": "Vent",
+      "id": "f3b90188-0287-49aa-95f7-2a269e580995",
+      "mode": 2,
+      "duration": 200,
+      "actions": 1
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -200.61,
+        "y": -1371.99,
+        "z": 1659.03
+      },
+      "angles": {
+        "pitch": -12.37,
+        "yaw": 54.59
+      },
+      "decsription": "Chekers",
+      "id": "91a79a1f-ea95-4399-bf6c-979b1d3e9c35",
+      "mode": 2,
+      "duration": 400,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": -256.96,
+        "y": -1218.2,
+        "z": 1659.03
+      },
+      "angles": {
+        "pitch": -18.5,
+        "yaw": -1.75
+      },
+      "id": "820d8bbe-94f0-4430-bf7d-6303eeb8d304",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 609.03,
+        "y": -1463.97,
+        "z": 1614.03
+      },
+      "angles": {
+        "pitch": -32.27,
+        "yaw": 140.77
+      },
+      "id": "d78a3c16-4915-4cdb-8b3a-3f4355aec2ff",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 934.62,
+        "y": -1228.02,
+        "z": 1614.03
+      },
+      "angles": {
+        "pitch": -23.58,
+        "yaw": -179.88
+      },
+      "id": "7e111bf8-ca40-4742-9b7f-a8de5c958128",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 960.03,
+        "y": -1463.97,
+        "z": 1644.03
+      },
+      "angles": {
+        "pitch": -24.18,
+        "yaw": 171.48
+      },
+      "id": "2c554b9b-6e3c-4d8f-b217-153280ec066d",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 960.03,
+        "y": -1463.97,
+        "z": 1644.03
+      },
+      "angles": {
+        "pitch": -24.18,
+        "yaw": 171.48
+      },
+      "id": "631a73b2-e67e-4917-aabf-a3aef84deae7",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 46,
+      "pos": {
+        "x": 535.53,
+        "y": -1224.02,
+        "z": 1616.24
+      },
+      "angles": {
+        "pitch": -15.06,
+        "yaw": -109.82
+      },
+      "id": "403b752c-b281-403a-86b7-dca0098e057f",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -238.04,
+        "y": 1232.41,
+        "z": 1687.03
+      },
+      "angles": {
+        "pitch": -13.22,
+        "yaw": 37.6
+      },
+      "id": "25f664bc-073a-48b6-b890-f0e6336c55d0",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -382.86,
+        "y": 2082.56,
+        "z": 1687.03
+      },
+      "angles": {
+        "pitch": -14.6,
+        "yaw": -170.23
+      },
+      "id": "c1adbe8b-8425-4af5-9391-88b59c954fdd",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 89.97,
+        "y": 2261.97,
+        "z": 1718.03
+      },
+      "angles": {
+        "pitch": -26.87,
+        "yaw": -79.67
+      },
+      "id": "ad9d811f-1ad8-49fb-b978-100c53efbb50",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 766.97,
+        "y": 836.03,
+        "z": 1702.03
+      },
+      "angles": {
+        "pitch": -10.1,
+        "yaw": 111.85
+      },
+      "id": "720dd9a4-f846-47ca-b621-c19c5e773401",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": 1733.62,
+        "y": 308.99,
+        "z": 1614.03
+      },
+      "angles": {
+        "pitch": -10.97,
+        "yaw": -173.57
+      },
+      "id": "c28d8a67-61f5-4e61-a521-589f317594bf",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 43,
+      "pos": {
+        "x": -410.97,
+        "y": -1458.97,
+        "z": 1664.55
+      },
+      "angles": {
+        "pitch": -8.36,
+        "yaw": 50.62
+      },
+      "id": "e97f4bb6-4ae9-4eef-955a-2858d4178b1f",
+      "mode": 0,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 515.03,
+        "y": 1428.03,
+        "z": 1702.03
+      },
+      "angles": {
+        "pitch": 1.6,
+        "yaw": 103.8
+      },
+      "description": "Fork",
+      "id": "f80ed229-a2c5-4321-998d-53243c06d75f",
+      "mode": 2,
+      "duration": 440,
+      "actions": 1
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1616.23,
+        "y": 512.6,
+        "z": 1613.99
+      },
+      "angles": {
+        "pitch": -23.19,
+        "yaw": 154.27
+      },
+      "id": "5fe1e09e-194c-4329-b941-8d65a835b683",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1,
+      "description": "Unknown"
+    },
+    {
+      "grenade": 45,
+      "pos": {
+        "x": 1810.82,
+        "y": 723.06,
+        "z": 1613.03
+      },
+      "angles": {
+        "pitch": -21.52,
+        "yaw": 171.59
+      },
+      "description": "Highway",
+      "id": "67d64f64-3b80-468c-b4a1-720ecdca3d20",
+      "mode": 1,
+      "duration": 0,
+      "actions": 1
+    }
+  ]
+}
