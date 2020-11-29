@@ -57,6 +57,7 @@ Inject_Dll(pID, dllPath)
 		Return Inject_CleanUp("Couldn't create thread in PID: " pID, pHandle, pLibrary)
 
     DllCall("CloseHandle", "UInt", hThread)
+	SoundPlay, %A_AppData%\FET Loader\woo.mp3
 	MsgBox, 0, %script%, %string_success%
 	Return
 }

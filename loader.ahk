@@ -25,11 +25,11 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     2.5
-;@Ahk2Exe-SetVersion            2.5
+;@Ahk2Exe-SetProductVersion     2.6
+;@Ahk2Exe-SetVersion            2.6
 
 global script = "FET Loader"
-global version = "v2.5-final"
+global version = "v2.6"
 global build_status = "release" ; release or alpha or beta
 global times = 3 ; piece of shit, don't touch
 
@@ -127,6 +127,18 @@ IfNotExist, %A_AppData%\FET Loader\emb.exe
 {
     Logging(1,"- Downloading emb.exe...")
     UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/emb.exe, %A_AppData%\FET Loader\emb.exe
+    Logging(1,"......done.")
+}
+IfNotExist, %A_AppData%\FET Loader\inject.mp3
+{
+    Logging(1,"- Downloading inject.mp3...")
+    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/inject.mp3, %A_AppData%\FET Loader\inject.mp3
+    Logging(1,"......done.")
+}
+IfNotExist, %A_AppData%\FET Loader\woo.mp3
+{
+    Logging(1,"- Downloading woo.mp3...")
+    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/woo.mp3, %A_AppData%\FET Loader\woo.mp3
     Logging(1,"......done.")
 }
 Logging(1,"done.")

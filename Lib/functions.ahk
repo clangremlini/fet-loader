@@ -71,6 +71,7 @@ Inject(neutron, event)
     }
     if (PID > 0 and event != "Load DLL") ;govnokod mne poxui
     {
+        SoundPlay, %A_AppData%\FET Loader\inject.mp3
         Logging(1,"Initialized dll injection")
         IniRead, dll, %A_AppData%\FET Loader\cheats.ini, cheats, %event%
         IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
