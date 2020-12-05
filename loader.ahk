@@ -228,14 +228,17 @@ else
 {
     FileRead, gui, Web\js\iniparser.bak
     StringReplace, newgui, gui, clangremlini/fetloader-dll-repo, %cheatrepo%, All
-    FileAppend, %newgui%, Web\js\iniparser.js 
+    FileAppend, %newgui%, Web\js\iniparser.js
+    IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
+	StringSplit, cheatss, cheatlist, |
+	cheatsCount := cheatss0 
     neutron := new NeutronWindow()
     neutron.Load("Web\main.html")
-    Loop, Read, %A_AppData%\FET Loader\cheats.ini
+    guiheight := cheatsCount * 40 + 40
+    if (guiheight < 320)
     {
-        total_lines = %A_Index%
+        guiheight := 330
     }
-    guiheight := (total_lines - 1) * 40 + 40
     neutron.Show("w320 h" guiheight )
     neutron.Gui("+LabelNeutron")
     return
