@@ -6,30 +6,26 @@ class OTA
 {
     checkupd()
     {
-        jsonStr := JSON.GetFromUrl("https://api.github.com/repos/clangremlini/fet-loader/releases/latest")
-        if IsObject(jsonStr) 
-        {
-            MsgBox, % jsonStr[1]
-            Return
-        }
-        if (jsonStr = "")
-        Return
-        obj := JSON.Parse(jsonStr)
-        latest_release := obj.tag_name
-        change_log := obj.body
+        UrlDownloadToFile, https://api.github.com/repos/clangremlini/fet-loader/releases/latest, %A_AppData%\FET Loader\json.tmp
+        FileRead, jsonStr, %A_AppData%\FET Loader\json.tmp
+        VarSetCapacity(ansi, StrPut(jsonStr, "CP1251")), StrPut(jsonStr, &ansi, "CP1251")
+        jsonStr := StrGet(&ansi, "UTF-8")
+        parsed := JSON.Load(jsonStr)
+        latest_release := parsed.tag_name
+        change_log := parsed.body
+        download_url := parsed.assets[1].browser_download_url
         if (version != latest_release)
         {
             Logging(1,"A new version is available. Latest version: " latest_release)
             MsgBox, 68, %script% | %string_new_version%, %latest_release% | %string_changelog%`n`n%change_log%`n`n`n%string_want_download%
             IfMsgBox, Yes
-                OTA.download(latest_release)
+                OTA.download(download_url,latest_release)
         }
     }
-    download(govnokod_po_drugomy_ne_rabotaet)
+    download(download_url,tag)
     {
-        download_url := "https://github.com/clangremlini/fet-loader/releases/download/" govnokod_po_drugomy_ne_rabotaet "/loader.exe"
-        UrlDownloadToFile, %download_url%, %A_ScriptDir%\loader-%govnokod_po_drugomy_ne_rabotaet%.exe
-        Run, %A_ScriptDir%\loader-%govnokod_po_drugomy_ne_rabotaet%.exe
+        UrlDownloadToFile, %download_url%, %A_ScriptDir%\loader-%tag%.exe
+        Run, %A_ScriptDir%\loader-%tag%.exe
         ExitApp
     }
 }

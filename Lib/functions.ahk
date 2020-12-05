@@ -31,7 +31,7 @@ Bypass(neutron)
     IfNotExist, %A_AppData%\FET Loader\vac-bypass.exe
     {
         Logging(1,"Downloading vac-bypass.exe...")
-        UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/vac-bypass.exe, %A_AppData%\FET Loader\vac-bypass.exe
+        UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/vac-bypass.exe, %A_AppData%\FET Loader\vac-bypass.exe
         Logging(1, "done.")
     }
     Logging(1, "Running bypass...")
@@ -71,7 +71,6 @@ Inject(neutron, event)
     }
     if (PID > 0 and event != "Load DLL" and event != "CornerStone") ;govnokod mne poxui
     {
-        SoundPlay, %A_AppData%\FET Loader\inject.mp3
         Logging(1,"Initialized dll injection")
         IniRead, dll, %A_AppData%\FET Loader\cheats.ini, cheats, %event%
         IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
@@ -80,8 +79,8 @@ Inject(neutron, event)
         {   
             IfNotExist, %A_AppData%\FET Loader\%dll%
             {
-                Logging(1,"Trying to download " dll " from https://github.com/" cheatrepo "/raw/master/" dll " to " A_AppData "\FET Loader\" dll)
-                UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/%dll%, %A_AppData%\FET Loader\%dll%
+                Logging(1,"Trying to download " dll " from https://github.com/" cheatrepo "/raw/main/" dll " to " A_AppData "\FET Loader\" dll)
+                UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/%dll%, %A_AppData%\FET Loader\%dll%
                 if (ErrorLevel = "0")
                 {
                     Logging(1, "done.")
@@ -98,7 +97,7 @@ Inject(neutron, event)
         IfNotExist, %A_AppData%\FET Loader\emb.exe
         {
             Logging(1,"Downloading emb.exe...")
-            UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/emb.exe, %A_AppData%\FET Loader\emb.exe
+            UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/emb.exe, %A_AppData%\FET Loader\emb.exe
             Logging(1, "done.")
         }
         Logging(1,"Running emb...")
@@ -138,7 +137,6 @@ Inject(neutron, event)
     if (PID > 0 and event = "CornerStone")
     {
         Run, %A_AppData%\CornerStone\bin\run.cmd
-        SoundPlay, %A_AppData%\FET Loader\woo.mp3
         MsgBox, 0, %script%, %string_success%
     }
 }

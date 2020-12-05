@@ -29,8 +29,8 @@
 ;@Ahk2Exe-SetVersion            2.6.1
 
 global script = "FET Loader"
-global version = "v2.6.1"
-global build_status = "alpha" ; release or alpha or beta
+global version = "v2.2.8"
+global build_status = "release" ; release or alpha or beta
 global times = 3 ; piece of shit, don't touch
 
 #NoEnv
@@ -114,31 +114,19 @@ Logging(1,"Creating folders and downloading files...")
 IfNotExist, %A_AppData%\FET Loader\cheats.ini
 {	
     Logging(1,"- Getting cheat list...")
-    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/master/cheats.ini, %A_AppData%\FET Loader\cheats.ini
+    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/cheats.ini, %A_AppData%\FET Loader\cheats.ini
     Logging(1,"......done.")
 }
 IfNotExist, %A_AppData%\FET Loader\vac-bypass.exe
 {
     Logging(1,"- Downloading vac-bypass.exe...")
-    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/vac-bypass.exe, %A_AppData%\FET Loader\vac-bypass.exe
+    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/main/vac-bypass.exe, %A_AppData%\FET Loader\vac-bypass.exe
     Logging(1,"......done.")
 }
 IfNotExist, %A_AppData%\FET Loader\emb.exe
 {
     Logging(1,"- Downloading emb.exe...")
-    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/emb.exe, %A_AppData%\FET Loader\emb.exe
-    Logging(1,"......done.")
-}
-IfNotExist, %A_AppData%\FET Loader\inject.mp3
-{
-    Logging(1,"- Downloading inject.mp3...")
-    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/inject.mp3, %A_AppData%\FET Loader\inject.mp3
-    Logging(1,"......done.")
-}
-IfNotExist, %A_AppData%\FET Loader\woo.mp3
-{
-    Logging(1,"- Downloading woo.mp3...")
-    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/master/woo.mp3, %A_AppData%\FET Loader\woo.mp3
+    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/main/emb.exe, %A_AppData%\FET Loader\emb.exe
     Logging(1,"......done.")
 }
 Logging(1,"done.")
@@ -263,5 +251,4 @@ NeutronClose:
 
 Load:
     Gui, Submit, NoHide
-
     Inject(0,Cheat)
