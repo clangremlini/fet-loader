@@ -29,7 +29,7 @@
 ;@Ahk2Exe-SetVersion            2.6.1
 
 global script = "FET Loader"
-global version = "v2.2.8"
+global version = "v2.6.2"
 global build_status = "release" ; release or alpha or beta
 global times = 3 ; piece of shit, don't touch
 
