@@ -22,10 +22,7 @@
 - Run `COMPILE.bat`
 
 ## Frequent problems and their solutions
-- P: Can't init dll
-  - S: See [this](https://github.com/clangremlini/fet-loader/discussions/11) discussion
-- P: Couldn't find function "LoadLibrary" in kernel32.dll
-  - S: Download the [compiled](https://github.com/clangremlini/fet-loader/releases) version or compile the source using `COMPILE.bat`
+- See [this](https://github.com/clangremlini/fet-loader/discussions?discussions_q=category%3A%22Solved+bugs%22)
 
 ## Contributing
 
