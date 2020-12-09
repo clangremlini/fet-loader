@@ -27,7 +27,7 @@
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
 ;@Ahk2Exe-SetProductVersion     2.6.2.1
 ;@Ahk2Exe-SetVersion            2.6.2.1
-
+;@Ahk2Exe-SetMainIcon           icon.ico
 global script = "FET Loader"
 global version = "v2.6.2.1"
 global build_status = "release" ; release or alpha or beta
