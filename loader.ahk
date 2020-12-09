@@ -28,6 +28,7 @@
 ;@Ahk2Exe-SetProductVersion     2.6.2.1
 ;@Ahk2Exe-SetVersion            2.6.2.1
 ;@Ahk2Exe-SetMainIcon           icon.ico
+;@Ahk2Exe-UpdateManifest        1
 global script = "FET Loader"
 global version = "v2.6.2.1"
 global build_status = "release" ; release or alpha or beta
@@ -49,8 +50,6 @@ FileDelete, %A_AppData%\FET Loader\Web\main.*
 FileDelete, %A_AppData%\FET Loader\Web\js\iniparser.*
 FileDelete, %A_AppData%\FET Loader\cheats.ini
 FileDelete, %A_AppData%\FET Loader\*.dll
-
-RunAsAdmin()
 
 RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
 RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID

@@ -2,15 +2,6 @@
 {
     run, %A_AppData%\FET Loader\config.ini
 }
-RunAsAdmin()
-{
-    if (A_IsAdmin = false) 
-    { 
-        Logging(1,"Restarting as admin...")
-        Run *RunAs "%A_ScriptFullPath%" ,, UseErrorLevel
-        ExitApp
-    }
-}
 ShowAbout(neutron)
 {
 	Logging(1,"Building About GUI...")
