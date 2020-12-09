@@ -21,9 +21,11 @@
 - Clone the repository with the command `git clone https://github.com/clangremlini/fet-loader | cd fet-loader | git submodule update --init --recursive`
 - Run `COMPILE.bat`
 
-## Requirements
-- Windows 8-10 (64 bit)
-- Microsoft Visual C++ Redistributable packages. [Download here](https://fetloader.xyz/VCRHyb64.exe)
+## Frequent problems and their solutions
+- P: Can't init dll
+  - S: See [this](https://github.com/clangremlini/fet-loader/discussions/11) discussion
+- P: Couldn't find function "LoadLibrary" in kernel32.dll
+  - S: Download the [compiled](https://github.com/clangremlini/fet-loader/releases) version or compile the source using `COMPILE.bat`
 
 ## Contributing
 
