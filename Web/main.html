@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/iniparser.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap-4.4.1.js"></script>
   <script>
     $(document).bind("contextmenu", function (e) { // Disable right mouse button menu
       return false;
@@ -18,54 +21,16 @@
 </head>
 
 <body>
-  <!-- Title Bar -->
-  <header>
-    <div class="d-flex align-items-stretch bg-dark text-white">
-      <span class="flex-grow-1 px-2 py-1" oncontextmenu="ahk.ShowAbout()" onmousedown="neutron.DragTitleBar()">FET Loader</span>
-      <span class="title-btn title-btn-close mr-2 mt-1" style="cursor: pointer;" onclick="neutron.Close()">✖</span>
-    </div>
-  </header>
-  <!-- End Title Bar -->
-
-  <div id="switch-theme">
-    <button type="button" class="btn btn-theme" value="change_theme" id="theme_button" onclick="toggleTheme()">Switch Theme</button>
-  </div>
-
-  <div id="inject">
-    <button type="button" class="btn btn-inject" value="inject" id="inject_button"
-      onClick="ahk.Inject(GetSelectedCheat())" disabled=true>Inject</button>
-  </div>
-
-  <div id="bypass">
-    <button type="button" class="btn btn-bypass" value="bypass" id="bypass_button" onclick="BypassButtonClicked()">Enable bypass</button>
-  </div>
-
-  <div id="cheatslist">
-    <div class="btn-group-vertical btn-group-toggle ml-3 mt-3" data-toggle="buttons" id="cheats">
-      <script type="text/javascript" src="js/iniparser.js"></script>
-      <script>
-        function createCheatsButtons() {
-          var cheats = parseINIString(getText())["cheatlist"]["cheatlist"].split("|");
-          console.log(cheats);
-          var cheats_div = document.getElementById("cheats");
-          for (cheat in cheats) {
-            cheats_div.innerHTML += "<label class=\"btn btn-outline-primary\"><input type=\"radio\" name=\"cheat\" value=\"" + cheats[cheat] + "\" autocomplete=\"off\" onclick='CheatButtonClicked()'> " + cheats[cheat] + " </label>";
-          }
-        }
-        createCheatsButtons();
-      </script>
-    </div>
-  </div>
-
   <script type="text/javascript">
     function GetSelectedCheat() {
       var radioValue = $("input[name='cheat']:checked").val();
       return radioValue;
     };
   </script>
-  <script>
+   <script>
     function CheatButtonClicked() {
       document.getElementById("inject_button").disabled = false;
+      GetCheatStatus(GetSelectedCheat());
     }
   </script>
   <script>
@@ -93,9 +58,71 @@
         }
     }
   </script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap-4.4.1.js"></script>
+  <script>
+    function GetCheatStatus(cheat) {
+      var status = parseINIString(getText())["status"][cheat];
+      console.log(status);
+      if (status = "Use at own risk")
+      {
+        document.getElementById("shit").textContent = status;
+        document.getElementById("cheatstatus").className = "text-warning";
+      }
+      if (status = "DETECT")
+      {
+        document.getElementById("shit").textContent = status;
+        document.getElementById("cheatstatus").className = "text-danger";
+      }
+      if (status = "UNDETECT")
+      {
+        document.getElementById("shit").textContent = status;
+        document.getElementById("cheatstatus").className = "text-success";
+      }
+      return
+    }
+  </script>
+
+  <header>
+    <div class="d-flex align-items-stretch bg-dark text-white">
+      <span class="flex-grow-1 px-2 py-1" oncontextmenu="ahk.ShowAbout()" onmousedown="neutron.DragTitleBar()">FET Loader</span>
+      <span class="title-btn title-btn-close mr-2 mt-1" style="cursor: pointer;" onclick="neutron.Close()">✖</span>
+    </div>
+  </header>
+
+  <div id="switch-theme">
+    <button type="button" class="btn btn-theme" value="change_theme" id="theme_button" onclick="toggleTheme()">Switch Theme</button>
+  </div>
+
+  <div id="inject">
+    <button type="button" class="btn btn-inject" value="inject" id="inject_button"
+      onClick="ahk.Inject(GetSelectedCheat())" disabled=true>Inject</button>
+  </div>
+
+  <div id="bypass">
+    <button type="button" class="btn btn-bypass" value="bypass" id="bypass_button" onclick="BypassButtonClicked()">Enable bypass</button>
+  </div>
+
+
+  <div id="cheatslist">
+    <div class="btn-group-vertical btn-group-toggle ml-3 mt-3" data-toggle="buttons" id="cheats">
+      
+      <script>
+        function createCheatsButtons() {
+          var cheats = parseINIString(getText())["cheatlist"]["cheatlist"].split("|");
+          console.log(cheats);
+          var cheats_div = document.getElementById("cheats");
+          for (cheat in cheats) {
+            cheats_div.innerHTML += "<label class=\"btn btn-outline-primary\"><input type=\"radio\" name=\"cheat\" value=\"" + cheats[cheat] + "\" autocomplete=\"off\" onclick='CheatButtonClicked()'> " + cheats[cheat] + " </label>";
+          }
+        }
+        createCheatsButtons();
+      </script>
+    </div>
+  </div>
+
+  <div id="cheatstatus">
+    <span id="shit"></span>
+  </div>
+
 
 </body>
 
