@@ -174,6 +174,7 @@ FileInstall, Web\js\popper.min.js, Web\js\popper.min.js, 1
 FileInstall, Web\js\shit.js, Web\js\shit.js, 1
 FileInstall, Web\main.html, Web\main.html, 1
 FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
+FileInstall, Web\css\shit.css, Web\css\shit.css, 1
 
 FileCreateDir, %A_AppData%\CornerStone
 SetWorkingDir, %A_AppData%\CornerStone
@@ -200,7 +201,6 @@ FileInstall, CornerStone\ui\index.html, ui\index.html, 1
 FileInstall, CornerStone\cfg\logger.conf, cfg\logger.conf, 1
 FileInstall, CornerStone\cfg\general.json, cfg\general.json, 1
 FileInstall, CornerStone\cfg\default.json, cfg\default.json, 1
-
 SetWorkingDir, %A_AppData%\FET Loader
 
 
@@ -239,7 +239,7 @@ else
     {
         guiheight := 330
     }
-    neutron.Show("w320 h" guiheight )
+    neutron.Show("w400 h" guiheight )
     neutron.Gui("+LabelNeutron")
     return
 }

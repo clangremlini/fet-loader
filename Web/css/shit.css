@@ -1,0 +1,6 @@
+.detect-status{
+    position: absolute;
+    left: 130px;
+    top: 0;
+    white-space: nowrap;
+}
