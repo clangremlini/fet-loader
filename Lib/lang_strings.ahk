@@ -73,6 +73,7 @@ if (language = "en")
     global string_disclaimer := "If you downloaded the loader from unverified sources, we completely disclaim responsibility in case of infection of your system with any of the viruses.`nMake sure that you downloaded the loader from trusted sources, such as:`nGitHub, official fetloader.xyz website, telegram channel t.me/ayeloader."
     global string_error := "An error occurred while executing the program. Details can be found in the log file."
     global string_20h2_warning := "On Windows version 2009/20H2, problems with the injection may occur. `nTo fix them, you need to (re-)install Microsoft Visual C++ Redistributable. `n`nWant to start downloading?"
+    global string_cant_init_ntdll := "The VC++ packages needed for the loader to work were not found on your computer.`n`nDo you want to start downloading?"
 }
 if (language = "ru") 
 {
@@ -93,6 +94,7 @@ if (language = "ru")
     global string_disclaimer := "Если вы загрузили лоадер из непроверенных источников - мы полностью снимаем с себя ответственность в случае заражения вашей системы каким либо из вирусов.`nУбедитесь что загрузили лоадер с проверенных источников, таких как:`nGitHub, официальный сайт fetloader.xyz, телеграм канал t.me/ayeloader."
     global string_error := "При выполнении программы произошла ошибка. Подробности можно найти в логфайле."
     global string_20h2_warning := "На версии Windows 2009/20H2 могут возникать проблемы с инжектом.`nДля того чтобы исправить их, нужно (пере-)установить Microsoft Visual C++ Redistributable.`n`nХотите начать скачивание?"
+    global string_cant_init_ntdll := "На вашем компьютере не были найдены пакеты VC++ необходимые для работы лоадера`n`nХотите начать скачивание?"
 }
 if (language = "ukr") 
 {
@@ -113,4 +115,5 @@ if (language = "ukr")
     global string_disclaimer := "Якщо ви завантажили лоадер з неперевірених джерел - ми повністю знімаємо з себе відповідальність в разі зараження вашої системи будь-яким з вірусів.`nПереконайтеся що завантажили лоадер з перевірених джерел, таких як:`nGitHub, офіційний сайт fetloader.xyz, телеграм канал t.me/ayeloader"
     global string_error := "При виконанні програми сталася помилка. Подробиці можна знайти в логфайлів."
     global string_20h2_warning := "На версії Windows 2009/20H2 можуть виникати проблеми з інжектом.`nДля того щоб виправити їх, потрібно (пере-)встановити Microsoft Visual C++ Redistributable.`n`nХочете почати скачування?"
+    global string_cant_init_ntdll := "На вашому комп'ютері не були знайдені пакети VC++ необхідні для роботи лоадера`n`nХотіте почати скачування?"
 }
