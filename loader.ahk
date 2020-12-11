@@ -171,6 +171,7 @@ FileInstall, Web\js\bootstrap-4.4.1.js, Web\js\bootstrap-4.4.1.js, 1
 FileInstall, Web\css\bootstrap-4.4.1.css, Web\css\bootstrap-4.4.1.css, 1
 FileInstall, Web\js\jquery-3.4.1.min.js, Web\js\jquery-3.4.1.min.js, 1
 FileInstall, Web\js\popper.min.js, Web\js\popper.min.js, 1
+FileInstall, Web\js\shit.js, Web\js\shit.js, 1
 FileInstall, Web\main.html, Web\main.html, 1
 FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
 

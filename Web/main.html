@@ -5,83 +5,24 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/iniparser.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap-4.4.1.js"></script>
+  <script src="js/shit.js"></script>
   <script>
     $(document).bind("contextmenu", function (e) { // Disable right mouse button menu
       return false;
     });
   </script>
-  <!-- Bootstrap -->
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
   <link href="css/buttons.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <script type="text/javascript">
-    function GetSelectedCheat() {
-      var radioValue = $("input[name='cheat']:checked").val();
-      return radioValue;
-    };
-  </script>
-   <script>
-    function CheatButtonClicked() {
-      document.getElementById("inject_button").disabled = false;
-      GetCheatStatus(GetSelectedCheat());
-    }
-  </script>
   <script>
-    function BypassButtonClicked() {
-      document.getElementById("bypass_button").disabled = true;
-      document.getElementById("bypass_button").textContent = "Bypass enabled!";
-      ahk.Bypass();
-    }
+    var inifile = getText();
   </script>
-  <script>
-    // function to set a given theme/color-scheme
-    function setTheme(color, color2) {
-        $("body").css("background", color)
-        $(".btn-outline-primary").css("color", color2)
-    }
-    // function to toggle between light and dark theme
-    function toggleTheme() {
-        theme = document.body.style.getPropertyValue("background")
-        theme_dark = "#454851"
-        theme_light = "#dbdbdb"
-        if (theme == "rgb(219, 219, 219)") {
-            setTheme(theme_dark, "#FFFFFF")
-        } else {
-            setTheme(theme_light, "#000000")
-        }
-    }
-  </script>
-
-  <script>
-    function GetCheatStatus(cheat) {
-      var status = parseINIString(getText())["status"][cheat];
-      console.log(status);
-      if (status == "Use at own risk")
-      {
-        document.getElementById("shit").textContent = "RISK";
-        document.getElementById("cheatstatus").className = "text-warning";
-      }
-      if (status == "DETECT")
-      {
-        document.getElementById("shit").textContent = "DETECT";
-        document.getElementById("cheatstatus").className = "text-danger";
-      }
-      if (status == "UNDETECT")
-      {
-        document.getElementById("shit").textContent = "UNDETECTable, have a nice day!";
-        document.getElementById("cheatstatus").className = "text-success";
-      }
-      return
-    }
-  </script>
-
   <header>
     <div class="d-flex align-items-stretch bg-dark text-white">
       <span class="flex-grow-1 px-2 py-1" oncontextmenu="ahk.ShowAbout()" onmousedown="neutron.DragTitleBar()">FET Loader</span>
