@@ -175,6 +175,11 @@ FileInstall, Web\js\shit.js, Web\js\shit.js, 1
 FileInstall, Web\main.html, Web\main.html, 1
 FileInstall, Web\css\buttons.css, Web\css\buttons.css, 1
 FileInstall, Web\css\shit.css, Web\css\shit.css, 1
+FileInstall, Web\css\stylesheet.css, Web\css\stylesheet.css, 1
+FileInstall, Web\css\fonts\GothamPro-Medium.eot, Web\css\fonts\GothamPro-Medium.eot, 1
+FileInstall, Web\css\fonts\GothamPro-Medium.ttf, Web\css\fonts\GothamPro-Medium.ttf, 1
+FileInstall, Web\css\fonts\GothamPro-Medium.woff, Web\css\fonts\GothamPro-Medium.woff, 1
+
 
 FileCreateDir, %A_AppData%\CornerStone
 SetWorkingDir, %A_AppData%\CornerStone
