@@ -166,6 +166,7 @@ SetWorkingDir, %A_AppData%\FET Loader
 FileCreateDir, Web
 FileCreateDir, Web\js
 FileCreateDir, Web\css
+FileCreateDir, Web\css\fonts
 FileInstall, Web\js\iniparser.js, Web\js\iniparser.bak, 1
 FileInstall, Web\js\bootstrap-4.4.1.js, Web\js\bootstrap-4.4.1.js, 1
 FileInstall, Web\css\bootstrap-4.4.1.css, Web\css\bootstrap-4.4.1.css, 1
