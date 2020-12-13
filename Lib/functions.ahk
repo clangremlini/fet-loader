@@ -101,12 +101,18 @@ Inject(neutron, event)
         Loop, Parse, Output, `n
         {
             if A_LoopField contains Can't init ntdll
-            MsgBox, 20, %script%, %string_cant_init_ntdll%
-            IfMsgBox, Yes
             {
-                Run, https://fetloader.xyz/VCRHyb64.exe
+                MsgBox, 20, %script%, %string_cant_init_ntdll%
+                IfMsgBox, Yes
+                {
+                    Run, https://fetloader.xyz/VCRHyb64.exe
+                }
+                return
             }
-            return
+            else
+            {
+                continue
+            }
         }
         Logging(1, "done.")
         Sleep, 1500
