@@ -98,6 +98,7 @@ Inject(neutron, event)
         {
             MsgBox, [DEBUG] %Output%
         }
+        Logging(1,"EMB LOG `n" Output)
         Loop, Parse, Output, `n
         {
             if A_LoopField contains Can't init ntdll
