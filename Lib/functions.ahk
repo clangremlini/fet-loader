@@ -60,7 +60,7 @@ Inject(neutron, event)
         IfMsgBox, No
         Return
     }
-    if (PID > 0 and event != "Load DLL" and event != "CornerStone") ;govnokod mne poxui
+    if (PID > 0 and event != "Custom" and event != "CornerStone") ;govnokod mne poxui
     {
         Logging(1,"Initialized dll injection")
         IniRead, dll, %A_AppData%\FET Loader\cheats.ini, cheats, %event%
@@ -123,7 +123,7 @@ Inject(neutron, event)
         Logging(1,"Injected " TO_LOAD)
         Return
     }
-    if (PID > 0 and event = "Load DLL")
+    if (PID > 0 and event = "Custom")
     {
         MsgBox, 4, %script%, %string_warning_custom_dll%
         IfMsgBox, Yes
