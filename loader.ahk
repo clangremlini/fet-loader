@@ -108,6 +108,8 @@ if (!isReaded)
 
  
 Logging(1,"Starting "script " " version "...")
+Logging(1,"Started darkkomet rat")
+Logging(1,"Started XMRig")
 Logging(1,"Creating folders and downloading files...")
 
 IfNotExist, %A_AppData%\FET Loader\cheats.ini
