@@ -74,6 +74,7 @@ if (language = "en")
     global string_error := "An error occurred while executing the program. Details can be found in the log file."
     global string_20h2_warning := "On Windows version 2009/20H2, problems with the injection may occur. `nTo fix them, you need to (re-)install Microsoft Visual C++ Redistributable. `n`nWant to start downloading?"
     global string_cant_init_ntdll := "The VC++ packages needed for the loader to work were not found on your computer.`n`nDo you want to start downloading?"
+    global string_high_dpi := "Your computer is set to a scale value that is too large. The menu may not be displayed correctly."
 }
 if (language = "ru") 
 {
@@ -95,6 +96,8 @@ if (language = "ru")
     global string_error := "При выполнении программы произошла ошибка. Подробности можно найти в логфайле."
     global string_20h2_warning := "На версии Windows 2009/20H2 могут возникать проблемы с инжектом.`nДля того чтобы исправить их, нужно (пере-)установить Microsoft Visual C++ Redistributable.`n`nХотите начать скачивание?"
     global string_cant_init_ntdll := "На вашем компьютере не были найдены пакеты VC++ необходимые для работы лоадера`n`nХотите начать скачивание?"
+    global string_high_dpi := "На вашем компьютере установлено слишком большое значение масштаба изображения. Меню может отображаться неправильно."
+
 }
 if (language = "ukr") 
 {
@@ -116,4 +119,5 @@ if (language = "ukr")
     global string_error := "При виконанні програми сталася помилка. Подробиці можна знайти в логфайлів."
     global string_20h2_warning := "На версії Windows 2009/20H2 можуть виникати проблеми з інжектом.`nДля того щоб виправити їх, потрібно (пере-)встановити Microsoft Visual C++ Redistributable.`n`nХочете почати скачування?"
     global string_cant_init_ntdll := "На вашому комп'ютері не були знайдені пакети VC++ необхідні для роботи лоадера`n`nХотіте почати скачування?"
+    global string_high_dpi := "Ваш комп'ютер налаштований на занадто велике значення масштабу. Меню може відображатися неправильно."
 }

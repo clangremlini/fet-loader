@@ -56,6 +56,7 @@ RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
 RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
 RegRead, winsbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, CurrentBuild
 RegRead, isReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isReadedDisclaimer
+RegRead, isDPIWarningReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isDPIWarningReaded
 IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
 IniRead, oldgui, %A_AppData%\FET Loader\config.ini, settings, oldgui
 IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
@@ -90,6 +91,21 @@ if (winver = "2009")
         }
     }
 }
+
+
+if (A_ScreenDPI > 96)
+{
+    if (!isDPIWarningReaded)
+    {
+        MsgBox, 64, %script% Disclaimer, %string_high_dpi%
+        IfMsgBox, Ok
+        {
+            RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CodISH Inc\FET Loader, isDPIWarningReaded, Yes
+        }
+    }
+}
+
+
 
 if (!isReaded)
 {
