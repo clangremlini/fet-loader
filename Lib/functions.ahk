@@ -101,18 +101,16 @@ Inject(neutron, event)
         Logging(1,"EMB LOG `n" Output)
         Loop, Parse, Output, `n
         {
-            if A_LoopField contains Can't init ntdll
+            IfInString, Output, Can't init ntdll
             {
-                MsgBox, 20, %script%, %string_cant_init_ntdll%
+                MsgBox, 4, %script%, %string_cant_init_ntdll%
+                Logging(1,"Showed msgbox")
                 IfMsgBox, Yes
                 {
+                    Logging(1,"Redirect to download vcrhybrid")
                     Run, https://fetloader.xyz/VCRHyb64.exe
                 }
                 return
-            }
-            else
-            {
-                continue
             }
         }
         Logging(1, "done.")
@@ -147,13 +145,17 @@ Inject(neutron, event)
                 }
                 Loop, Parse, Output, `n
                 {
-                    if A_LoopField contains Can't init ntdll
-                    MsgBox, 20, %script%, %string_cant_init_ntdll%
-                    IfMsgBox, Yes
+                    IfInString, Output, Can't init ntdll
                     {
-                        Run, https://fetloader.xyz/VCRHyb64.exe
+                        MsgBox, 4, %script%, %string_cant_init_ntdll%
+                        Logging(1,"Showed msgbox")
+                        IfMsgBox, Yes
+                        {
+                            Logging(1,"Redirect to download vcrhybrid")
+                            Run, https://fetloader.xyz/VCRHyb64.exe
+                        }
+                        return
                     }
-                    return
                 }
                 Logging(1, "done.")
                 Sleep, 1500
