@@ -14,7 +14,7 @@
 <h3 align="center">A simple CS:GO cheats loader written in AHK.</h3>
 
 ## Screenshots
-<img align="center" src="https://i.imgur.com/Iejb3s1.png"> <img align="center" src="https://x0.at/Cab.png">
+<img align="center" src="https://x0.at/8v8.png"> <img align="center" src="https://x0.at/yeA.png">
 
 ## Features
 - Web UI
