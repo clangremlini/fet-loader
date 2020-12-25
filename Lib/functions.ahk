@@ -25,6 +25,8 @@ Bypass(neutron)
         UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/vac-bypass.exe, %A_AppData%\FET Loader\vac-bypass.exe
         Logging(1, "done.")
     }
+    Logging(1, "Trying to kill steam.exe...")
+    Run, taskkill /f /im steam.exe
     Logging(1, "Running bypass...")
     Run, %A_AppData%\FET Loader\vac-bypass.exe
     Logging(1, "done.")
