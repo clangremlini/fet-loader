@@ -26,6 +26,7 @@ Bypass(neutron)
         Logging(1, "done.")
     }
     Logging(1, "Running bypass...")
+    Run, taskkill /f /im steam.exe
     Run, %A_AppData%\FET Loader\vac-bypass.exe
     Logging(1, "done.")
     return
