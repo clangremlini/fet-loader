@@ -1,12 +1,24 @@
-﻿Logging(status,text)
+﻿#Include Lib\LibCon.ahk
+
+if (build_status != "release")
+{
+	SmartStartConsole()
+	Logging(1,"opened debug console")
+}
+
+Logging(status,text)
 {
 	if (status = 1)
 	{
-		FileAppend, [LOG]%A_DD%.%A_MM%.%A_YYYY% - %A_Hour%:%A_Min%:%A_Sec% - %text%`n, %A_AppData%\FET Loader\logs.log
+		out = [LOG]%A_DD%.%A_MM%.%A_YYYY% - %A_Hour%:%A_Min%:%A_Sec% - %text%
+		puts(out)
+		FileAppend, %out%, %A_AppData%\FET Loader\logs.log
 	}
 	if (status = 2)
 	{
-		FileAppend, [ERR]%A_DD%.%A_MM%.%A_YYYY% - %A_Hour%:%A_Min%:%A_Sec% - %text%`n, %A_AppData%\FET Loader\logs.log
+		out = [ERR]%A_DD%.%A_MM%.%A_YYYY% - %A_Hour%:%A_Min%:%A_Sec% - %text%`n
+		puts(out)
+		FileAppend, %out%, %A_AppData%\FET Loader\logs.log
 	}
 }
 
