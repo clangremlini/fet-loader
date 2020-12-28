@@ -31,7 +31,7 @@
 ;@Ahk2Exe-UpdateManifest        1
 global script = "FET Loader"
 global version = "v3.0.1"
-global build_status = "alpha"
+global build_status = "release"
 global times = 3 ; piece of shit, don't touch
 
 #NoEnv
@@ -54,7 +54,6 @@ FileDelete, %A_AppData%\FET Loader\*.dll
 RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
 RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
 RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
-RegRead, winsbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, CurrentBuild
 RegRead, isReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isReadedDisclaimer
 RegRead, isDPIWarningReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isDPIWarningReaded
 IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
@@ -70,12 +69,6 @@ if (!cringe)
 if (bruhshit = "unofficial build")
 {
     MsgBox, 0, %script%, %string_unofficial_build%
-}
-
-if (winsbuild = "7600" or winsbuild = "7601")
-{
-    MsgBox, 0, %script%, %string_outdated_os%
-    ExitApp
 }
 
 if (winver = "2009")
