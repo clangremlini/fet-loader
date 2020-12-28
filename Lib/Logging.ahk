@@ -10,7 +10,7 @@ Logging(status,text)
 {
 	if (status = 1)
 	{
-		out = [LOG]%A_DD%.%A_MM%.%A_YYYY% - %A_Hour%:%A_Min%:%A_Sec% - %text%
+		out = [LOG]%A_DD%.%A_MM%.%A_YYYY% - %A_Hour%:%A_Min%:%A_Sec% - %text%`n
 		puts(out)
 		FileAppend, %out%, %A_AppData%\FET Loader\logs.log
 	}
