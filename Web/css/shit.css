@@ -10,8 +10,8 @@
     left: 135px;
     width: 230px;
     top: 50px;
-    white-space: nowrap;
-    word-wrap: break-word;
+    white-space: pre-line;
+    word-wrap: break-all;
 }
 
 * {
