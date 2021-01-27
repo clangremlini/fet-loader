@@ -54,13 +54,16 @@
           console.log(cheats);
           var cheats_div = document.getElementById("cheats");
           for (cheat in cheats) {
-            cheats_div.innerHTML += "<label class=\"btn btn-outline-primary\"><input type=\"radio\" name=\"cheat\" value=\"" + cheats[cheat] + "\" autocomplete=\"off\" onclick='CheatButtonClicked(); GetCheatStatus(" + cheat + ")'> " + cheats[cheat] + " </label>";
+            cheats_div.innerHTML += "<label class=\"btn btn-outline-primary\"><input type=\"radio\" name=\"cheat\" value=\"" + cheats[cheat] + "\" autocomplete=\"off\" onclick='CheatButtonClicked();'> " + cheats[cheat] + " </label>";
           }
         }
         createCheatsButtons();
       </script>
       <div id="cheatstatus">
         <span class="detect-status" id="shit"></span>
+      </div>
+      <div id="cheatinfo">
+        <span class="cheat-info" id="shit228"></span>
       </div>
     </div>
   </div>

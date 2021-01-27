@@ -7,6 +7,7 @@ function CheatButtonClicked()
 {
     document.getElementById("inject_button").disabled = false;
     GetCheatStatus(GetSelectedCheat());
+    GetCheatAbout(GetSelectedCheat());
 }
 function BypassButtonClicked()
 {
@@ -48,4 +49,11 @@ function GetCheatStatus(cheat) {
       document.getElementById("cheatstatus").className = "text-success";
     }
     return
-  }
+}
+function GetCheatAbout(zaebalo) 
+{
+    var status = parseINIString(inifile)["info"][zaebalo];
+    console.log(status);
+    document.getElementById("shit228").textContent = status;
+    return
+}

@@ -5,6 +5,13 @@
     white-space: nowrap;
 }
 
+.cheat-info{
+    position: absolute;
+    left: 135px;
+    top: -20px;
+    white-space: nowrap;
+}
+
 * {
     cursor: default;
     -webkit-touch-callout: none;
