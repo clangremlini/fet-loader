@@ -8,8 +8,10 @@
 .cheat-info{
     position: absolute;
     left: 135px;
-    top: -20px;
+    width: 230px;
+    top: 50px;
     white-space: nowrap;
+    word-wrap: break-word;
 }
 
 * {
