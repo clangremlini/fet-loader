@@ -14,7 +14,7 @@
 <h3 align="center">A simple CS:GO cheats loader written in AHK.</h3>
 
 ## Screenshots
-<img align="center" src="https://x0.at/8v8.png"> <img align="center" src="https://x0.at/yeA.png">
+<img align="center" src="https://havoc-gay.club/F5j8U/bDhiOlaH.png"> <img align="center" src="https://havoc-gay.club/UdnJi/gg5XOHU-.png">
 
 ## Features
 - Web UI
