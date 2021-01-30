@@ -26,6 +26,7 @@ function toggleTheme() {
     theme_light = "#dbdbdb"
     if (theme == "rgb(219, 219, 219)") {
         setTheme(theme_dark, "#FFFFFF")
+
     } else {
         setTheme(theme_light, "#000000")
     }

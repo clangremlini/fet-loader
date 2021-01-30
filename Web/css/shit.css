@@ -7,6 +7,7 @@
 
 .cheat-info{
     position: absolute;
+    color: #1d97aa;
     left: 135px;
     width: 230px;
     top: 50px;
@@ -32,3 +33,4 @@ body {
     min-height: 100vh;
     font-family: 'Gotham Pro Medium';
 }
+
