@@ -7,7 +7,6 @@
 
 .cheat-info{
     position: absolute;
-    color: #1d97aa;
     left: 135px;
     width: 230px;
     top: 50px;
@@ -28,9 +27,8 @@
 
 
 body {
-    background: #454851;
-    color: #A8C7FF;
+    background: #333333;
+    color: #17a2b8;
     min-height: 100vh;
     font-family: 'Gotham Pro Medium';
 }
-

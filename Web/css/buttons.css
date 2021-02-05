@@ -7,30 +7,30 @@
     width: 100px;
     height: 40px;
 
-    background-color: #28a745;
-    outline-color:#28a745;
-    border-color:#28a745;
-    box-shadow: none!important;
+    background-color: #9b52be; //68b723
+    outline-color: #9b52be;
+    border-color: #9b52be;
+    box-shadow: none;
     color: white;
-    transition: all .2s;
+    transition: all .3s;
 }
 
-.btn-inject:hover
+.btn-inject:hover, .btn-inject.hover
 {
-    color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34;
-    transition: all .2s;
+    color: #000;
+    background-color: #F94D35; //d1ff82
+    border-color: #F94D35;
+    transition: all .3s;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-inject:disabled{
     background-color: transparent;
-    outline-color:#dc3545;
-    border-color:#dc3545;
+    outline-color: #abacae;
+    border-color: #abacae;
     box-shadow: none!important;
-    color: #dc3545;
+    color: #abacae;
     filter: brightness(66%);
     transform: none;
 }
@@ -38,9 +38,10 @@
 .btn-inject:focus, .btn-inject.focus
 {
     color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34;
-    box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+    background-color: #D04D6F; //9bdb4d
+    border-color: #D04D6F;
+    transform: translateY(6px);
+//    box-shadow: 0 0 0 0.0rem rgba(72, 180, 97, 0.5);
 }
 
 .btn-bypass
@@ -50,16 +51,16 @@
     right: 15px;
     width: 100px;
     height: 60px;
-    color: #1d97aa;
-    /* background-color: #17a2b8; */
-    border-color: #17a2b8;
-    transition: all .2s;
+    color: #28bca3;
+    background-color: transparent;
+    border-color: #28bca3;
+    transition: all .3s;
 }
 .btn-bypass:hover
 {
-    color: #fff;
-    background-color: #138496;
-    border-color: #117a8b;
+    color: #000;
+    background-color: #89ffdd;
+    border-color: #89ffdd;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -67,9 +68,10 @@
 .btn-bypass:focus, .btn-bypass.focus
 {
     color: #fff;
-    background-color: #138496;
-    border-color: #117a8b;
-    box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
+    background-color: #43d6b5;
+    border-color: #43d6b5;
+    transform: translateY(6px);
+//    box-shadow: 0 0 0 0.0rem rgba(58, 176, 195, 0.5);
 }
 
 .btn-theme
@@ -79,47 +81,52 @@
     right: 15px;
     width: 100px;
     height: 60px;
-    color: #8b6ac9;
-    /* background-color: #17a2b8; */
-    border-color: #8251df;
-    transition: all .2s;
+    color: #3689e6;
+    background-color: transparent;
+    border-color: #3689e6;
+    transition: all .3s;
 }
 .btn-theme:hover
 {
-    color: #fff;
-    background-color: #be94e0;
-    border-color: #be94e0;
+    color: #000;
+    background-color: #8cd5ff;
+    border-color: #8cd5ff;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btn-theme:focus, .btn-bypass.focus
+.btn-theme:focus, .btn-theme.focus
 {
     color: #fff;
-    background-color: #552aa5;
-    border-color: #6f42c1;
-    box-shadow: 0 0 0 0.2rem #be94e0;
+    background-color: #64baff;
+    border-color: #64baff;
+    transform: translateY(6px);
+    box-shadow: 0 0 0 0.0rem #64baff;
 }
 
 
 
-.btn-outline-primary{
-    outline-color:#6f42c1;
-    border-color:#6f42c1;
+.btn-outline-primary {
+    outline-color: #9b52be;
+    border-color: #9b52be;
     box-shadow: none!important;
     color: #FFFFFF;
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:active{
-    background-color: #be94e0;
-    border-color: #be94e0;
-    color: white;
+//.btn-outline-primary:hover, .btn-outline-primary:active
+.btn-outline-primary:hover {
+    background-color: #9b52be;
+    border-color: #9b52be;
+    color: #000000;
     box-shadow: none!important;
 }
 
-.btn-outline-primary:focus{
+//.btn-outline-primary:focus
+.btn-outline-primary:focus, .btn-outline-primary:active {
+    background-color: #F94D35;
+    color: #ffffff;
     box-shadow: none!important;
-    border-color: none !important;
+    border-color: #F94D35;
 }
 
 @keyframes moveInBottom {

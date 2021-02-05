@@ -22,13 +22,17 @@ function setTheme(color, color2)
 }
 function toggleTheme() {
     theme = document.body.style.getPropertyValue("background")
-    theme_dark = "#454851"
-    theme_light = "#dbdbdb"
-    if (theme == "rgb(219, 219, 219)") {
+    theme_dark = "#333333"
+    theme_light = "#fafafa"
+    theme_blm = "#000000"
+    if (theme == "rgb(0, 0, 0)") {
         setTheme(theme_dark, "#FFFFFF")
-
     } else {
+        if (theme == "rgb(250, 250, 250)") {
+            setTheme(theme_blm, "#FFFFFF")
+        } else {
         setTheme(theme_light, "#000000")
+        }
     }
 }
 function GetCheatStatus(cheat) {
