@@ -1,6 +1,6 @@
 ; MIT License
 ;
-; Copyright (c) 2020 CodISH Inc.
+; Copyright (c) 2021 CodISH Inc.
 ;
 ; Permission is hereby granted, free of charge, to any person obtaining a copy
 ; of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@
 ;
 ;@Ahk2Exe-SetName               FET Loader
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
-;@Ahk2Exe-SetCopyright          Copyright (C) 2020 CodISH inc.
+;@Ahk2Exe-SetCopyright          Copyright (C) 2021 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
 ;@Ahk2Exe-SetProductVersion     3.1.1.0
 ;@Ahk2Exe-SetVersion            3.1.1.0
