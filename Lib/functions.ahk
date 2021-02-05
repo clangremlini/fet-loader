@@ -224,7 +224,8 @@ RunCon(CmdLine, Input, ByRef Output)
                                   , "uint", 1, "uint", 0, "ptr", 0, "ptr", 0
                                   , "ptr", &StartupInfo, "ptr", &ProcessInfo)
     If (!Ret) {
-        MsgBox,, %A_ThisFunc%, Не удалось создать процесс.
+        MsgBox,, %script%, %string_failed_to_create_process%
+        Logging(2,"RunCon: Failed to create process.")
         Output := ""
         Return 1
     }

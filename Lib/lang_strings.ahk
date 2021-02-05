@@ -75,6 +75,7 @@ if (language = "en")
     global string_20h2_warning := "On Windows version 2009/20H2, problems with the injection may occur. `nTo fix them, you need to (re-)install Microsoft Visual C++ Redistributable. `n`nWant to start downloading?"
     global string_cant_init_ntdll := "Important VC++ packages weren't found on your computer.`n`nDo you want to download them now?"
     global string_high_dpi := "You have a display scale other than 100%. The menu won't be displayed correctly."
+    global string_failed_to_create_process := "Failed to create process."
 }
 if (language = "ru") 
 {
@@ -97,7 +98,7 @@ if (language = "ru")
     global string_20h2_warning := "На версии Windows 2009/20H2 могут возникать проблемы с инжектом.`nДля того, чтобы исправить их, нужно (пере-)установить Microsoft Visual C++ Redistributable.`n`nХотите начать скачивание?"
     global string_cant_init_ntdll := "На вашем компьютере не были найдены пакеты VC++, необходимые для работы лоадера`n`nХотите загрузить сейчас?"
     global string_high_dpi := "На вашем ПК установлен масштаб дисплея, отличный от 100%. Меню может и будет отображаться неправильно."
-
+    global string_failed_to_create_process := "Не удалось создать процесс."
 }
 if (language = "ukr") 
 {
@@ -120,4 +121,5 @@ if (language = "ukr")
     global string_20h2_warning := "На версії Windows 2009/20H2 можуть виникати проблеми з інжектом.`nДля того щоб виправити їх, потрібно (пере-)встановити Microsoft Visual C++ Redistributable.`n`nХочете почати скачування?"
     global string_cant_init_ntdll := "На вашому комп'ютері не були знайдені пакети VC++ необхідні для роботи лоадера`n`nХотіте почати скачування?"
     global string_high_dpi := "Ваш комп'ютер налаштований на занадто велике значення масштабу. Меню може відображатися неправильно."
+    global string_failed_to_create_process := "Не вдалося створити процес."
 }

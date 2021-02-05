@@ -1,6 +1,4 @@
-﻿#Include Lib\LibCon.ahk
-
-if (build_status != "release")
+﻿if (build_status != "release")
 {
 	SmartStartConsole()
 	Logging(1,"opened debug console")

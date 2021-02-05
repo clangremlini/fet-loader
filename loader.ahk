@@ -31,11 +31,12 @@
 ;@Ahk2Exe-UpdateManifest        1
 global script = "FET Loader"
 global version = "v3.1.1"
-global build_status = "release"
+global build_status = "debug"
 global times = 3 ; piece of shit, don't touch
 
 #NoEnv
 #NoTrayIcon
+#Include Lib\LibCon.ahk
 #Include Lib\Neutron.ahk
 #Include Lib\Logging.ahk
 #Include Lib\lang_strings.ahk 
@@ -54,6 +55,7 @@ FileDelete, %A_AppData%\FET Loader\*.dll
 RegRead, winedition, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ProductName
 RegRead, winver, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, ReleaseID
 RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
+RegRead, isLightMode, HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize, SystemUsesLightTheme
 RegRead, isReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isReadedDisclaimer
 RegRead, isDPIWarningReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isDPIWarningReaded
 IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
@@ -249,6 +251,11 @@ else
 	cheatsCount := cheatss0 
     neutron := new NeutronWindow()
     neutron.Load("Web\main.html")
+    if (isLightMode = 1)
+    {
+        neutron.wnd.toggleTheme()
+        Logging(1, "Changing loader theme")
+    }
     guiheight := cheatsCount * 40 + 40
     if (guiheight < 320)
     {
