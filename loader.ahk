@@ -62,6 +62,9 @@ IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
 IniRead, oldgui, %A_AppData%\FET Loader\config.ini, settings, oldgui
 IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
 IniRead, checkupdates, %A_AppData%\FET Loader\config.ini, settings, checkupdates
+IniRead, color1, %A_AppData%\FET Loader\config.ini, theming, color_background
+IniRead, color2, %A_AppData%\FET Loader\config.ini, theming, color_buttons
+
 
 if (!cringe)
 {
@@ -251,11 +254,19 @@ else
 	cheatsCount := cheatss0 
     neutron := new NeutronWindow()
     neutron.Load("Web\main.html")
-    if (isLightMode = 1)
+    if (!color1 & !color2)
     {
-        neutron.wnd.toggleTheme()
-        Logging(1, "Changing loader theme")
+        if (isLightMode = 1)
+        {
+            Logging(1, "Changing loader theme")
+            neutron.wnd.toggleTheme()
+        }
     }
+    else {
+        Logging(1, "Change theme to custom")
+        neutron.wnd.setTheme(color1, color2)
+    }
+
     guiheight := cheatsCount * 40 + 40
     if (guiheight < 320)
     {

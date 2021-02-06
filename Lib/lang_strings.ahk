@@ -25,6 +25,7 @@ isConfigValue(A_AppData "\FET Loader\config.ini","settings","oldgui","false")
 isConfigValue(A_AppData "\FET Loader\config.ini","settings","checkupdates","true")
 isConfigValue(A_AppData "\FET Loader\config.ini","settings","cheatrepo","clangremlini/fetloader-dll-repo")
 
+
 isConfigValue(file,section,key,value)
 {   
     IniRead, output_key, %file%, %section%, %key%
