@@ -25,12 +25,12 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2021 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     3.1.1.0
-;@Ahk2Exe-SetVersion            3.1.1.0
+;@Ahk2Exe-SetProductVersion     3.2.0.0
+;@Ahk2Exe-SetVersion            3.2.0.0
 ;@Ahk2Exe-SetMainIcon           icon.ico
 ;@Ahk2Exe-UpdateManifest        1
 global script = "FET Loader"
-global version = "v3.1.1"
+global version = "v3.2"
 global build_status = "debug"
 global times = 3 ; piece of shit, don't touch
 

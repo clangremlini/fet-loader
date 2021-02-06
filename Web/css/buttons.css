@@ -18,8 +18,8 @@
 .btn-inject:hover, .btn-inject.hover
 {
     color: #000;
-    background-color: #F94D35; //d1ff82
-    border-color: #F94D35;
+    background-color: #f0547d; //d1ff82
+    border-color: #D04D6F;
     transition: all .3s;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -40,7 +40,7 @@
     color: #fff;
     background-color: #D04D6F; //9bdb4d
     border-color: #D04D6F;
-    transform: translateY(6px);
+    transform: translateY(-2px);
 //    box-shadow: 0 0 0 0.0rem rgba(72, 180, 97, 0.5);
 }
 
@@ -113,7 +113,6 @@
     color: #FFFFFF;
 }
 
-//.btn-outline-primary:hover, .btn-outline-primary:active
 .btn-outline-primary:hover {
     background-color: #9b52be;
     border-color: #9b52be;
