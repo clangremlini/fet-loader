@@ -55,6 +55,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Translation: [Gl1c1n](https://github.com/Gl1c1n)
 - Web-UI: [toxyxd](https://github.com/toxyxd)
 - Custom repo: [zrn1x](https://github.com/oliyase)
+- Big thanks to MORGENSHTERN and his tracks
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/clangremlini/fet-loader.svg?style=flat-square
