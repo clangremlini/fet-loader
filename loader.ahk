@@ -30,8 +30,8 @@
 ;@Ahk2Exe-SetMainIcon           icon.ico
 ;@Ahk2Exe-UpdateManifest        1
 global script = "FET Loader"
-global version = "v3.2"
-global build_status = "debug"
+global version = "v3.2.0"
+global build_status = "beta"
 global times = 3 ; piece of shit, don't touch
 
 #NoEnv
