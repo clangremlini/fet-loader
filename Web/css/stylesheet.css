@@ -8,3 +8,10 @@
 	font-weight: 500;
 	font-style: normal;
 }
+
+/* 125% dpi fix */
+@media (min-resolution: 120dpi) {
+    html {
+         font-size: 80%;
+    }
+}
