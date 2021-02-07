@@ -96,17 +96,17 @@ if (winver = "2009")
 }
 
 
-if (A_ScreenDPI > 96)
-{
-    if (!isDPIWarningReaded)
-    {
-        MsgBox, 64, %script% Disclaimer, %string_high_dpi%
-        IfMsgBox, Ok
-        {
-            RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CodISH Inc\FET Loader, isDPIWarningReaded, Yes
-        }
-    }
-}
+; if (A_ScreenDPI > 96)
+; {
+;     if (!isDPIWarningReaded)
+;     {
+;         MsgBox, 64, %script% Disclaimer, %string_high_dpi%
+;         IfMsgBox, Ok
+;         {
+;             RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CodISH Inc\FET Loader, isDPIWarningReaded, Yes
+;         }
+;     }
+; }
 
 
 
