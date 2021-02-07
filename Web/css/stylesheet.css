@@ -15,3 +15,15 @@
          font-size: 80%;
     }
 }
+
+@media (min-resolution: 144dpi) {
+    html {
+         font-size: 67%;
+    }
+}
+
+@media (min-resolution: 168dpi) {
+    html {
+         font-size: 57%;
+    }
+}
