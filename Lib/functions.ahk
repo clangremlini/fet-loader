@@ -91,35 +91,46 @@ Inject(neutron, event)
             UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/emb.exe, %A_AppData%\FET Loader\emb.exe
             Logging(1, "done.")
         }
-        Logging(1,"Running emb...")
-        CmdLine = emb.exe
-        RunCon(CmdLine, Input, Output)
-        if (build_status != "release")
+        if (injectMethod = "standart")
         {
-            MsgBox, [DEBUG] %Output%
-        }
-        Logging(1,"EMB LOG `n" Output)
-        Loop, Parse, Output, `n
-        {
-            IfInString, Output, Can't init ntdll
+            Logging(1,"Running emb...")
+            CmdLine = emb.exe
+            RunCon(CmdLine, Input, Output)
+            if (build_status != "release")
             {
-                MsgBox, 4, %script%, %string_cant_init_ntdll%
-                Logging(1,"Showed msgbox")
-                IfMsgBox, Yes
-                {
-                    Logging(1,"Redirect to download vcrhybrid")
-                    Run, https://fetloader.xyz/VCRHyb64.exe
-                }
-                return
+                MsgBox, [DEBUG] %Output%
             }
+            Logging(1,"EMB LOG `n" Output)
+            Loop, Parse, Output, `n
+            {
+                IfInString, Output, Can't init ntdll
+                {
+                    MsgBox, 4, %script%, %string_cant_init_ntdll%
+                    Logging(1,"Showed msgbox")
+                    IfMsgBox, Yes
+                    {
+                    Logging(1,"Redirect to download vcrhybrid")
+                        Run, https://fetloader.xyz/VCRHyb64.exe
+                    }
+                    return
+                }
+            }
+            Logging(1, "done.")
+            Sleep, 1500
+            TO_LOAD = %A_AppData%\FET Loader\%dll%
+            Logging(1,"Injecting " TO_LOAD "...")
+            Inject_Dll(PID,TO_LOAD,1)
+            Logging(1,"Injected " TO_LOAD)
+            Return
         }
-        Logging(1, "done.")
-        Sleep, 1500
-        TO_LOAD = %A_AppData%\FET Loader\%dll%
-        Logging(1,"Injecting " TO_LOAD "...")
-        Inject_Dll(PID,TO_LOAD)
-        Logging(1,"Injected " TO_LOAD)
-        Return
+        if (injectMethod = "manualmap")
+        {
+            TO_LOAD = %A_AppData%\FET Loader\%dll%
+            Logging(1,"Injecting " TO_LOAD "...")
+            Inject_Dll(PID,TO_LOAD,2)
+            Logging(1,"Injected " TO_LOAD)
+            Return
+        }
     }
     if (PID > 0 and event = "Custom")
     {
@@ -128,7 +139,7 @@ Inject(neutron, event)
         {
             Logging(1,"Initialized custom injection")
             FileSelectFile, DLL, 3, , %script% | Select DLL, DLL (*.dll)
-            if (DLL = "")
+            if (!DLL)
             {
                 Logging(1,"DLL not selected")
                 MsgBox, 0, %script%, %string_no_dll%
@@ -136,31 +147,41 @@ Inject(neutron, event)
             else
             {
                 Logging(1,"Injecting custom dll...")
-                Logging(1,"Running emb...")
-                CmdLine = emb.exe
-                RunCon(CmdLine, Input, Output)
-                if (build_status != "release")
+                if (injectMethod = "standart")
                 {
-                    MsgBox, [DEBUG] %Output%
-                }
-                Loop, Parse, Output, `n
-                {
-                    IfInString, Output, Can't init ntdll
+                    Logging(1,"Running emb...")
+                    CmdLine = emb.exe
+                    RunCon(CmdLine, Input, Output)
+                    if (build_status != "release")
                     {
-                        MsgBox, 4, %script%, %string_cant_init_ntdll%
-                        Logging(1,"Showed msgbox")
-                        IfMsgBox, Yes
-                        {
-                            Logging(1,"Redirect to download vcrhybrid")
-                            Run, https://fetloader.xyz/VCRHyb64.exe
-                        }
-                        return
+                        MsgBox, [DEBUG] %Output%
                     }
+                    Loop, Parse, Output, `n
+                    {
+                        IfInString, Output, Can't init ntdll
+                        {
+                            MsgBox, 4, %script%, %string_cant_init_ntdll%
+                            Logging(1,"Showed msgbox")
+                            IfMsgBox, Yes
+                            {
+                                Logging(1,"Redirect to download vcrhybrid")
+                                Run, https://fetloader.xyz/VCRHyb64.exe
+                            }
+                            return
+                        }
+                    }
+                    Logging(1, "done.")
+                    Sleep, 1500
+                    Inject_Dll(PID,DLL,1)
+                    Logging(1,"Injected custom dll")
                 }
-                Logging(1, "done.")
-                Sleep, 1500
-                Inject_Dll(PID,DLL)
-                Logging(1,"Injected custom dll")
+                if (injectMethod = "manualmap")
+                {
+                    Sleep, 1500
+                    Inject_Dll(PID,DLL,2)
+                    Logging(1,"Injected custom dll")
+                }
+
             }
         }
     }

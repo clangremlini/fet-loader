@@ -63,13 +63,13 @@ IniRead, oldgui, %A_AppData%\FET Loader\config.ini, settings, oldgui
 IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
 IniRead, checkupdates, %A_AppData%\FET Loader\config.ini, settings, checkupdates
 IniRead, theme, %A_AppData%\FET Loader\config.ini, settings, theme
+IniRead, injectMethod, %A_AppData%\FET Loader\config.ini, settings, injectMethod
+
 if (theme)
 {
     IniRead, color1, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_background
     IniRead, color2, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_buttons
 }
-
-
 
 if (!cringe)
 {
@@ -94,21 +94,6 @@ if (winver = "2009")
         }
     }
 }
-
-
-; if (A_ScreenDPI > 96)
-; {
-;     if (!isDPIWarningReaded)
-;     {
-;         MsgBox, 64, %script% Disclaimer, %string_high_dpi%
-;         IfMsgBox, Ok
-;         {
-;             RegWrite, REG_MULTI_SZ, HKCU\SOFTWARE\CodISH Inc\FET Loader, isDPIWarningReaded, Yes
-;         }
-;     }
-; }
-
-
 
 if (!isReaded)
 {
@@ -199,6 +184,7 @@ FileInstall, Web\css\stylesheet.css, Web\css\stylesheet.css, 1
 FileInstall, Web\css\fonts\GothamPro-Medium.eot, Web\css\fonts\GothamPro-Medium.eot, 1
 FileInstall, Web\css\fonts\GothamPro-Medium.ttf, Web\css\fonts\GothamPro-Medium.ttf, 1
 FileInstall, Web\css\fonts\GothamPro-Medium.woff, Web\css\fonts\GothamPro-Medium.woff, 1
+FileInstall, Lib\gh_injector.dll, gh_injector.dll, 1
 
 
 FileCreateDir, %A_AppData%\CornerStone
