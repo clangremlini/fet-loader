@@ -1,8 +1,8 @@
-﻿;=================================================================================
+;=================================================================================
 ;	InjectDll - An AutoHotkey library for injecting dll files into a process
 ;	Copyright (C) 2016 Brian Baker https://github.com/Fooly-Cooly
-;   Copyright (C) 2021 a1987zz https://github.com/a1987zz
-;   Copyright (C) 2021 clownless https://github.com/clownless
+;       Copyright (C) 2021 a1987zz https://github.com/a1987zz
+;       Copyright (C) 2021 clownless https://github.com/clownless
 ;	Requires AutoHotKey ANSI
 ;=================================================================================
 
