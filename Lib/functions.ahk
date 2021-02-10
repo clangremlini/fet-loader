@@ -62,9 +62,10 @@ Inject(neutron, event)
     }
     if (PID > 0 and event != "Custom" and event != "CornerStone") ;govnokod mne poxui
     {
-        Logging(1,"Initialized dll injection")
         IniRead, dll, %A_AppData%\FET Loader\cheats.ini, cheats, %event%
         IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
+        IniRead, injectMethod, %A_AppData%\FET Loader\config.ini, settings, injectMethod
+        Logging(1,"Initialized dll injection. Method: " injectMethod ". DLL: " dll)
 
         Loop 3
         {   
@@ -134,10 +135,11 @@ Inject(neutron, event)
     }
     if (PID > 0 and event = "Custom")
     {
+        IniRead, injectMethod, %A_AppData%\FET Loader\config.ini, settings, injectMethod
         MsgBox, 4, %script%, %string_warning_custom_dll%
         IfMsgBox, Yes
         {
-            Logging(1,"Initialized custom injection")
+            Logging(1,"Initialized custom injection. Method: " injectMethod)
             FileSelectFile, DLL, 3, , %script% | Select DLL, DLL (*.dll)
             if (!DLL)
             {
