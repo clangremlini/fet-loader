@@ -15,10 +15,12 @@ function BypassButtonClicked()
     document.getElementById("bypass_button").textContent = "Bypass enabled!";
     ahk.Bypass();
 }
-function setTheme(color, color2)
+function setTheme(color, color2, color3)
 {
     $("body").css("background", color)
-    $(".btn-outline-primary").css("color", color2)
+    //$(".btn-outline-primary").css("border-color", color2)
+    $(".btn").css("border-color", color3)
+    $(".btn").css("color", color2)
 }
 function toggleTheme() {
     theme = document.body.style.getPropertyValue("background")
