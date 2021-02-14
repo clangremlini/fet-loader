@@ -33,10 +33,10 @@ function toggleTheme() {
     theme_dark = "#333333"
     theme_light = "#fafafa"
     if (theme == "rgb(250, 250, 250)") {
-        setTheme(theme_dark, "#FFFFFF")
+        setTheme(theme_dark, "#FFFFFF", "#9b52be", "#28bca3", "#28bca3", "#9b52be", "#9b52be")
     } 
     else {
-        setTheme(theme_light, "#000000")
+        setTheme(theme_light, "#000000", "#9b52be", "#28bca3", "#28bca3", "#9b52be", "#9b52be")
     }
 }
 function GetCheatStatus(cheat) {
