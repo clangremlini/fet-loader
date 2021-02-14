@@ -15,12 +15,18 @@ function BypassButtonClicked()
     document.getElementById("bypass_button").textContent = "Bypass enabled!";
     ahk.Bypass();
 }
-function setTheme(color, color2, color3)
+function setTheme(bodyColor, cheatButtonsColor, cheatBorderColor, bypassButtonColor, bypassBorderColor, injectButtonColor, injectBorderColor)
 {
-    $("body").css("background", color)
-    //$(".btn-outline-primary").css("border-color", color2)
-    $(".btn").css("border-color", color3)
-    $(".btn").css("color", color2)
+    $("body").css("background", bodyColor)
+    // cheat buttons
+    $(".btn-outline-primary").css("border-color", cheatBorderColor)
+    $(".btn-outline-primary").css("color", cheatButtonsColor)
+    //bypass
+    $(".btn-bypass").css("border-color", bypassBorderColor)
+    $(".btn-bypass").css("color", bypassButtonColor)
+    //inject
+    $(".btn-inject").css("border-color", injectBorderColor)
+    $(".btn-inject").css("color", injectButtonColor)
 }
 function toggleTheme() {
     theme = document.body.style.getPropertyValue("background")

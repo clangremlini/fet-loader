@@ -68,8 +68,13 @@ IniRead, injectMethod, %A_AppData%\FET Loader\config.ini, settings, injectMethod
 if (theme)
 {
     IniRead, color1, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_background
-    IniRead, color2, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_buttons
-    IniRead, color3, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_buttons_border
+    IniRead, color2, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_cheat_button
+    IniRead, color3, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_cheat_border
+    IniRead, color4, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_bypass_button
+    IniRead, color5, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_bypass_border
+    IniRead, color6, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_inject_button
+    IniRead, color7, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_inject_border
+
 }
 
 if (!cringe)
@@ -246,7 +251,7 @@ else
 	cheatsCount := cheatss0 
     neutron := new NeutronWindow()
     neutron.Load("Web\main.html")
-    if (!color1 & !color2 & !color3)
+    if (!color1 & !color2 & !color3 & !color4 & !color5 & !color6 & !color7)
     {
         if (isLightMode = 1)
         {
@@ -256,7 +261,7 @@ else
     }
     else {
         Logging(1, "Changing theme to " theme)
-        neutron.wnd.setTheme(color1, color2, color3)
+        neutron.wnd.setTheme(color1, color2, color3, color4, color5, color6, color7)
     }
 
     guiheight := cheatsCount * 40 + 40
