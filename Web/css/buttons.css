@@ -3,11 +3,9 @@
     position: absolute;
     bottom: 15px;
     right: 15px;
-
     width: 100px;
     height: 40px;
-
-    background-color: #9b52be; //68b723
+    background-color: #9b52be;
     outline-color: #9b52be;
     border-color: #9b52be;
     box-shadow: none;
@@ -38,10 +36,9 @@
 .btn-inject:focus, .btn-inject.focus
 {
     color: #fff;
-    background-color: #D04D6F; //9bdb4d
+    background-color: #D04D6F;
     border-color: #D04D6F;
     transform: translateY(-2px);
-//    box-shadow: 0 0 0 0.0rem rgba(72, 180, 97, 0.5);
 }
 
 .btn-bypass
@@ -71,7 +68,7 @@
     background-color: #43d6b5;
     border-color: #43d6b5;
     transform: translateY(6px);
-//    box-shadow: 0 0 0 0.0rem rgba(58, 176, 195, 0.5);
+/*    box-shadow: 0 0 0 0.0rem rgba(58, 176, 195, 0.5); */
 }
 
 .btn-theme
@@ -120,7 +117,7 @@
     box-shadow: none!important;
 }
 
-//.btn-outline-primary:focus
+/*.btn-outline-primary:focus */
 .btn-outline-primary:focus, .btn-outline-primary:active {
     background-color: #F94D35;
     color: #ffffff;
