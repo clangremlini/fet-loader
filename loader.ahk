@@ -74,7 +74,6 @@ if (theme)
     IniRead, color5, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_bypass_border
     IniRead, color6, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_inject_button
     IniRead, color7, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_inject_border
-
 }
 
 if (!cringe)
@@ -251,7 +250,7 @@ else
 	cheatsCount := cheatss0 
     neutron := new NeutronWindow()
     neutron.Load("Web\main.html")
-    if (!color1 & !color2 & !color3 & !color4 & !color5 & !color6 & !color7)
+    if (!color1 & !color2 & !color3 & !color4 & !color5 & !color6 & !color7) ; AHHAAHAHHAAAHHAHAFAFHAHHaafhahhahahHAHAHAHAHAHAHAAHAHAHAAHAHAH
     {
         if (isLightMode = 1)
         {
