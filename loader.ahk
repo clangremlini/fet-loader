@@ -31,7 +31,7 @@
 ;@Ahk2Exe-UpdateManifest        1
 global script = "FET Loader"
 global version = "v3.2.0"
-global build_status = "beta"
+global build_status = "rc"
 global times = 3 ; piece of shit, don't touch
 
 #NoEnv
@@ -167,6 +167,7 @@ if (bruhshit = "unofficial build") {
 } else {
     Logging(1,"Build Type: OFFICIAL")
 }
+Logging(1,"Build Status: " build_status)
 Logging(1,"---ENV---")
 Logging(1, "")
 
