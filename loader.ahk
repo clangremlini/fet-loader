@@ -31,7 +31,7 @@
 ;@Ahk2Exe-UpdateManifest        1
 global script = "FET Loader"
 global version = "v3.2.0"
-global build_status = "rc"
+global build_status = "release"
 global times = 3 ; piece of shit, don't touch
 
 #NoEnv
