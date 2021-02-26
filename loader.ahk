@@ -25,13 +25,13 @@
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
 ;@Ahk2Exe-SetCopyright          Copyright (C) 2021 CodISH inc.
 ;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     3.2.0.0
-;@Ahk2Exe-SetVersion            3.2.0.0
+;@Ahk2Exe-SetProductVersion     3.2.1.0
+;@Ahk2Exe-SetVersion            3.2.1.0
 ;@Ahk2Exe-SetMainIcon           icon.ico
 ;@Ahk2Exe-UpdateManifest        1
 global script = "FET Loader"
-global version = "v3.2.0"
-global build_status = "release"
+global version = "v3.2.1"
+global build_status = "beta"
 global times = 3 ; piece of shit, don't touch
 
 #NoEnv
@@ -63,7 +63,7 @@ IniRead, oldgui, %A_AppData%\FET Loader\config.ini, settings, oldgui
 IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
 IniRead, checkupdates, %A_AppData%\FET Loader\config.ini, settings, checkupdates
 IniRead, theme, %A_AppData%\FET Loader\config.ini, settings, theme
-IniRead, injectMethod, %A_AppData%\FET Loader\config.ini, settings, injectMethod
+IniRead, forceLoadLibrary, %A_AppData%\FET Loader\config.ini, settings, forceLoadLibrary
 
 if (theme)
 {

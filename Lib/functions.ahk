@@ -64,7 +64,11 @@ Inject(neutron, event)
     {
         IniRead, dll, %A_AppData%\FET Loader\cheats.ini, cheats, %event%
         IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
-        IniRead, injectMethod, %A_AppData%\FET Loader\config.ini, settings, injectMethod
+        IniRead, injectMethod, %A_AppData%\FET Loader\cheats.ini, inject, %event%
+        if (forceLoadLibrary = true)
+        {
+            injectMethod := "LoadLibrary"
+        }
         Logging(1,"Initialized dll injection. Method: " injectMethod ". DLL: " dll)
 
         Loop 3
@@ -92,7 +96,7 @@ Inject(neutron, event)
             UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/emb.exe, %A_AppData%\FET Loader\emb.exe
             Logging(1, "done.")
         }
-        if (injectMethod = "standart")
+        if (injectMethod = "loadlibrary")
         {
             Logging(1,"Running emb...")
             CmdLine = emb.exe
@@ -135,7 +139,11 @@ Inject(neutron, event)
     }
     if (PID > 0 and event = "Custom")
     {
-        IniRead, injectMethod, %A_AppData%\FET Loader\config.ini, settings, injectMethod
+        IniRead, injectMethod, %A_AppData%\FET Loader\cheats.ini, inject, %event%
+        if (forceLoadLibrary = true)
+        {
+            injectMethod := "LoadLibrary"
+        }
         MsgBox, 4, %script%, %string_warning_custom_dll%
         IfMsgBox, Yes
         {
