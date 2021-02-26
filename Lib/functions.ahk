@@ -64,10 +64,12 @@ Inject(neutron, event)
     {
         IniRead, dll, %A_AppData%\FET Loader\cheats.ini, cheats, %event%
         IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
+        IniRead, forceLoadLibrary, %A_AppData%\FET Loader\config.ini, settings, forceLoadLibrary
         IniRead, injectMethod, %A_AppData%\FET Loader\cheats.ini, inject, %event%
-        if (forceLoadLibrary = true)
+        if (forceLoadLibrary = "true")
         {
             injectMethod := "LoadLibrary"
+            msgbox, force ll
         }
         Logging(1,"Initialized dll injection. Method: " injectMethod ". DLL: " dll)
 
@@ -140,7 +142,8 @@ Inject(neutron, event)
     if (PID > 0 and event = "Custom")
     {
         IniRead, injectMethod, %A_AppData%\FET Loader\cheats.ini, inject, %event%
-        if (forceLoadLibrary = true)
+        IniRead, forceLoadLibrary, %A_AppData%\FET Loader\config.ini, settings, forceLoadLibrary
+        if (forceLoadLibrary = "true")
         {
             injectMethod := "LoadLibrary"
         }
