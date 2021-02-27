@@ -24,6 +24,7 @@ IfNotExist, %A_AppData%\FET Loader\config.ini
 isConfigValue(A_AppData "\FET Loader\config.ini","settings","oldgui","false")
 isConfigValue(A_AppData "\FET Loader\config.ini","settings","checkupdates","true")
 isConfigValue(A_AppData "\FET Loader\config.ini","settings","cheatrepo","clangremlini/fetloader-dll-repo")
+isConfigValue(A_AppData "\FET Loader\config.ini","settings","branch","main")
 isConfigValue(A_AppData "\FET Loader\config.ini","settings","forceLoadLibrary","false")
 
 

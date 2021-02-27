@@ -59,6 +59,7 @@ RegRead, isLightMode, HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Pers
 RegRead, isReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isReadedDisclaimer
 RegRead, isDPIWarningReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isDPIWarningReaded
 IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
+IniRead, branch, %A_AppData%\FET Loader\config.ini, settings, branch
 IniRead, oldgui, %A_AppData%\FET Loader\config.ini, settings, oldgui
 IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
 IniRead, checkupdates, %A_AppData%\FET Loader\config.ini, settings, checkupdates
@@ -243,8 +244,9 @@ if (oldgui = "true")
 }
 else
 {
+    newrepo = %cheatrepo%/raw/%branch%
     FileRead, gui, Web\js\iniparser.bak
-    StringReplace, newgui, gui, clangremlini/fetloader-dll-repo, %cheatrepo%, All
+    StringReplace, newgui, gui, clangremlini/fetloader-dll-repo/raw/main, %newrepo%, All
     FileAppend, %newgui%, Web\js\iniparser.js
     IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
 	StringSplit, cheatss, cheatlist, |
