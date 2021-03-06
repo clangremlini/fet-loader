@@ -31,7 +31,7 @@
 ;@Ahk2Exe-UpdateManifest        1
 global script = "FET Loader"
 global version = "v3.2.1"
-global build_status = "beta"
+global build_status = "release"
 global times = 3 ; piece of shit, don't touch
 
 #NoEnv
@@ -66,7 +66,7 @@ IniRead, checkupdates, %A_AppData%\FET Loader\config.ini, settings, checkupdates
 IniRead, theme, %A_AppData%\FET Loader\config.ini, settings, theme
 IniRead, forceLoadLibrary, %A_AppData%\FET Loader\config.ini, settings, forceLoadLibrary
 
-if (theme)
+if (theme != "ERROR")
 {
     IniRead, color1, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_background
     IniRead, color2, %A_AppData%\FET Loader\themes\%theme%\config.ini, theming, color_cheat_button
@@ -158,6 +158,7 @@ else {
 }
 Logging(1,"Loader Location: "A_ScriptFullPath)
 Logging(1,"Cheat Repo: "cheatrepo)
+Logging(1,"Cheat Repo Branch: "branch)
 if (A_IsUnicode = true) {
     Logging(1,"Compiler Type: UTF-8")
 } else {
@@ -253,7 +254,7 @@ else
 	cheatsCount := cheatss0 
     neutron := new NeutronWindow()
     neutron.Load("Web\main.html")
-    if (!color1 & !color2 & !color3 & !color4 & !color5 & !color6 & !color7) ; AHHAAHAHHAAAHHAHAFAFHAHHaafhahhahahHAHAHAHAHAHAHAAHAHAHAAHAHAH
+    if (!color1 & !color2 & !color3 & !color4 & !color5 & !color6 & !color7)
     {
         if (isLightMode = 1)
         {
@@ -262,8 +263,11 @@ else
         }
     }
     else {
-        Logging(1, "Changing theme to " theme)
-        neutron.wnd.setTheme(color1, color2, color3, color4, color5, color6, color7)
+        if (theme != "ERROR" and color1 != "ERROR") ; $$$$ superior code $$$$
+        {
+            Logging(1, "Changing theme to " theme)
+            neutron.wnd.setTheme(color1, color2, color3, color4, color5, color6, color7)
+        }
     }
 
     guiheight := cheatsCount * 40 + 40
