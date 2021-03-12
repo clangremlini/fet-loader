@@ -6,14 +6,14 @@ class OTA
 {
     checkupd()
     {
-        UrlDownloadToFile, https://api.github.com/repos/clangremlini/fet-loader/releases/latest, %A_AppData%\FET Loader\json.tmp
+        UrlDownloadToFile, https://gitlab.com/api/v4/projects/25081260/repository/files/version.json/raw?ref=master, %A_AppData%\FET Loader\json.tmp
         FileRead, jsonStr, %A_AppData%\FET Loader\json.tmp
         VarSetCapacity(ansi, StrPut(jsonStr, "CP1251")), StrPut(jsonStr, &ansi, "CP1251")
         jsonStr := StrGet(&ansi, "UTF-8")
         parsed := JSON.Load(jsonStr)
-        latest_release := parsed.tag_name
-        change_log := parsed.body
-        download_url := parsed.assets[1].browser_download_url
+        latest_release := parsed.version
+        change_log := parsed.changelog
+        download_url := parsed.downloadurl
         if (version != latest_release)
         {
             Logging(1,"A new version is available. Latest version: " latest_release)

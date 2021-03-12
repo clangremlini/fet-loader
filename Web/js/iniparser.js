@@ -1,6 +1,6 @@
 function getText() {    
     var xmlHttp = new XMLHttpRequest();
-    var linktomainfile = "https://github.com/clangremlini/fetloader-dll-repo/raw/main/cheats.ini";
+    var linktomainfile = "https://gitlab.com/api/v4/projects/25080350/repository/files/cheats.ini/raw?ref=main";
     xmlHttp.open("GET", linktomainfile, false);
     xmlHttp.send(null);
     return xmlHttp.responseText;

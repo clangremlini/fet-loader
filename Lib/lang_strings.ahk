@@ -15,7 +15,6 @@ IfNotExist, %A_AppData%\FET Loader\config.ini
 {	
 	Logging(1, "Creating config file...")
 	IniWrite, true, %A_AppData%\FET Loader\config.ini, settings, checkupdates
-	IniWrite, clangremlini/fetloader-dll-repo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
     IniWrite, false, %A_AppData%\FET Loader\config.ini, settings, oldgui
 	Logging(1, "done.")
 }
@@ -23,8 +22,6 @@ IfNotExist, %A_AppData%\FET Loader\config.ini
 
 isConfigValue(A_AppData "\FET Loader\config.ini","settings","oldgui","false")
 isConfigValue(A_AppData "\FET Loader\config.ini","settings","checkupdates","true")
-isConfigValue(A_AppData "\FET Loader\config.ini","settings","cheatrepo","clangremlini/fetloader-dll-repo")
-isConfigValue(A_AppData "\FET Loader\config.ini","settings","branch","main")
 isConfigValue(A_AppData "\FET Loader\config.ini","settings","forceLoadLibrary","false")
 
 

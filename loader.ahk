@@ -1,6 +1,6 @@
 ; MIT License
 ;
-; Copyright (c) 2021 CodISH Inc.
+; Copyright (c) 2021 clownless (Maxim K.)
 ;
 ; Permission is hereby granted, free of charge, to any person obtaining a copy
 ; of this software and associated documentation files (the "Software"), to deal
@@ -23,14 +23,14 @@
 ;
 ;@Ahk2Exe-SetName               FET Loader
 ;@Ahk2Exe-SetDescription        A simple cheats loader written in AHK.
-;@Ahk2Exe-SetCopyright          Copyright (C) 2021 CodISH inc.
-;@Ahk2Exe-SetCompanyName        CodISH Inc.
-;@Ahk2Exe-SetProductVersion     3.2.1.0
-;@Ahk2Exe-SetVersion            3.2.1.0
+;@Ahk2Exe-SetCopyright          Copyright (C) 2021 clownless
+;@Ahk2Exe-SetCompanyName        Maxim K.
+;@Ahk2Exe-SetProductVersion     3.2.2.0
+;@Ahk2Exe-SetVersion            3.2.2.0
 ;@Ahk2Exe-SetMainIcon           icon.ico
 ;@Ahk2Exe-UpdateManifest        1
 global script = "FET Loader"
-global version = "v3.2.1"
+global version = "v3.2.2"
 global build_status = "release"
 global times = 3 ; piece of shit, don't touch
 
@@ -48,7 +48,6 @@ SetBatchLines, -1
 CoordMode, Mouse, Screen
 
 FileDelete, %A_AppData%\FET Loader\Web\main.*
-FileDelete, %A_AppData%\FET Loader\Web\js\iniparser.*
 FileDelete, %A_AppData%\FET Loader\cheats.ini
 FileDelete, %A_AppData%\FET Loader\*.dll
 
@@ -58,8 +57,6 @@ RegRead, winbuild, HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
 RegRead, isLightMode, HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize, SystemUsesLightTheme
 RegRead, isReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isReadedDisclaimer
 RegRead, isDPIWarningReaded, HKCU\SOFTWARE\CodISH Inc\FET Loader, isDPIWarningReaded
-IniRead, cheatrepo, %A_AppData%\FET Loader\config.ini, settings, cheatrepo
-IniRead, branch, %A_AppData%\FET Loader\config.ini, settings, branch
 IniRead, oldgui, %A_AppData%\FET Loader\config.ini, settings, oldgui
 IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
 IniRead, checkupdates, %A_AppData%\FET Loader\config.ini, settings, checkupdates
@@ -123,19 +120,20 @@ Logging(1,"Creating folders and downloading files...")
 IfNotExist, %A_AppData%\FET Loader\cheats.ini
 {	
     Logging(1,"- Getting cheat list...")
-    UrlDownloadToFile, https://github.com/%cheatrepo%/raw/main/cheats.ini, %A_AppData%\FET Loader\cheats.ini
+    UrlDownloadToFile, https://gitlab.com/api/v4/projects/25080350/repository/files/cheats.ini/raw?ref=main, %A_AppData%\FET Loader\cheats.ini
     Logging(1,"......done.")
 }
+
 IfNotExist, %A_AppData%\FET Loader\vac-bypass.exe
 {
     Logging(1,"- Downloading vac-bypass.exe...")
-    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/main/vac-bypass.exe, %A_AppData%\FET Loader\vac-bypass.exe
+    UrlDownloadToFile, https://gitlab.com/api/v4/projects/25080350/repository/files/vac-bypass.exe/raw?ref=main, %A_AppData%\FET Loader\vac-bypass.exe
     Logging(1,"......done.")
 }
 IfNotExist, %A_AppData%\FET Loader\emb.exe
 {
     Logging(1,"- Downloading emb.exe...")
-    UrlDownloadToFile, https://github.com/clangremlini/fetloader-dll-repo/raw/main/emb.exe, %A_AppData%\FET Loader\emb.exe
+    UrlDownloadToFile, https://gitlab.com/api/v4/projects/25080350/repository/files/emb.exe/raw?ref=main, %A_AppData%\FET Loader\emb.exe
     Logging(1,"......done.")
 }
 Logging(1,"done.")
@@ -157,8 +155,8 @@ else {
     Logging(1,"Build No.: "winbuild)
 }
 Logging(1,"Loader Location: "A_ScriptFullPath)
-Logging(1,"Cheat Repo: "cheatrepo)
-Logging(1,"Cheat Repo Branch: "branch)
+Logging(1,"Cheat Repo: FETLoader/dll-repo")
+Logging(1,"Cheat Repo Branch: main")
 if (A_IsUnicode = true) {
     Logging(1,"Compiler Type: UTF-8")
 } else {
@@ -179,7 +177,7 @@ FileCreateDir, Web
 FileCreateDir, Web\js
 FileCreateDir, Web\css
 FileCreateDir, Web\css\fonts
-FileInstall, Web\js\iniparser.js, Web\js\iniparser.bak, 1
+FileInstall, Web\js\iniparser.js, Web\js\iniparser.js, 1
 FileInstall, Web\js\bootstrap-4.4.1.js, Web\js\bootstrap-4.4.1.js, 1
 FileInstall, Web\css\bootstrap-4.4.1.css, Web\css\bootstrap-4.4.1.css, 1
 FileInstall, Web\js\jquery-3.4.1.min.js, Web\js\jquery-3.4.1.min.js, 1
@@ -245,10 +243,6 @@ if (oldgui = "true")
 }
 else
 {
-    newrepo = %cheatrepo%/raw/%branch%
-    FileRead, gui, Web\js\iniparser.bak
-    StringReplace, newgui, gui, clangremlini/fetloader-dll-repo/raw/main, %newrepo%, All
-    FileAppend, %newgui%, Web\js\iniparser.js
     IniRead, cheatlist, %A_AppData%\FET Loader\cheats.ini, cheatlist, cheatlist
 	StringSplit, cheatss, cheatlist, |
 	cheatsCount := cheatss0 
